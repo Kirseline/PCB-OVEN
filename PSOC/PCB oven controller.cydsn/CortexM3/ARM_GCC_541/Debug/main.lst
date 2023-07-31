@@ -1,0 +1,2555 @@
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB0:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** #include "display\driver\psoc5_ssd1306_i2c.h"
+  14:main.c        **** #include "display\GEVA.h"
+  15:main.c        **** 
+  16:main.c        **** #define DISPLAY_ADDRESS 0x3C // 011110+SA0+RW - 0x3C or 0x3D
+  17:main.c        **** video_buffer vid_buf;
+  18:main.c        **** 
+  19:main.c        **** 
+  20:main.c        **** 
+  21:main.c        **** int main(void)
+  22:main.c        **** {   
+  28              		.loc 1 22 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 1024
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 30B5     		push	{r4, r5, lr}
+  33              		.cfi_def_cfa_offset 12
+  34              		.cfi_offset 4, -12
+  35              		.cfi_offset 5, -8
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 2
+
+
+  36              		.cfi_offset 14, -4
+  37 0002 ADF20C4D 		subw	sp, sp, #1036
+  38              		.cfi_def_cfa_offset 1048
+  23:main.c        **** //-------vbc_file start-------
+  24:main.c        **** 
+  25:main.c        **** vbc_file a;
+  26:main.c        **** 
+  27:main.c        **** a.header.id = 0xa7;
+  39              		.loc 1 27 0
+  40 0006 A723     		movs	r3, #167
+  41 0008 8DF8FC33 		strb	r3, [sp, #1020]
+  28:main.c        **** a.header.width = 0x7f;
+  42              		.loc 1 28 0
+  43 000c 7F23     		movs	r3, #127
+  44 000e 8DF8FD33 		strb	r3, [sp, #1021]
+  29:main.c        **** a.header.height = 0x3f;
+  45              		.loc 1 29 0
+  46 0012 3F23     		movs	r3, #63
+  47 0014 8DF8FE33 		strb	r3, [sp, #1022]
+  30:main.c        **** a.header.byte_cnt_h = 0x03;
+  48              		.loc 1 30 0
+  49 0018 0323     		movs	r3, #3
+  50 001a 8DF8FF33 		strb	r3, [sp, #1023]
+  31:main.c        **** a.header.byte_cnt_l = 0xf5;
+  51              		.loc 1 31 0
+  52 001e F523     		movs	r3, #245
+  53 0020 8DF80034 		strb	r3, [sp, #1024]
+  32:main.c        **** 
+  33:main.c        **** uint8_t a_sv[1008] = 
+  54              		.loc 1 33 0
+  55 0024 03AC     		add	r4, sp, #12
+  56 0026 4FF47C72 		mov	r2, #1008
+  57 002a 1749     		ldr	r1, .L4
+  58 002c 2046     		mov	r0, r4
+  59 002e FFF7FEFF 		bl	memcpy
+  60              	.LVL0:
+  34:main.c        **** {
+  35:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  36:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  37:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  38:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  39:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  40:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  41:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  42:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7e, 0x00, 0x00, 
+  43:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xc3, 0x00, 0x00, 
+  44:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x03, 0xff, 0xff, 0x00, 0x00, 0x00, 0x01, 0xf8, 0x03, 0x01, 0x00, 0x00, 
+  45:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x3f, 0xfe, 0x01, 0xf8, 0x00, 0x00, 0x07, 0x0e, 0x06, 0x01, 0x00, 0x00, 
+  46:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0xc0, 0x01, 0x00, 0x0e, 0x00, 0x00, 0x04, 0x03, 0x84, 0x00, 0x80, 0x00, 
+  47:main.c        **** 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x04, 0x00, 0xcc, 0x00, 0x80, 0x00, 
+  48:main.c        **** 	0x00, 0x00, 0x00, 0x0e, 0x00, 0x00, 0x00, 0x00, 0xc0, 0x00, 0x04, 0x00, 0x68, 0x00, 0x80, 0x00, 
+  49:main.c        **** 	0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x06, 0x00, 0x38, 0x00, 0x40, 0x00, 
+  50:main.c        **** 	0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x02, 0x00, 0x30, 0x00, 0x40, 0x00, 
+  51:main.c        **** 	0x00, 0x00, 0x00, 0x60, 0x02, 0x00, 0x20, 0x00, 0x30, 0x00, 0x03, 0x00, 0x07, 0x00, 0x40, 0x00, 
+  52:main.c        **** 	0x00, 0x00, 0x00, 0x40, 0x02, 0x00, 0x20, 0x00, 0x10, 0x00, 0x01, 0x00, 0x01, 0x00, 0x40, 0x00, 
+  53:main.c        **** 	0x00, 0x00, 0x00, 0x80, 0x02, 0x00, 0x20, 0x00, 0x08, 0x00, 0x01, 0x80, 0x3d, 0x80, 0x40, 0x00, 
+  54:main.c        **** 	0x00, 0x00, 0x01, 0x80, 0x03, 0x00, 0x20, 0x00, 0x08, 0x00, 0x00, 0xc0, 0x60, 0x80, 0x40, 0x00, 
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 3
+
+
+  55:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x01, 0x80, 0x20, 0x00, 0x0c, 0x00, 0x00, 0x60, 0x40, 0x9c, 0xc0, 0x00, 
+  56:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x30, 0x00, 0x04, 0x00, 0x00, 0x3c, 0x40, 0x8f, 0x80, 0x00, 
+  57:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x38, 0x40, 0x81, 0xc0, 0x00, 
+  58:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x20, 0x60, 0x80, 0x70, 0x00, 
+  59:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x20, 0x35, 0x80, 0x18, 0x00, 
+  60:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x80, 0x04, 0x00, 0x00, 0x20, 0x1f, 0x00, 0x0c, 0x00, 
+  61:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x20, 0x00, 0x00, 0x80, 0x04, 0x00, 0x00, 0x20, 0x04, 0x00, 0x04, 0x00, 
+  62:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x20, 0x00, 0x01, 0x80, 0x04, 0x00, 0x00, 0x20, 0x06, 0x00, 0x04, 0x00, 
+  63:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x30, 0x00, 0x03, 0x00, 0x04, 0x00, 0x00, 0x20, 0x07, 0x00, 0x0c, 0x00, 
+  64:main.c        **** 	0x00, 0x00, 0x01, 0x00, 0x18, 0x00, 0x02, 0x00, 0x04, 0x00, 0x00, 0x30, 0x0d, 0xc0, 0x38, 0x00, 
+  65:main.c        **** 	0x00, 0x00, 0x00, 0x80, 0x0e, 0x00, 0x0c, 0x00, 0x04, 0x00, 0x00, 0x10, 0x0c, 0x7f, 0xe0, 0x00, 
+  66:main.c        **** 	0x00, 0x00, 0x00, 0xc0, 0x03, 0xc3, 0xf8, 0x00, 0x0c, 0x00, 0x00, 0x10, 0x1c, 0x00, 0x00, 0x00, 
+  67:main.c        **** 	0x00, 0x00, 0x00, 0x60, 0x00, 0x7e, 0x00, 0x00, 0x08, 0x00, 0x00, 0x08, 0x64, 0x00, 0x00, 0x00, 
+  68:main.c        **** 	0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x0f, 0xc6, 0x00, 0x00, 0x00, 
+  69:main.c        **** 	0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
+  70:main.c        **** 	0x00, 0x00, 0x00, 0x0c, 0x00, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
+  71:main.c        **** 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
+  72:main.c        **** 	0x00, 0x00, 0x00, 0x01, 0xc0, 0x00, 0x00, 0x00, 0xc0, 0x00, 0x00, 0x00, 0x02, 0x01, 0xc0, 0x00, 
+  73:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x70, 0x00, 0x00, 0x03, 0x80, 0x00, 0x00, 0x00, 0x02, 0x1f, 0x00, 0x00, 
+  74:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x1e, 0x00, 0x00, 0x1e, 0x00, 0x00, 0x00, 0x0f, 0xc2, 0xf0, 0x00, 0x00, 
+  75:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x03, 0xf0, 0x01, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x7f, 0x80, 0x00, 0x00, 
+  76:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
+  77:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
+  78:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
+  79:main.c        **** 	0x00, 0x00, 0x00, 0x0e, 0x00, 0x02, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 
+  80:main.c        **** 	0x00, 0x00, 0x00, 0x03, 0xc0, 0x02, 0x03, 0x80, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 
+  81:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x7c, 0x02, 0x0c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0c, 0x00, 0x00, 0x00, 
+  82:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x07, 0xff, 0x38, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1e, 0x00, 0x00, 0x00, 
+  83:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 
+  84:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x71, 0x80, 0x00, 0x00, 
+  85:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc0, 0xc0, 0x00, 0x00, 
+  86:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x80, 0x70, 0x00, 0x00, 
+  87:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x18, 0x00, 0x00, 
+  88:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0e, 0x00, 0x0c, 0x00, 0x00, 
+  89:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x20, 0x00, 0x00, 0x00, 0x00, 0x18, 0x00, 0x04, 0x00, 0x00, 
+  90:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x0e, 0x38, 0x00, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00, 
+  91:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x07, 0xf0, 0x00, 0x00, 0x00, 0xe0, 0x00, 0x00, 0x00, 0x00, 
+  92:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x01, 0x80, 0x00, 0x00, 0x00, 0x00, 
+  93:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  94:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  95:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  96:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  97:main.c        **** 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+  98:main.c        **** };
+  99:main.c        **** 
+ 100:main.c        **** a.body = a_sv;
+  61              		.loc 1 100 0
+  62 0032 CDF80444 		str	r4, [sp, #1028]
+ 101:main.c        **** 
+ 102:main.c        **** //-------vbc_file stop -------
+ 103:main.c        **** 
+ 104:main.c        **** 
+ 105:main.c        **** 
+ 106:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  63              		.loc 1 106 0
+  64              		.syntax unified
+  65              	@ 106 "main.c" 1
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 4
+
+
+  66 0036 62B6     		CPSIE   i
+  67              	@ 0 "" 2
+ 107:main.c        ****     
+ 108:main.c        ****     oled_Start();  
+  68              		.loc 1 108 0
+  69              		.thumb
+  70              		.syntax unified
+  71 0038 FFF7FEFF 		bl	oled_Start
+  72              	.LVL1:
+ 109:main.c        ****     init_display(DISPLAY_ADDRESS);
+  73              		.loc 1 109 0
+  74 003c 3C20     		movs	r0, #60
+  75 003e FFF7FEFF 		bl	init_display
+  76              	.LVL2:
+ 110:main.c        ****     init_buf(&vid_buf, 128, 64);
+  77              		.loc 1 110 0
+  78 0042 124C     		ldr	r4, .L4+4
+  79 0044 4022     		movs	r2, #64
+  80 0046 8021     		movs	r1, #128
+  81 0048 2046     		mov	r0, r4
+  82 004a FFF7FEFF 		bl	init_buf
+  83              	.LVL3:
+ 111:main.c        ****     set_mode(NORMAL, &vid_buf);
+  84              		.loc 1 111 0
+  85 004e 2146     		mov	r1, r4
+  86 0050 0020     		movs	r0, #0
+  87 0052 FFF7FEFF 		bl	set_mode
+  88              	.LVL4:
+ 112:main.c        ****     set_orientation(LANDSCAPE, &vid_buf);
+  89              		.loc 1 112 0
+  90 0056 2146     		mov	r1, r4
+  91 0058 0020     		movs	r0, #0
+  92 005a FFF7FEFF 		bl	set_orientation
+  93              	.LVL5:
+ 113:main.c        ****     put_vbc(a,0,0,&vid_buf);
+  94              		.loc 1 113 0
+  95 005e 0194     		str	r4, [sp, #4]
+  96 0060 0025     		movs	r5, #0
+  97 0062 0095     		str	r5, [sp]
+  98 0064 2B46     		mov	r3, r5
+  99 0066 0DF58162 		add	r2, sp, #1032
+ 100 006a 12E90700 		ldmdb	r2, {r0, r1, r2}
+ 101 006e FFF7FEFF 		bl	put_vbc
+ 102              	.LVL6:
+ 114:main.c        ****     put_string(0,50,"CAZZOMENE \n\rCAZZI TUOI",SMALL, &vid_buf);
+ 103              		.loc 1 114 0
+ 104 0072 0094     		str	r4, [sp]
+ 105 0074 2B46     		mov	r3, r5
+ 106 0076 064A     		ldr	r2, .L4+8
+ 107 0078 3221     		movs	r1, #50
+ 108 007a 2846     		mov	r0, r5
+ 109 007c FFF7FEFF 		bl	put_string
+ 110              	.LVL7:
+ 115:main.c        ****    // put_string(0,0,"ciao",SMALL, &vid_buf);
+ 116:main.c        ****     
+ 117:main.c        ****     update_display(&vid_buf);
+ 111              		.loc 1 117 0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 5
+
+
+ 112 0080 2046     		mov	r0, r4
+ 113 0082 FFF7FEFF 		bl	update_display
+ 114              	.LVL8:
+ 115              	.L2:
+ 116 0086 FEE7     		b	.L2
+ 117              	.L5:
+ 118              		.align	2
+ 119              	.L4:
+ 120 0088 00000000 		.word	.LANCHOR0
+ 121 008c 00000000 		.word	vid_buf
+ 122 0090 00000000 		.word	.LC1
+ 123              		.cfi_endproc
+ 124              	.LFE0:
+ 125              		.size	main, .-main
+ 126              		.comm	vid_buf,20,4
+ 127              		.section	.rodata
+ 128              		.align	2
+ 129              		.set	.LANCHOR0,. + 0
+ 130              	.LC0:
+ 131 0000 00       		.byte	0
+ 132 0001 00       		.byte	0
+ 133 0002 00       		.byte	0
+ 134 0003 00       		.byte	0
+ 135 0004 00       		.byte	0
+ 136 0005 00       		.byte	0
+ 137 0006 00       		.byte	0
+ 138 0007 00       		.byte	0
+ 139 0008 00       		.byte	0
+ 140 0009 00       		.byte	0
+ 141 000a 00       		.byte	0
+ 142 000b 00       		.byte	0
+ 143 000c 00       		.byte	0
+ 144 000d 00       		.byte	0
+ 145 000e 00       		.byte	0
+ 146 000f 00       		.byte	0
+ 147 0010 00       		.byte	0
+ 148 0011 00       		.byte	0
+ 149 0012 00       		.byte	0
+ 150 0013 00       		.byte	0
+ 151 0014 00       		.byte	0
+ 152 0015 00       		.byte	0
+ 153 0016 00       		.byte	0
+ 154 0017 00       		.byte	0
+ 155 0018 00       		.byte	0
+ 156 0019 00       		.byte	0
+ 157 001a 00       		.byte	0
+ 158 001b 00       		.byte	0
+ 159 001c 00       		.byte	0
+ 160 001d 00       		.byte	0
+ 161 001e 00       		.byte	0
+ 162 001f 00       		.byte	0
+ 163 0020 00       		.byte	0
+ 164 0021 00       		.byte	0
+ 165 0022 00       		.byte	0
+ 166 0023 00       		.byte	0
+ 167 0024 00       		.byte	0
+ 168 0025 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 6
+
+
+ 169 0026 00       		.byte	0
+ 170 0027 00       		.byte	0
+ 171 0028 00       		.byte	0
+ 172 0029 00       		.byte	0
+ 173 002a 00       		.byte	0
+ 174 002b 00       		.byte	0
+ 175 002c 00       		.byte	0
+ 176 002d 00       		.byte	0
+ 177 002e 00       		.byte	0
+ 178 002f 00       		.byte	0
+ 179 0030 00       		.byte	0
+ 180 0031 00       		.byte	0
+ 181 0032 00       		.byte	0
+ 182 0033 00       		.byte	0
+ 183 0034 00       		.byte	0
+ 184 0035 00       		.byte	0
+ 185 0036 00       		.byte	0
+ 186 0037 00       		.byte	0
+ 187 0038 00       		.byte	0
+ 188 0039 00       		.byte	0
+ 189 003a 00       		.byte	0
+ 190 003b 00       		.byte	0
+ 191 003c 00       		.byte	0
+ 192 003d 00       		.byte	0
+ 193 003e 00       		.byte	0
+ 194 003f 00       		.byte	0
+ 195 0040 00       		.byte	0
+ 196 0041 00       		.byte	0
+ 197 0042 00       		.byte	0
+ 198 0043 00       		.byte	0
+ 199 0044 00       		.byte	0
+ 200 0045 00       		.byte	0
+ 201 0046 00       		.byte	0
+ 202 0047 00       		.byte	0
+ 203 0048 00       		.byte	0
+ 204 0049 00       		.byte	0
+ 205 004a 00       		.byte	0
+ 206 004b 00       		.byte	0
+ 207 004c 00       		.byte	0
+ 208 004d 00       		.byte	0
+ 209 004e 00       		.byte	0
+ 210 004f 00       		.byte	0
+ 211 0050 00       		.byte	0
+ 212 0051 00       		.byte	0
+ 213 0052 00       		.byte	0
+ 214 0053 00       		.byte	0
+ 215 0054 00       		.byte	0
+ 216 0055 00       		.byte	0
+ 217 0056 00       		.byte	0
+ 218 0057 00       		.byte	0
+ 219 0058 00       		.byte	0
+ 220 0059 00       		.byte	0
+ 221 005a 00       		.byte	0
+ 222 005b 00       		.byte	0
+ 223 005c 00       		.byte	0
+ 224 005d 00       		.byte	0
+ 225 005e 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 7
+
+
+ 226 005f 00       		.byte	0
+ 227 0060 00       		.byte	0
+ 228 0061 00       		.byte	0
+ 229 0062 00       		.byte	0
+ 230 0063 00       		.byte	0
+ 231 0064 00       		.byte	0
+ 232 0065 00       		.byte	0
+ 233 0066 00       		.byte	0
+ 234 0067 00       		.byte	0
+ 235 0068 00       		.byte	0
+ 236 0069 00       		.byte	0
+ 237 006a 00       		.byte	0
+ 238 006b 00       		.byte	0
+ 239 006c 00       		.byte	0
+ 240 006d 00       		.byte	0
+ 241 006e 00       		.byte	0
+ 242 006f 00       		.byte	0
+ 243 0070 00       		.byte	0
+ 244 0071 00       		.byte	0
+ 245 0072 00       		.byte	0
+ 246 0073 00       		.byte	0
+ 247 0074 00       		.byte	0
+ 248 0075 00       		.byte	0
+ 249 0076 00       		.byte	0
+ 250 0077 00       		.byte	0
+ 251 0078 00       		.byte	0
+ 252 0079 00       		.byte	0
+ 253 007a 00       		.byte	0
+ 254 007b 00       		.byte	0
+ 255 007c 00       		.byte	0
+ 256 007d 7E       		.byte	126
+ 257 007e 00       		.byte	0
+ 258 007f 00       		.byte	0
+ 259 0080 00       		.byte	0
+ 260 0081 00       		.byte	0
+ 261 0082 00       		.byte	0
+ 262 0083 00       		.byte	0
+ 263 0084 00       		.byte	0
+ 264 0085 00       		.byte	0
+ 265 0086 00       		.byte	0
+ 266 0087 00       		.byte	0
+ 267 0088 00       		.byte	0
+ 268 0089 00       		.byte	0
+ 269 008a 00       		.byte	0
+ 270 008b 00       		.byte	0
+ 271 008c 01       		.byte	1
+ 272 008d C3       		.byte	-61
+ 273 008e 00       		.byte	0
+ 274 008f 00       		.byte	0
+ 275 0090 00       		.byte	0
+ 276 0091 00       		.byte	0
+ 277 0092 00       		.byte	0
+ 278 0093 00       		.byte	0
+ 279 0094 03       		.byte	3
+ 280 0095 FF       		.byte	-1
+ 281 0096 FF       		.byte	-1
+ 282 0097 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 8
+
+
+ 283 0098 00       		.byte	0
+ 284 0099 00       		.byte	0
+ 285 009a 01       		.byte	1
+ 286 009b F8       		.byte	-8
+ 287 009c 03       		.byte	3
+ 288 009d 01       		.byte	1
+ 289 009e 00       		.byte	0
+ 290 009f 00       		.byte	0
+ 291 00a0 00       		.byte	0
+ 292 00a1 00       		.byte	0
+ 293 00a2 00       		.byte	0
+ 294 00a3 00       		.byte	0
+ 295 00a4 3F       		.byte	63
+ 296 00a5 FE       		.byte	-2
+ 297 00a6 01       		.byte	1
+ 298 00a7 F8       		.byte	-8
+ 299 00a8 00       		.byte	0
+ 300 00a9 00       		.byte	0
+ 301 00aa 07       		.byte	7
+ 302 00ab 0E       		.byte	14
+ 303 00ac 06       		.byte	6
+ 304 00ad 01       		.byte	1
+ 305 00ae 00       		.byte	0
+ 306 00af 00       		.byte	0
+ 307 00b0 00       		.byte	0
+ 308 00b1 00       		.byte	0
+ 309 00b2 00       		.byte	0
+ 310 00b3 00       		.byte	0
+ 311 00b4 C0       		.byte	-64
+ 312 00b5 01       		.byte	1
+ 313 00b6 00       		.byte	0
+ 314 00b7 0E       		.byte	14
+ 315 00b8 00       		.byte	0
+ 316 00b9 00       		.byte	0
+ 317 00ba 04       		.byte	4
+ 318 00bb 03       		.byte	3
+ 319 00bc 84       		.byte	-124
+ 320 00bd 00       		.byte	0
+ 321 00be 80       		.byte	-128
+ 322 00bf 00       		.byte	0
+ 323 00c0 00       		.byte	0
+ 324 00c1 00       		.byte	0
+ 325 00c2 00       		.byte	0
+ 326 00c3 03       		.byte	3
+ 327 00c4 00       		.byte	0
+ 328 00c5 00       		.byte	0
+ 329 00c6 00       		.byte	0
+ 330 00c7 03       		.byte	3
+ 331 00c8 00       		.byte	0
+ 332 00c9 00       		.byte	0
+ 333 00ca 04       		.byte	4
+ 334 00cb 00       		.byte	0
+ 335 00cc CC       		.byte	-52
+ 336 00cd 00       		.byte	0
+ 337 00ce 80       		.byte	-128
+ 338 00cf 00       		.byte	0
+ 339 00d0 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 9
+
+
+ 340 00d1 00       		.byte	0
+ 341 00d2 00       		.byte	0
+ 342 00d3 0E       		.byte	14
+ 343 00d4 00       		.byte	0
+ 344 00d5 00       		.byte	0
+ 345 00d6 00       		.byte	0
+ 346 00d7 00       		.byte	0
+ 347 00d8 C0       		.byte	-64
+ 348 00d9 00       		.byte	0
+ 349 00da 04       		.byte	4
+ 350 00db 00       		.byte	0
+ 351 00dc 68       		.byte	104
+ 352 00dd 00       		.byte	0
+ 353 00de 80       		.byte	-128
+ 354 00df 00       		.byte	0
+ 355 00e0 00       		.byte	0
+ 356 00e1 00       		.byte	0
+ 357 00e2 00       		.byte	0
+ 358 00e3 18       		.byte	24
+ 359 00e4 00       		.byte	0
+ 360 00e5 00       		.byte	0
+ 361 00e6 00       		.byte	0
+ 362 00e7 00       		.byte	0
+ 363 00e8 40       		.byte	64
+ 364 00e9 00       		.byte	0
+ 365 00ea 06       		.byte	6
+ 366 00eb 00       		.byte	0
+ 367 00ec 38       		.byte	56
+ 368 00ed 00       		.byte	0
+ 369 00ee 40       		.byte	64
+ 370 00ef 00       		.byte	0
+ 371 00f0 00       		.byte	0
+ 372 00f1 00       		.byte	0
+ 373 00f2 00       		.byte	0
+ 374 00f3 30       		.byte	48
+ 375 00f4 00       		.byte	0
+ 376 00f5 00       		.byte	0
+ 377 00f6 00       		.byte	0
+ 378 00f7 00       		.byte	0
+ 379 00f8 20       		.byte	32
+ 380 00f9 00       		.byte	0
+ 381 00fa 02       		.byte	2
+ 382 00fb 00       		.byte	0
+ 383 00fc 30       		.byte	48
+ 384 00fd 00       		.byte	0
+ 385 00fe 40       		.byte	64
+ 386 00ff 00       		.byte	0
+ 387 0100 00       		.byte	0
+ 388 0101 00       		.byte	0
+ 389 0102 00       		.byte	0
+ 390 0103 60       		.byte	96
+ 391 0104 02       		.byte	2
+ 392 0105 00       		.byte	0
+ 393 0106 20       		.byte	32
+ 394 0107 00       		.byte	0
+ 395 0108 30       		.byte	48
+ 396 0109 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 10
+
+
+ 397 010a 03       		.byte	3
+ 398 010b 00       		.byte	0
+ 399 010c 07       		.byte	7
+ 400 010d 00       		.byte	0
+ 401 010e 40       		.byte	64
+ 402 010f 00       		.byte	0
+ 403 0110 00       		.byte	0
+ 404 0111 00       		.byte	0
+ 405 0112 00       		.byte	0
+ 406 0113 40       		.byte	64
+ 407 0114 02       		.byte	2
+ 408 0115 00       		.byte	0
+ 409 0116 20       		.byte	32
+ 410 0117 00       		.byte	0
+ 411 0118 10       		.byte	16
+ 412 0119 00       		.byte	0
+ 413 011a 01       		.byte	1
+ 414 011b 00       		.byte	0
+ 415 011c 01       		.byte	1
+ 416 011d 00       		.byte	0
+ 417 011e 40       		.byte	64
+ 418 011f 00       		.byte	0
+ 419 0120 00       		.byte	0
+ 420 0121 00       		.byte	0
+ 421 0122 00       		.byte	0
+ 422 0123 80       		.byte	-128
+ 423 0124 02       		.byte	2
+ 424 0125 00       		.byte	0
+ 425 0126 20       		.byte	32
+ 426 0127 00       		.byte	0
+ 427 0128 08       		.byte	8
+ 428 0129 00       		.byte	0
+ 429 012a 01       		.byte	1
+ 430 012b 80       		.byte	-128
+ 431 012c 3D       		.byte	61
+ 432 012d 80       		.byte	-128
+ 433 012e 40       		.byte	64
+ 434 012f 00       		.byte	0
+ 435 0130 00       		.byte	0
+ 436 0131 00       		.byte	0
+ 437 0132 01       		.byte	1
+ 438 0133 80       		.byte	-128
+ 439 0134 03       		.byte	3
+ 440 0135 00       		.byte	0
+ 441 0136 20       		.byte	32
+ 442 0137 00       		.byte	0
+ 443 0138 08       		.byte	8
+ 444 0139 00       		.byte	0
+ 445 013a 00       		.byte	0
+ 446 013b C0       		.byte	-64
+ 447 013c 60       		.byte	96
+ 448 013d 80       		.byte	-128
+ 449 013e 40       		.byte	64
+ 450 013f 00       		.byte	0
+ 451 0140 00       		.byte	0
+ 452 0141 00       		.byte	0
+ 453 0142 01       		.byte	1
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 11
+
+
+ 454 0143 00       		.byte	0
+ 455 0144 01       		.byte	1
+ 456 0145 80       		.byte	-128
+ 457 0146 20       		.byte	32
+ 458 0147 00       		.byte	0
+ 459 0148 0C       		.byte	12
+ 460 0149 00       		.byte	0
+ 461 014a 00       		.byte	0
+ 462 014b 60       		.byte	96
+ 463 014c 40       		.byte	64
+ 464 014d 9C       		.byte	-100
+ 465 014e C0       		.byte	-64
+ 466 014f 00       		.byte	0
+ 467 0150 00       		.byte	0
+ 468 0151 00       		.byte	0
+ 469 0152 01       		.byte	1
+ 470 0153 00       		.byte	0
+ 471 0154 00       		.byte	0
+ 472 0155 00       		.byte	0
+ 473 0156 30       		.byte	48
+ 474 0157 00       		.byte	0
+ 475 0158 04       		.byte	4
+ 476 0159 00       		.byte	0
+ 477 015a 00       		.byte	0
+ 478 015b 3C       		.byte	60
+ 479 015c 40       		.byte	64
+ 480 015d 8F       		.byte	-113
+ 481 015e 80       		.byte	-128
+ 482 015f 00       		.byte	0
+ 483 0160 00       		.byte	0
+ 484 0161 00       		.byte	0
+ 485 0162 01       		.byte	1
+ 486 0163 00       		.byte	0
+ 487 0164 00       		.byte	0
+ 488 0165 00       		.byte	0
+ 489 0166 00       		.byte	0
+ 490 0167 00       		.byte	0
+ 491 0168 04       		.byte	4
+ 492 0169 00       		.byte	0
+ 493 016a 00       		.byte	0
+ 494 016b 38       		.byte	56
+ 495 016c 40       		.byte	64
+ 496 016d 81       		.byte	-127
+ 497 016e C0       		.byte	-64
+ 498 016f 00       		.byte	0
+ 499 0170 00       		.byte	0
+ 500 0171 00       		.byte	0
+ 501 0172 01       		.byte	1
+ 502 0173 00       		.byte	0
+ 503 0174 00       		.byte	0
+ 504 0175 00       		.byte	0
+ 505 0176 00       		.byte	0
+ 506 0177 00       		.byte	0
+ 507 0178 04       		.byte	4
+ 508 0179 00       		.byte	0
+ 509 017a 00       		.byte	0
+ 510 017b 20       		.byte	32
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 12
+
+
+ 511 017c 60       		.byte	96
+ 512 017d 80       		.byte	-128
+ 513 017e 70       		.byte	112
+ 514 017f 00       		.byte	0
+ 515 0180 00       		.byte	0
+ 516 0181 00       		.byte	0
+ 517 0182 01       		.byte	1
+ 518 0183 00       		.byte	0
+ 519 0184 00       		.byte	0
+ 520 0185 00       		.byte	0
+ 521 0186 00       		.byte	0
+ 522 0187 00       		.byte	0
+ 523 0188 04       		.byte	4
+ 524 0189 00       		.byte	0
+ 525 018a 00       		.byte	0
+ 526 018b 20       		.byte	32
+ 527 018c 35       		.byte	53
+ 528 018d 80       		.byte	-128
+ 529 018e 18       		.byte	24
+ 530 018f 00       		.byte	0
+ 531 0190 00       		.byte	0
+ 532 0191 00       		.byte	0
+ 533 0192 01       		.byte	1
+ 534 0193 00       		.byte	0
+ 535 0194 00       		.byte	0
+ 536 0195 00       		.byte	0
+ 537 0196 00       		.byte	0
+ 538 0197 80       		.byte	-128
+ 539 0198 04       		.byte	4
+ 540 0199 00       		.byte	0
+ 541 019a 00       		.byte	0
+ 542 019b 20       		.byte	32
+ 543 019c 1F       		.byte	31
+ 544 019d 00       		.byte	0
+ 545 019e 0C       		.byte	12
+ 546 019f 00       		.byte	0
+ 547 01a0 00       		.byte	0
+ 548 01a1 00       		.byte	0
+ 549 01a2 01       		.byte	1
+ 550 01a3 00       		.byte	0
+ 551 01a4 20       		.byte	32
+ 552 01a5 00       		.byte	0
+ 553 01a6 00       		.byte	0
+ 554 01a7 80       		.byte	-128
+ 555 01a8 04       		.byte	4
+ 556 01a9 00       		.byte	0
+ 557 01aa 00       		.byte	0
+ 558 01ab 20       		.byte	32
+ 559 01ac 04       		.byte	4
+ 560 01ad 00       		.byte	0
+ 561 01ae 04       		.byte	4
+ 562 01af 00       		.byte	0
+ 563 01b0 00       		.byte	0
+ 564 01b1 00       		.byte	0
+ 565 01b2 01       		.byte	1
+ 566 01b3 00       		.byte	0
+ 567 01b4 20       		.byte	32
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 13
+
+
+ 568 01b5 00       		.byte	0
+ 569 01b6 01       		.byte	1
+ 570 01b7 80       		.byte	-128
+ 571 01b8 04       		.byte	4
+ 572 01b9 00       		.byte	0
+ 573 01ba 00       		.byte	0
+ 574 01bb 20       		.byte	32
+ 575 01bc 06       		.byte	6
+ 576 01bd 00       		.byte	0
+ 577 01be 04       		.byte	4
+ 578 01bf 00       		.byte	0
+ 579 01c0 00       		.byte	0
+ 580 01c1 00       		.byte	0
+ 581 01c2 01       		.byte	1
+ 582 01c3 00       		.byte	0
+ 583 01c4 30       		.byte	48
+ 584 01c5 00       		.byte	0
+ 585 01c6 03       		.byte	3
+ 586 01c7 00       		.byte	0
+ 587 01c8 04       		.byte	4
+ 588 01c9 00       		.byte	0
+ 589 01ca 00       		.byte	0
+ 590 01cb 20       		.byte	32
+ 591 01cc 07       		.byte	7
+ 592 01cd 00       		.byte	0
+ 593 01ce 0C       		.byte	12
+ 594 01cf 00       		.byte	0
+ 595 01d0 00       		.byte	0
+ 596 01d1 00       		.byte	0
+ 597 01d2 01       		.byte	1
+ 598 01d3 00       		.byte	0
+ 599 01d4 18       		.byte	24
+ 600 01d5 00       		.byte	0
+ 601 01d6 02       		.byte	2
+ 602 01d7 00       		.byte	0
+ 603 01d8 04       		.byte	4
+ 604 01d9 00       		.byte	0
+ 605 01da 00       		.byte	0
+ 606 01db 30       		.byte	48
+ 607 01dc 0D       		.byte	13
+ 608 01dd C0       		.byte	-64
+ 609 01de 38       		.byte	56
+ 610 01df 00       		.byte	0
+ 611 01e0 00       		.byte	0
+ 612 01e1 00       		.byte	0
+ 613 01e2 00       		.byte	0
+ 614 01e3 80       		.byte	-128
+ 615 01e4 0E       		.byte	14
+ 616 01e5 00       		.byte	0
+ 617 01e6 0C       		.byte	12
+ 618 01e7 00       		.byte	0
+ 619 01e8 04       		.byte	4
+ 620 01e9 00       		.byte	0
+ 621 01ea 00       		.byte	0
+ 622 01eb 10       		.byte	16
+ 623 01ec 0C       		.byte	12
+ 624 01ed 7F       		.byte	127
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 14
+
+
+ 625 01ee E0       		.byte	-32
+ 626 01ef 00       		.byte	0
+ 627 01f0 00       		.byte	0
+ 628 01f1 00       		.byte	0
+ 629 01f2 00       		.byte	0
+ 630 01f3 C0       		.byte	-64
+ 631 01f4 03       		.byte	3
+ 632 01f5 C3       		.byte	-61
+ 633 01f6 F8       		.byte	-8
+ 634 01f7 00       		.byte	0
+ 635 01f8 0C       		.byte	12
+ 636 01f9 00       		.byte	0
+ 637 01fa 00       		.byte	0
+ 638 01fb 10       		.byte	16
+ 639 01fc 1C       		.byte	28
+ 640 01fd 00       		.byte	0
+ 641 01fe 00       		.byte	0
+ 642 01ff 00       		.byte	0
+ 643 0200 00       		.byte	0
+ 644 0201 00       		.byte	0
+ 645 0202 00       		.byte	0
+ 646 0203 60       		.byte	96
+ 647 0204 00       		.byte	0
+ 648 0205 7E       		.byte	126
+ 649 0206 00       		.byte	0
+ 650 0207 00       		.byte	0
+ 651 0208 08       		.byte	8
+ 652 0209 00       		.byte	0
+ 653 020a 00       		.byte	0
+ 654 020b 08       		.byte	8
+ 655 020c 64       		.byte	100
+ 656 020d 00       		.byte	0
+ 657 020e 00       		.byte	0
+ 658 020f 00       		.byte	0
+ 659 0210 00       		.byte	0
+ 660 0211 00       		.byte	0
+ 661 0212 00       		.byte	0
+ 662 0213 30       		.byte	48
+ 663 0214 00       		.byte	0
+ 664 0215 00       		.byte	0
+ 665 0216 00       		.byte	0
+ 666 0217 00       		.byte	0
+ 667 0218 08       		.byte	8
+ 668 0219 00       		.byte	0
+ 669 021a 00       		.byte	0
+ 670 021b 0F       		.byte	15
+ 671 021c C6       		.byte	-58
+ 672 021d 00       		.byte	0
+ 673 021e 00       		.byte	0
+ 674 021f 00       		.byte	0
+ 675 0220 00       		.byte	0
+ 676 0221 00       		.byte	0
+ 677 0222 00       		.byte	0
+ 678 0223 18       		.byte	24
+ 679 0224 00       		.byte	0
+ 680 0225 00       		.byte	0
+ 681 0226 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 15
+
+
+ 682 0227 00       		.byte	0
+ 683 0228 10       		.byte	16
+ 684 0229 00       		.byte	0
+ 685 022a 00       		.byte	0
+ 686 022b 00       		.byte	0
+ 687 022c 02       		.byte	2
+ 688 022d 00       		.byte	0
+ 689 022e 00       		.byte	0
+ 690 022f 00       		.byte	0
+ 691 0230 00       		.byte	0
+ 692 0231 00       		.byte	0
+ 693 0232 00       		.byte	0
+ 694 0233 0C       		.byte	12
+ 695 0234 00       		.byte	0
+ 696 0235 00       		.byte	0
+ 697 0236 00       		.byte	0
+ 698 0237 00       		.byte	0
+ 699 0238 30       		.byte	48
+ 700 0239 00       		.byte	0
+ 701 023a 00       		.byte	0
+ 702 023b 00       		.byte	0
+ 703 023c 02       		.byte	2
+ 704 023d 00       		.byte	0
+ 705 023e 00       		.byte	0
+ 706 023f 00       		.byte	0
+ 707 0240 00       		.byte	0
+ 708 0241 00       		.byte	0
+ 709 0242 00       		.byte	0
+ 710 0243 03       		.byte	3
+ 711 0244 00       		.byte	0
+ 712 0245 00       		.byte	0
+ 713 0246 00       		.byte	0
+ 714 0247 00       		.byte	0
+ 715 0248 60       		.byte	96
+ 716 0249 00       		.byte	0
+ 717 024a 00       		.byte	0
+ 718 024b 00       		.byte	0
+ 719 024c 02       		.byte	2
+ 720 024d 00       		.byte	0
+ 721 024e 00       		.byte	0
+ 722 024f 00       		.byte	0
+ 723 0250 00       		.byte	0
+ 724 0251 00       		.byte	0
+ 725 0252 00       		.byte	0
+ 726 0253 01       		.byte	1
+ 727 0254 C0       		.byte	-64
+ 728 0255 00       		.byte	0
+ 729 0256 00       		.byte	0
+ 730 0257 00       		.byte	0
+ 731 0258 C0       		.byte	-64
+ 732 0259 00       		.byte	0
+ 733 025a 00       		.byte	0
+ 734 025b 00       		.byte	0
+ 735 025c 02       		.byte	2
+ 736 025d 01       		.byte	1
+ 737 025e C0       		.byte	-64
+ 738 025f 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 16
+
+
+ 739 0260 00       		.byte	0
+ 740 0261 00       		.byte	0
+ 741 0262 00       		.byte	0
+ 742 0263 00       		.byte	0
+ 743 0264 70       		.byte	112
+ 744 0265 00       		.byte	0
+ 745 0266 00       		.byte	0
+ 746 0267 03       		.byte	3
+ 747 0268 80       		.byte	-128
+ 748 0269 00       		.byte	0
+ 749 026a 00       		.byte	0
+ 750 026b 00       		.byte	0
+ 751 026c 02       		.byte	2
+ 752 026d 1F       		.byte	31
+ 753 026e 00       		.byte	0
+ 754 026f 00       		.byte	0
+ 755 0270 00       		.byte	0
+ 756 0271 00       		.byte	0
+ 757 0272 00       		.byte	0
+ 758 0273 00       		.byte	0
+ 759 0274 1E       		.byte	30
+ 760 0275 00       		.byte	0
+ 761 0276 00       		.byte	0
+ 762 0277 1E       		.byte	30
+ 763 0278 00       		.byte	0
+ 764 0279 00       		.byte	0
+ 765 027a 00       		.byte	0
+ 766 027b 0F       		.byte	15
+ 767 027c C2       		.byte	-62
+ 768 027d F0       		.byte	-16
+ 769 027e 00       		.byte	0
+ 770 027f 00       		.byte	0
+ 771 0280 00       		.byte	0
+ 772 0281 00       		.byte	0
+ 773 0282 00       		.byte	0
+ 774 0283 00       		.byte	0
+ 775 0284 03       		.byte	3
+ 776 0285 F0       		.byte	-16
+ 777 0286 01       		.byte	1
+ 778 0287 F0       		.byte	-16
+ 779 0288 00       		.byte	0
+ 780 0289 00       		.byte	0
+ 781 028a 00       		.byte	0
+ 782 028b 00       		.byte	0
+ 783 028c 7F       		.byte	127
+ 784 028d 80       		.byte	-128
+ 785 028e 00       		.byte	0
+ 786 028f 00       		.byte	0
+ 787 0290 00       		.byte	0
+ 788 0291 00       		.byte	0
+ 789 0292 00       		.byte	0
+ 790 0293 00       		.byte	0
+ 791 0294 00       		.byte	0
+ 792 0295 1F       		.byte	31
+ 793 0296 FF       		.byte	-1
+ 794 0297 00       		.byte	0
+ 795 0298 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 17
+
+
+ 796 0299 00       		.byte	0
+ 797 029a 00       		.byte	0
+ 798 029b 00       		.byte	0
+ 799 029c 02       		.byte	2
+ 800 029d 00       		.byte	0
+ 801 029e 00       		.byte	0
+ 802 029f 00       		.byte	0
+ 803 02a0 00       		.byte	0
+ 804 02a1 00       		.byte	0
+ 805 02a2 00       		.byte	0
+ 806 02a3 00       		.byte	0
+ 807 02a4 00       		.byte	0
+ 808 02a5 00       		.byte	0
+ 809 02a6 00       		.byte	0
+ 810 02a7 00       		.byte	0
+ 811 02a8 00       		.byte	0
+ 812 02a9 00       		.byte	0
+ 813 02aa 00       		.byte	0
+ 814 02ab 00       		.byte	0
+ 815 02ac 02       		.byte	2
+ 816 02ad 00       		.byte	0
+ 817 02ae 00       		.byte	0
+ 818 02af 00       		.byte	0
+ 819 02b0 00       		.byte	0
+ 820 02b1 00       		.byte	0
+ 821 02b2 00       		.byte	0
+ 822 02b3 00       		.byte	0
+ 823 02b4 00       		.byte	0
+ 824 02b5 02       		.byte	2
+ 825 02b6 00       		.byte	0
+ 826 02b7 80       		.byte	-128
+ 827 02b8 00       		.byte	0
+ 828 02b9 00       		.byte	0
+ 829 02ba 00       		.byte	0
+ 830 02bb 00       		.byte	0
+ 831 02bc 02       		.byte	2
+ 832 02bd 00       		.byte	0
+ 833 02be 00       		.byte	0
+ 834 02bf 00       		.byte	0
+ 835 02c0 00       		.byte	0
+ 836 02c1 00       		.byte	0
+ 837 02c2 00       		.byte	0
+ 838 02c3 0E       		.byte	14
+ 839 02c4 00       		.byte	0
+ 840 02c5 02       		.byte	2
+ 841 02c6 00       		.byte	0
+ 842 02c7 80       		.byte	-128
+ 843 02c8 00       		.byte	0
+ 844 02c9 00       		.byte	0
+ 845 02ca 00       		.byte	0
+ 846 02cb 00       		.byte	0
+ 847 02cc 06       		.byte	6
+ 848 02cd 00       		.byte	0
+ 849 02ce 00       		.byte	0
+ 850 02cf 00       		.byte	0
+ 851 02d0 00       		.byte	0
+ 852 02d1 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 18
+
+
+ 853 02d2 00       		.byte	0
+ 854 02d3 03       		.byte	3
+ 855 02d4 C0       		.byte	-64
+ 856 02d5 02       		.byte	2
+ 857 02d6 03       		.byte	3
+ 858 02d7 80       		.byte	-128
+ 859 02d8 00       		.byte	0
+ 860 02d9 00       		.byte	0
+ 861 02da 00       		.byte	0
+ 862 02db 00       		.byte	0
+ 863 02dc 04       		.byte	4
+ 864 02dd 00       		.byte	0
+ 865 02de 00       		.byte	0
+ 866 02df 00       		.byte	0
+ 867 02e0 00       		.byte	0
+ 868 02e1 00       		.byte	0
+ 869 02e2 00       		.byte	0
+ 870 02e3 00       		.byte	0
+ 871 02e4 7C       		.byte	124
+ 872 02e5 02       		.byte	2
+ 873 02e6 0C       		.byte	12
+ 874 02e7 00       		.byte	0
+ 875 02e8 00       		.byte	0
+ 876 02e9 00       		.byte	0
+ 877 02ea 00       		.byte	0
+ 878 02eb 00       		.byte	0
+ 879 02ec 0C       		.byte	12
+ 880 02ed 00       		.byte	0
+ 881 02ee 00       		.byte	0
+ 882 02ef 00       		.byte	0
+ 883 02f0 00       		.byte	0
+ 884 02f1 00       		.byte	0
+ 885 02f2 00       		.byte	0
+ 886 02f3 00       		.byte	0
+ 887 02f4 07       		.byte	7
+ 888 02f5 FF       		.byte	-1
+ 889 02f6 38       		.byte	56
+ 890 02f7 00       		.byte	0
+ 891 02f8 00       		.byte	0
+ 892 02f9 00       		.byte	0
+ 893 02fa 00       		.byte	0
+ 894 02fb 00       		.byte	0
+ 895 02fc 1E       		.byte	30
+ 896 02fd 00       		.byte	0
+ 897 02fe 00       		.byte	0
+ 898 02ff 00       		.byte	0
+ 899 0300 00       		.byte	0
+ 900 0301 00       		.byte	0
+ 901 0302 00       		.byte	0
+ 902 0303 00       		.byte	0
+ 903 0304 00       		.byte	0
+ 904 0305 02       		.byte	2
+ 905 0306 E0       		.byte	-32
+ 906 0307 00       		.byte	0
+ 907 0308 00       		.byte	0
+ 908 0309 00       		.byte	0
+ 909 030a 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 19
+
+
+ 910 030b 00       		.byte	0
+ 911 030c 13       		.byte	19
+ 912 030d 00       		.byte	0
+ 913 030e 00       		.byte	0
+ 914 030f 00       		.byte	0
+ 915 0310 00       		.byte	0
+ 916 0311 00       		.byte	0
+ 917 0312 00       		.byte	0
+ 918 0313 00       		.byte	0
+ 919 0314 00       		.byte	0
+ 920 0315 02       		.byte	2
+ 921 0316 80       		.byte	-128
+ 922 0317 00       		.byte	0
+ 923 0318 00       		.byte	0
+ 924 0319 00       		.byte	0
+ 925 031a 00       		.byte	0
+ 926 031b 00       		.byte	0
+ 927 031c 71       		.byte	113
+ 928 031d 80       		.byte	-128
+ 929 031e 00       		.byte	0
+ 930 031f 00       		.byte	0
+ 931 0320 00       		.byte	0
+ 932 0321 00       		.byte	0
+ 933 0322 00       		.byte	0
+ 934 0323 00       		.byte	0
+ 935 0324 00       		.byte	0
+ 936 0325 03       		.byte	3
+ 937 0326 00       		.byte	0
+ 938 0327 00       		.byte	0
+ 939 0328 00       		.byte	0
+ 940 0329 00       		.byte	0
+ 941 032a 00       		.byte	0
+ 942 032b 00       		.byte	0
+ 943 032c C0       		.byte	-64
+ 944 032d C0       		.byte	-64
+ 945 032e 00       		.byte	0
+ 946 032f 00       		.byte	0
+ 947 0330 00       		.byte	0
+ 948 0331 00       		.byte	0
+ 949 0332 00       		.byte	0
+ 950 0333 00       		.byte	0
+ 951 0334 00       		.byte	0
+ 952 0335 01       		.byte	1
+ 953 0336 00       		.byte	0
+ 954 0337 00       		.byte	0
+ 955 0338 00       		.byte	0
+ 956 0339 00       		.byte	0
+ 957 033a 00       		.byte	0
+ 958 033b 01       		.byte	1
+ 959 033c 80       		.byte	-128
+ 960 033d 70       		.byte	112
+ 961 033e 00       		.byte	0
+ 962 033f 00       		.byte	0
+ 963 0340 00       		.byte	0
+ 964 0341 00       		.byte	0
+ 965 0342 00       		.byte	0
+ 966 0343 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 20
+
+
+ 967 0344 00       		.byte	0
+ 968 0345 01       		.byte	1
+ 969 0346 00       		.byte	0
+ 970 0347 00       		.byte	0
+ 971 0348 00       		.byte	0
+ 972 0349 00       		.byte	0
+ 973 034a 00       		.byte	0
+ 974 034b 03       		.byte	3
+ 975 034c 00       		.byte	0
+ 976 034d 18       		.byte	24
+ 977 034e 00       		.byte	0
+ 978 034f 00       		.byte	0
+ 979 0350 00       		.byte	0
+ 980 0351 00       		.byte	0
+ 981 0352 00       		.byte	0
+ 982 0353 00       		.byte	0
+ 983 0354 00       		.byte	0
+ 984 0355 01       		.byte	1
+ 985 0356 00       		.byte	0
+ 986 0357 00       		.byte	0
+ 987 0358 00       		.byte	0
+ 988 0359 00       		.byte	0
+ 989 035a 00       		.byte	0
+ 990 035b 0E       		.byte	14
+ 991 035c 00       		.byte	0
+ 992 035d 0C       		.byte	12
+ 993 035e 00       		.byte	0
+ 994 035f 00       		.byte	0
+ 995 0360 00       		.byte	0
+ 996 0361 00       		.byte	0
+ 997 0362 00       		.byte	0
+ 998 0363 00       		.byte	0
+ 999 0364 00       		.byte	0
+ 1000 0365 03       		.byte	3
+ 1001 0366 20       		.byte	32
+ 1002 0367 00       		.byte	0
+ 1003 0368 00       		.byte	0
+ 1004 0369 00       		.byte	0
+ 1005 036a 00       		.byte	0
+ 1006 036b 18       		.byte	24
+ 1007 036c 00       		.byte	0
+ 1008 036d 04       		.byte	4
+ 1009 036e 00       		.byte	0
+ 1010 036f 00       		.byte	0
+ 1011 0370 00       		.byte	0
+ 1012 0371 00       		.byte	0
+ 1013 0372 00       		.byte	0
+ 1014 0373 00       		.byte	0
+ 1015 0374 00       		.byte	0
+ 1016 0375 0E       		.byte	14
+ 1017 0376 38       		.byte	56
+ 1018 0377 00       		.byte	0
+ 1019 0378 00       		.byte	0
+ 1020 0379 00       		.byte	0
+ 1021 037a 00       		.byte	0
+ 1022 037b 30       		.byte	48
+ 1023 037c 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 21
+
+
+ 1024 037d 00       		.byte	0
+ 1025 037e 00       		.byte	0
+ 1026 037f 00       		.byte	0
+ 1027 0380 00       		.byte	0
+ 1028 0381 00       		.byte	0
+ 1029 0382 00       		.byte	0
+ 1030 0383 00       		.byte	0
+ 1031 0384 00       		.byte	0
+ 1032 0385 38       		.byte	56
+ 1033 0386 07       		.byte	7
+ 1034 0387 F0       		.byte	-16
+ 1035 0388 00       		.byte	0
+ 1036 0389 00       		.byte	0
+ 1037 038a 00       		.byte	0
+ 1038 038b E0       		.byte	-32
+ 1039 038c 00       		.byte	0
+ 1040 038d 00       		.byte	0
+ 1041 038e 00       		.byte	0
+ 1042 038f 00       		.byte	0
+ 1043 0390 00       		.byte	0
+ 1044 0391 00       		.byte	0
+ 1045 0392 00       		.byte	0
+ 1046 0393 00       		.byte	0
+ 1047 0394 00       		.byte	0
+ 1048 0395 E0       		.byte	-32
+ 1049 0396 00       		.byte	0
+ 1050 0397 00       		.byte	0
+ 1051 0398 00       		.byte	0
+ 1052 0399 00       		.byte	0
+ 1053 039a 01       		.byte	1
+ 1054 039b 80       		.byte	-128
+ 1055 039c 00       		.byte	0
+ 1056 039d 00       		.byte	0
+ 1057 039e 00       		.byte	0
+ 1058 039f 00       		.byte	0
+ 1059 03a0 00       		.byte	0
+ 1060 03a1 00       		.byte	0
+ 1061 03a2 00       		.byte	0
+ 1062 03a3 00       		.byte	0
+ 1063 03a4 00       		.byte	0
+ 1064 03a5 00       		.byte	0
+ 1065 03a6 00       		.byte	0
+ 1066 03a7 00       		.byte	0
+ 1067 03a8 00       		.byte	0
+ 1068 03a9 00       		.byte	0
+ 1069 03aa 00       		.byte	0
+ 1070 03ab 00       		.byte	0
+ 1071 03ac 00       		.byte	0
+ 1072 03ad 00       		.byte	0
+ 1073 03ae 00       		.byte	0
+ 1074 03af 00       		.byte	0
+ 1075 03b0 00       		.byte	0
+ 1076 03b1 00       		.byte	0
+ 1077 03b2 00       		.byte	0
+ 1078 03b3 00       		.byte	0
+ 1079 03b4 00       		.byte	0
+ 1080 03b5 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 22
+
+
+ 1081 03b6 00       		.byte	0
+ 1082 03b7 00       		.byte	0
+ 1083 03b8 00       		.byte	0
+ 1084 03b9 00       		.byte	0
+ 1085 03ba 00       		.byte	0
+ 1086 03bb 00       		.byte	0
+ 1087 03bc 00       		.byte	0
+ 1088 03bd 00       		.byte	0
+ 1089 03be 00       		.byte	0
+ 1090 03bf 00       		.byte	0
+ 1091 03c0 00       		.byte	0
+ 1092 03c1 00       		.byte	0
+ 1093 03c2 00       		.byte	0
+ 1094 03c3 00       		.byte	0
+ 1095 03c4 00       		.byte	0
+ 1096 03c5 00       		.byte	0
+ 1097 03c6 00       		.byte	0
+ 1098 03c7 00       		.byte	0
+ 1099 03c8 00       		.byte	0
+ 1100 03c9 00       		.byte	0
+ 1101 03ca 00       		.byte	0
+ 1102 03cb 00       		.byte	0
+ 1103 03cc 00       		.byte	0
+ 1104 03cd 00       		.byte	0
+ 1105 03ce 00       		.byte	0
+ 1106 03cf 00       		.byte	0
+ 1107 03d0 00       		.byte	0
+ 1108 03d1 00       		.byte	0
+ 1109 03d2 00       		.byte	0
+ 1110 03d3 00       		.byte	0
+ 1111 03d4 00       		.byte	0
+ 1112 03d5 00       		.byte	0
+ 1113 03d6 00       		.byte	0
+ 1114 03d7 00       		.byte	0
+ 1115 03d8 00       		.byte	0
+ 1116 03d9 00       		.byte	0
+ 1117 03da 00       		.byte	0
+ 1118 03db 00       		.byte	0
+ 1119 03dc 00       		.byte	0
+ 1120 03dd 00       		.byte	0
+ 1121 03de 00       		.byte	0
+ 1122 03df 00       		.byte	0
+ 1123 03e0 00       		.byte	0
+ 1124 03e1 00       		.byte	0
+ 1125 03e2 00       		.byte	0
+ 1126 03e3 00       		.byte	0
+ 1127 03e4 00       		.byte	0
+ 1128 03e5 00       		.byte	0
+ 1129 03e6 00       		.byte	0
+ 1130 03e7 00       		.byte	0
+ 1131 03e8 00       		.byte	0
+ 1132 03e9 00       		.byte	0
+ 1133 03ea 00       		.byte	0
+ 1134 03eb 00       		.byte	0
+ 1135 03ec 00       		.byte	0
+ 1136 03ed 00       		.byte	0
+ 1137 03ee 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 23
+
+
+ 1138 03ef 00       		.byte	0
+ 1139              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1140              		.align	2
+ 1141              	.LC1:
+ 1142 0000 43415A5A 		.ascii	"CAZZOMENE \012\015CAZZI TUOI\000"
+ 1142      4F4D454E 
+ 1142      45200A0D 
+ 1142      43415A5A 
+ 1142      49205455 
+ 1143              		.text
+ 1144              	.Letext0:
+ 1145              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1146              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1147              		.file 4 "c:\\users\\arist\\desktop\\geva\\geva.h"
+ 1148              		.file 5 "Generated_Source\\PSoC5/oled.h"
+ 1149              		.file 6 "display\\driver\\psoc5_ssd1306_i2c.h"
+ 1150              		.section	.debug_info,"",%progbits
+ 1151              	.Ldebug_info0:
+ 1152 0000 01040000 		.4byte	0x401
+ 1153 0004 0400     		.2byte	0x4
+ 1154 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1155 000a 04       		.byte	0x4
+ 1156 000b 01       		.uleb128 0x1
+ 1157 000c 5B020000 		.4byte	.LASF57
+ 1158 0010 0C       		.byte	0xc
+ 1159 0011 F5010000 		.4byte	.LASF58
+ 1160 0015 E9020000 		.4byte	.LASF59
+ 1161 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1162 001d 00000000 		.4byte	0
+ 1163 0021 00000000 		.4byte	.Ldebug_line0
+ 1164 0025 02       		.uleb128 0x2
+ 1165 0026 F6000000 		.4byte	.LASF0
+ 1166 002a 02       		.byte	0x2
+ 1167 002b 1B       		.byte	0x1b
+ 1168 002c 30000000 		.4byte	0x30
+ 1169 0030 03       		.uleb128 0x3
+ 1170 0031 01       		.byte	0x1
+ 1171 0032 06       		.byte	0x6
+ 1172 0033 22010000 		.4byte	.LASF2
+ 1173 0037 02       		.uleb128 0x2
+ 1174 0038 EC000000 		.4byte	.LASF1
+ 1175 003c 02       		.byte	0x2
+ 1176 003d 1D       		.byte	0x1d
+ 1177 003e 42000000 		.4byte	0x42
+ 1178 0042 03       		.uleb128 0x3
+ 1179 0043 01       		.byte	0x1
+ 1180 0044 08       		.byte	0x8
+ 1181 0045 14010000 		.4byte	.LASF3
+ 1182 0049 03       		.uleb128 0x3
+ 1183 004a 02       		.byte	0x2
+ 1184 004b 05       		.byte	0x5
+ 1185 004c 3F000000 		.4byte	.LASF4
+ 1186 0050 02       		.uleb128 0x2
+ 1187 0051 7E000000 		.4byte	.LASF5
+ 1188 0055 02       		.byte	0x2
+ 1189 0056 2B       		.byte	0x2b
+ 1190 0057 5B000000 		.4byte	0x5b
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 24
+
+
+ 1191 005b 03       		.uleb128 0x3
+ 1192 005c 02       		.byte	0x2
+ 1193 005d 07       		.byte	0x7
+ 1194 005e 9B010000 		.4byte	.LASF6
+ 1195 0062 03       		.uleb128 0x3
+ 1196 0063 04       		.byte	0x4
+ 1197 0064 05       		.byte	0x5
+ 1198 0065 C4000000 		.4byte	.LASF7
+ 1199 0069 03       		.uleb128 0x3
+ 1200 006a 04       		.byte	0x4
+ 1201 006b 07       		.byte	0x7
+ 1202 006c FC010000 		.4byte	.LASF8
+ 1203 0070 03       		.uleb128 0x3
+ 1204 0071 08       		.byte	0x8
+ 1205 0072 05       		.byte	0x5
+ 1206 0073 AB000000 		.4byte	.LASF9
+ 1207 0077 03       		.uleb128 0x3
+ 1208 0078 08       		.byte	0x8
+ 1209 0079 07       		.byte	0x7
+ 1210 007a 2E010000 		.4byte	.LASF10
+ 1211 007e 04       		.uleb128 0x4
+ 1212 007f 04       		.byte	0x4
+ 1213 0080 05       		.byte	0x5
+ 1214 0081 696E7400 		.ascii	"int\000"
+ 1215 0085 03       		.uleb128 0x3
+ 1216 0086 04       		.byte	0x4
+ 1217 0087 07       		.byte	0x7
+ 1218 0088 5C010000 		.4byte	.LASF11
+ 1219 008c 02       		.uleb128 0x2
+ 1220 008d 26000000 		.4byte	.LASF12
+ 1221 0091 03       		.byte	0x3
+ 1222 0092 14       		.byte	0x14
+ 1223 0093 25000000 		.4byte	0x25
+ 1224 0097 02       		.uleb128 0x2
+ 1225 0098 2D020000 		.4byte	.LASF13
+ 1226 009c 03       		.byte	0x3
+ 1227 009d 18       		.byte	0x18
+ 1228 009e 37000000 		.4byte	0x37
+ 1229 00a2 02       		.uleb128 0x2
+ 1230 00a3 D9010000 		.4byte	.LASF14
+ 1231 00a7 03       		.byte	0x3
+ 1232 00a8 24       		.byte	0x24
+ 1233 00a9 50000000 		.4byte	0x50
+ 1234 00ad 03       		.uleb128 0x3
+ 1235 00ae 04       		.byte	0x4
+ 1236 00af 04       		.byte	0x4
+ 1237 00b0 A5000000 		.4byte	.LASF15
+ 1238 00b4 03       		.uleb128 0x3
+ 1239 00b5 08       		.byte	0x8
+ 1240 00b6 04       		.byte	0x4
+ 1241 00b7 0E020000 		.4byte	.LASF16
+ 1242 00bb 03       		.uleb128 0x3
+ 1243 00bc 01       		.byte	0x1
+ 1244 00bd 08       		.byte	0x8
+ 1245 00be D4010000 		.4byte	.LASF17
+ 1246 00c2 03       		.uleb128 0x3
+ 1247 00c3 08       		.byte	0x8
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 25
+
+
+ 1248 00c4 04       		.byte	0x4
+ 1249 00c5 FF000000 		.4byte	.LASF18
+ 1250 00c9 03       		.uleb128 0x3
+ 1251 00ca 04       		.byte	0x4
+ 1252 00cb 07       		.byte	0x7
+ 1253 00cc 49000000 		.4byte	.LASF19
+ 1254 00d0 05       		.uleb128 0x5
+ 1255 00d1 73000000 		.4byte	.LASF22
+ 1256 00d5 01       		.byte	0x1
+ 1257 00d6 42000000 		.4byte	0x42
+ 1258 00da 04       		.byte	0x4
+ 1259 00db 13       		.byte	0x13
+ 1260 00dc ED000000 		.4byte	0xed
+ 1261 00e0 06       		.uleb128 0x6
+ 1262 00e1 2D000000 		.4byte	.LASF20
+ 1263 00e5 00       		.byte	0
+ 1264 00e6 06       		.uleb128 0x6
+ 1265 00e7 52020000 		.4byte	.LASF21
+ 1266 00eb 01       		.byte	0x1
+ 1267 00ec 00       		.byte	0
+ 1268 00ed 05       		.uleb128 0x5
+ 1269 00ee 7F010000 		.4byte	.LASF23
+ 1270 00f2 01       		.byte	0x1
+ 1271 00f3 42000000 		.4byte	0x42
+ 1272 00f7 04       		.byte	0x4
+ 1273 00f8 18       		.byte	0x18
+ 1274 00f9 16010000 		.4byte	0x116
+ 1275 00fd 06       		.uleb128 0x6
+ 1276 00fe AE010000 		.4byte	.LASF24
+ 1277 0102 00       		.byte	0
+ 1278 0103 06       		.uleb128 0x6
+ 1279 0104 CD000000 		.4byte	.LASF25
+ 1280 0108 01       		.byte	0x1
+ 1281 0109 06       		.uleb128 0x6
+ 1282 010a 0B010000 		.4byte	.LASF26
+ 1283 010e 02       		.byte	0x2
+ 1284 010f 06       		.uleb128 0x6
+ 1285 0110 40020000 		.4byte	.LASF27
+ 1286 0114 03       		.byte	0x3
+ 1287 0115 00       		.byte	0
+ 1288 0116 07       		.uleb128 0x7
+ 1289 0117 72010000 		.4byte	.LASF36
+ 1290 011b 14       		.byte	0x14
+ 1291 011c 04       		.byte	0x4
+ 1292 011d 20       		.byte	0x20
+ 1293 011e 8F010000 		.4byte	0x18f
+ 1294 0122 08       		.uleb128 0x8
+ 1295 0123 52000000 		.4byte	.LASF28
+ 1296 0127 04       		.byte	0x4
+ 1297 0128 21       		.byte	0x21
+ 1298 0129 97000000 		.4byte	0x97
+ 1299 012d 00       		.byte	0
+ 1300 012e 08       		.uleb128 0x8
+ 1301 012f 59000000 		.4byte	.LASF29
+ 1302 0133 04       		.byte	0x4
+ 1303 0134 22       		.byte	0x22
+ 1304 0135 97000000 		.4byte	0x97
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 26
+
+
+ 1305 0139 01       		.byte	0x1
+ 1306 013a 08       		.uleb128 0x8
+ 1307 013b 1C020000 		.4byte	.LASF30
+ 1308 013f 04       		.byte	0x4
+ 1309 0140 24       		.byte	0x24
+ 1310 0141 8F010000 		.4byte	0x18f
+ 1311 0145 04       		.byte	0x4
+ 1312 0146 08       		.uleb128 0x8
+ 1313 0147 C7010000 		.4byte	.LASF31
+ 1314 014b 04       		.byte	0x4
+ 1315 014c 26       		.byte	0x26
+ 1316 014d 97000000 		.4byte	0x97
+ 1317 0151 08       		.byte	0x8
+ 1318 0152 08       		.uleb128 0x8
+ 1319 0153 8B010000 		.4byte	.LASF32
+ 1320 0157 04       		.byte	0x4
+ 1321 0158 27       		.byte	0x27
+ 1322 0159 A2000000 		.4byte	0xa2
+ 1323 015d 0A       		.byte	0xa
+ 1324 015e 08       		.uleb128 0x8
+ 1325 015f 73000000 		.4byte	.LASF22
+ 1326 0163 04       		.byte	0x4
+ 1327 0164 29       		.byte	0x29
+ 1328 0165 D0000000 		.4byte	0xd0
+ 1329 0169 0C       		.byte	0xc
+ 1330 016a 08       		.uleb128 0x8
+ 1331 016b E0000000 		.4byte	.LASF33
+ 1332 016f 04       		.byte	0x4
+ 1333 0170 2B       		.byte	0x2b
+ 1334 0171 ED000000 		.4byte	0xed
+ 1335 0175 0D       		.byte	0xd
+ 1336 0176 08       		.uleb128 0x8
+ 1337 0177 15020000 		.4byte	.LASF34
+ 1338 017b 04       		.byte	0x4
+ 1339 017c 2C       		.byte	0x2c
+ 1340 017d 95010000 		.4byte	0x195
+ 1341 0181 0E       		.byte	0xe
+ 1342 0182 08       		.uleb128 0x8
+ 1343 0183 1D000000 		.4byte	.LASF35
+ 1344 0187 04       		.byte	0x4
+ 1345 0188 2D       		.byte	0x2d
+ 1346 0189 A5010000 		.4byte	0x1a5
+ 1347 018d 10       		.byte	0x10
+ 1348 018e 00       		.byte	0
+ 1349 018f 09       		.uleb128 0x9
+ 1350 0190 04       		.byte	0x4
+ 1351 0191 97000000 		.4byte	0x97
+ 1352 0195 0A       		.uleb128 0xa
+ 1353 0196 97000000 		.4byte	0x97
+ 1354 019a A5010000 		.4byte	0x1a5
+ 1355 019e 0B       		.uleb128 0xb
+ 1356 019f C9000000 		.4byte	0xc9
+ 1357 01a3 01       		.byte	0x1
+ 1358 01a4 00       		.byte	0
+ 1359 01a5 0A       		.uleb128 0xa
+ 1360 01a6 8C000000 		.4byte	0x8c
+ 1361 01aa B5010000 		.4byte	0x1b5
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 27
+
+
+ 1362 01ae 0B       		.uleb128 0xb
+ 1363 01af C9000000 		.4byte	0xc9
+ 1364 01b3 03       		.byte	0x3
+ 1365 01b4 00       		.byte	0
+ 1366 01b5 02       		.uleb128 0x2
+ 1367 01b6 72010000 		.4byte	.LASF36
+ 1368 01ba 04       		.byte	0x4
+ 1369 01bb 2F       		.byte	0x2f
+ 1370 01bc 16010000 		.4byte	0x116
+ 1371 01c0 0C       		.uleb128 0xc
+ 1372 01c1 05       		.byte	0x5
+ 1373 01c2 04       		.byte	0x4
+ 1374 01c3 33       		.byte	0x33
+ 1375 01c4 04020000 		.4byte	0x204
+ 1376 01c8 0D       		.uleb128 0xd
+ 1377 01c9 696400   		.ascii	"id\000"
+ 1378 01cc 04       		.byte	0x4
+ 1379 01cd 34       		.byte	0x34
+ 1380 01ce 97000000 		.4byte	0x97
+ 1381 01d2 00       		.byte	0
+ 1382 01d3 08       		.uleb128 0x8
+ 1383 01d4 9F000000 		.4byte	.LASF37
+ 1384 01d8 04       		.byte	0x4
+ 1385 01d9 35       		.byte	0x35
+ 1386 01da 97000000 		.4byte	0x97
+ 1387 01de 01       		.byte	0x1
+ 1388 01df 08       		.uleb128 0x8
+ 1389 01e0 55010000 		.4byte	.LASF38
+ 1390 01e4 04       		.byte	0x4
+ 1391 01e5 36       		.byte	0x36
+ 1392 01e6 97000000 		.4byte	0x97
+ 1393 01ea 02       		.byte	0x2
+ 1394 01eb 08       		.uleb128 0x8
+ 1395 01ec 45010000 		.4byte	.LASF39
+ 1396 01f0 04       		.byte	0x4
+ 1397 01f1 37       		.byte	0x37
+ 1398 01f2 97000000 		.4byte	0x97
+ 1399 01f6 03       		.byte	0x3
+ 1400 01f7 08       		.uleb128 0x8
+ 1401 01f8 EA010000 		.4byte	.LASF40
+ 1402 01fc 04       		.byte	0x4
+ 1403 01fd 38       		.byte	0x38
+ 1404 01fe 97000000 		.4byte	0x97
+ 1405 0202 04       		.byte	0x4
+ 1406 0203 00       		.byte	0
+ 1407 0204 07       		.uleb128 0x7
+ 1408 0205 69010000 		.4byte	.LASF41
+ 1409 0209 0C       		.byte	0xc
+ 1410 020a 04       		.byte	0x4
+ 1411 020b 31       		.byte	0x31
+ 1412 020c 29020000 		.4byte	0x229
+ 1413 0210 08       		.uleb128 0x8
+ 1414 0211 0D000000 		.4byte	.LASF42
+ 1415 0215 04       		.byte	0x4
+ 1416 0216 39       		.byte	0x39
+ 1417 0217 C0010000 		.4byte	0x1c0
+ 1418 021b 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 28
+
+
+ 1419 021c 08       		.uleb128 0x8
+ 1420 021d E7000000 		.4byte	.LASF43
+ 1421 0221 04       		.byte	0x4
+ 1422 0222 3B       		.byte	0x3b
+ 1423 0223 8F010000 		.4byte	0x18f
+ 1424 0227 08       		.byte	0x8
+ 1425 0228 00       		.byte	0
+ 1426 0229 02       		.uleb128 0x2
+ 1427 022a 69010000 		.4byte	.LASF41
+ 1428 022e 04       		.byte	0x4
+ 1429 022f 3C       		.byte	0x3c
+ 1430 0230 04020000 		.4byte	0x204
+ 1431 0234 05       		.uleb128 0x5
+ 1432 0235 34000000 		.4byte	.LASF44
+ 1433 0239 01       		.byte	0x1
+ 1434 023a 42000000 		.4byte	0x42
+ 1435 023e 04       		.byte	0x4
+ 1436 023f 3E       		.byte	0x3e
+ 1437 0240 57020000 		.4byte	0x257
+ 1438 0244 06       		.uleb128 0x6
+ 1439 0245 78000000 		.4byte	.LASF45
+ 1440 0249 00       		.byte	0
+ 1441 024a 06       		.uleb128 0x6
+ 1442 024b 6C000000 		.4byte	.LASF46
+ 1443 024f 01       		.byte	0x1
+ 1444 0250 06       		.uleb128 0x6
+ 1445 0251 99000000 		.4byte	.LASF47
+ 1446 0255 02       		.byte	0x2
+ 1447 0256 00       		.byte	0
+ 1448 0257 0E       		.uleb128 0xe
+ 1449 0258 60000000 		.4byte	.LASF60
+ 1450 025c 01       		.byte	0x1
+ 1451 025d 15       		.byte	0x15
+ 1452 025e 7E000000 		.4byte	0x7e
+ 1453 0262 00000000 		.4byte	.LFB0
+ 1454 0266 94000000 		.4byte	.LFE0-.LFB0
+ 1455 026a 01       		.uleb128 0x1
+ 1456 026b 9C       		.byte	0x9c
+ 1457 026c 81030000 		.4byte	0x381
+ 1458 0270 0F       		.uleb128 0xf
+ 1459 0271 6100     		.ascii	"a\000"
+ 1460 0273 01       		.byte	0x1
+ 1461 0274 19       		.byte	0x19
+ 1462 0275 29020000 		.4byte	0x229
+ 1463 0279 02       		.uleb128 0x2
+ 1464 027a 91       		.byte	0x91
+ 1465 027b 64       		.sleb128 -28
+ 1466 027c 10       		.uleb128 0x10
+ 1467 027d 50010000 		.4byte	.LASF48
+ 1468 0281 01       		.byte	0x1
+ 1469 0282 21       		.byte	0x21
+ 1470 0283 81030000 		.4byte	0x381
+ 1471 0287 03       		.uleb128 0x3
+ 1472 0288 91       		.byte	0x91
+ 1473 0289 F477     		.sleb128 -1036
+ 1474 028b 11       		.uleb128 0x11
+ 1475 028c 32000000 		.4byte	.LVL0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 29
+
+
+ 1476 0290 A3030000 		.4byte	0x3a3
+ 1477 0294 AF020000 		.4byte	0x2af
+ 1478 0298 12       		.uleb128 0x12
+ 1479 0299 01       		.uleb128 0x1
+ 1480 029a 50       		.byte	0x50
+ 1481 029b 02       		.uleb128 0x2
+ 1482 029c 74       		.byte	0x74
+ 1483 029d 00       		.sleb128 0
+ 1484 029e 12       		.uleb128 0x12
+ 1485 029f 01       		.uleb128 0x1
+ 1486 02a0 51       		.byte	0x51
+ 1487 02a1 05       		.uleb128 0x5
+ 1488 02a2 03       		.byte	0x3
+ 1489 02a3 00000000 		.4byte	.LANCHOR0
+ 1490 02a7 12       		.uleb128 0x12
+ 1491 02a8 01       		.uleb128 0x1
+ 1492 02a9 52       		.byte	0x52
+ 1493 02aa 03       		.uleb128 0x3
+ 1494 02ab 0A       		.byte	0xa
+ 1495 02ac F003     		.2byte	0x3f0
+ 1496 02ae 00       		.byte	0
+ 1497 02af 13       		.uleb128 0x13
+ 1498 02b0 3C000000 		.4byte	.LVL1
+ 1499 02b4 AC030000 		.4byte	0x3ac
+ 1500 02b8 11       		.uleb128 0x11
+ 1501 02b9 42000000 		.4byte	.LVL2
+ 1502 02bd B7030000 		.4byte	0x3b7
+ 1503 02c1 CC020000 		.4byte	0x2cc
+ 1504 02c5 12       		.uleb128 0x12
+ 1505 02c6 01       		.uleb128 0x1
+ 1506 02c7 50       		.byte	0x50
+ 1507 02c8 02       		.uleb128 0x2
+ 1508 02c9 08       		.byte	0x8
+ 1509 02ca 3C       		.byte	0x3c
+ 1510 02cb 00       		.byte	0
+ 1511 02cc 11       		.uleb128 0x11
+ 1512 02cd 4E000000 		.4byte	.LVL3
+ 1513 02d1 C2030000 		.4byte	0x3c2
+ 1514 02d5 EC020000 		.4byte	0x2ec
+ 1515 02d9 12       		.uleb128 0x12
+ 1516 02da 01       		.uleb128 0x1
+ 1517 02db 50       		.byte	0x50
+ 1518 02dc 02       		.uleb128 0x2
+ 1519 02dd 74       		.byte	0x74
+ 1520 02de 00       		.sleb128 0
+ 1521 02df 12       		.uleb128 0x12
+ 1522 02e0 01       		.uleb128 0x1
+ 1523 02e1 51       		.byte	0x51
+ 1524 02e2 02       		.uleb128 0x2
+ 1525 02e3 09       		.byte	0x9
+ 1526 02e4 80       		.byte	0x80
+ 1527 02e5 12       		.uleb128 0x12
+ 1528 02e6 01       		.uleb128 0x1
+ 1529 02e7 52       		.byte	0x52
+ 1530 02e8 02       		.uleb128 0x2
+ 1531 02e9 08       		.byte	0x8
+ 1532 02ea 40       		.byte	0x40
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 30
+
+
+ 1533 02eb 00       		.byte	0
+ 1534 02ec 11       		.uleb128 0x11
+ 1535 02ed 56000000 		.4byte	.LVL4
+ 1536 02f1 CD030000 		.4byte	0x3cd
+ 1537 02f5 05030000 		.4byte	0x305
+ 1538 02f9 12       		.uleb128 0x12
+ 1539 02fa 01       		.uleb128 0x1
+ 1540 02fb 50       		.byte	0x50
+ 1541 02fc 01       		.uleb128 0x1
+ 1542 02fd 30       		.byte	0x30
+ 1543 02fe 12       		.uleb128 0x12
+ 1544 02ff 01       		.uleb128 0x1
+ 1545 0300 51       		.byte	0x51
+ 1546 0301 02       		.uleb128 0x2
+ 1547 0302 74       		.byte	0x74
+ 1548 0303 00       		.sleb128 0
+ 1549 0304 00       		.byte	0
+ 1550 0305 11       		.uleb128 0x11
+ 1551 0306 5E000000 		.4byte	.LVL5
+ 1552 030a D8030000 		.4byte	0x3d8
+ 1553 030e 1E030000 		.4byte	0x31e
+ 1554 0312 12       		.uleb128 0x12
+ 1555 0313 01       		.uleb128 0x1
+ 1556 0314 50       		.byte	0x50
+ 1557 0315 01       		.uleb128 0x1
+ 1558 0316 30       		.byte	0x30
+ 1559 0317 12       		.uleb128 0x12
+ 1560 0318 01       		.uleb128 0x1
+ 1561 0319 51       		.byte	0x51
+ 1562 031a 02       		.uleb128 0x2
+ 1563 031b 74       		.byte	0x74
+ 1564 031c 00       		.sleb128 0
+ 1565 031d 00       		.byte	0
+ 1566 031e 11       		.uleb128 0x11
+ 1567 031f 72000000 		.4byte	.LVL6
+ 1568 0323 E3030000 		.4byte	0x3e3
+ 1569 0327 40030000 		.4byte	0x340
+ 1570 032b 12       		.uleb128 0x12
+ 1571 032c 01       		.uleb128 0x1
+ 1572 032d 53       		.byte	0x53
+ 1573 032e 02       		.uleb128 0x2
+ 1574 032f 75       		.byte	0x75
+ 1575 0330 00       		.sleb128 0
+ 1576 0331 12       		.uleb128 0x12
+ 1577 0332 02       		.uleb128 0x2
+ 1578 0333 7D       		.byte	0x7d
+ 1579 0334 00       		.sleb128 0
+ 1580 0335 02       		.uleb128 0x2
+ 1581 0336 75       		.byte	0x75
+ 1582 0337 00       		.sleb128 0
+ 1583 0338 12       		.uleb128 0x12
+ 1584 0339 02       		.uleb128 0x2
+ 1585 033a 7D       		.byte	0x7d
+ 1586 033b 04       		.sleb128 4
+ 1587 033c 02       		.uleb128 0x2
+ 1588 033d 74       		.byte	0x74
+ 1589 033e 00       		.sleb128 0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 31
+
+
+ 1590 033f 00       		.byte	0
+ 1591 0340 11       		.uleb128 0x11
+ 1592 0341 80000000 		.4byte	.LVL7
+ 1593 0345 EE030000 		.4byte	0x3ee
+ 1594 0349 70030000 		.4byte	0x370
+ 1595 034d 12       		.uleb128 0x12
+ 1596 034e 01       		.uleb128 0x1
+ 1597 034f 50       		.byte	0x50
+ 1598 0350 02       		.uleb128 0x2
+ 1599 0351 75       		.byte	0x75
+ 1600 0352 00       		.sleb128 0
+ 1601 0353 12       		.uleb128 0x12
+ 1602 0354 01       		.uleb128 0x1
+ 1603 0355 51       		.byte	0x51
+ 1604 0356 02       		.uleb128 0x2
+ 1605 0357 08       		.byte	0x8
+ 1606 0358 32       		.byte	0x32
+ 1607 0359 12       		.uleb128 0x12
+ 1608 035a 01       		.uleb128 0x1
+ 1609 035b 52       		.byte	0x52
+ 1610 035c 05       		.uleb128 0x5
+ 1611 035d 03       		.byte	0x3
+ 1612 035e 00000000 		.4byte	.LC1
+ 1613 0362 12       		.uleb128 0x12
+ 1614 0363 01       		.uleb128 0x1
+ 1615 0364 53       		.byte	0x53
+ 1616 0365 02       		.uleb128 0x2
+ 1617 0366 75       		.byte	0x75
+ 1618 0367 00       		.sleb128 0
+ 1619 0368 12       		.uleb128 0x12
+ 1620 0369 02       		.uleb128 0x2
+ 1621 036a 7D       		.byte	0x7d
+ 1622 036b 00       		.sleb128 0
+ 1623 036c 02       		.uleb128 0x2
+ 1624 036d 74       		.byte	0x74
+ 1625 036e 00       		.sleb128 0
+ 1626 036f 00       		.byte	0
+ 1627 0370 14       		.uleb128 0x14
+ 1628 0371 86000000 		.4byte	.LVL8
+ 1629 0375 F9030000 		.4byte	0x3f9
+ 1630 0379 12       		.uleb128 0x12
+ 1631 037a 01       		.uleb128 0x1
+ 1632 037b 50       		.byte	0x50
+ 1633 037c 02       		.uleb128 0x2
+ 1634 037d 74       		.byte	0x74
+ 1635 037e 00       		.sleb128 0
+ 1636 037f 00       		.byte	0
+ 1637 0380 00       		.byte	0
+ 1638 0381 0A       		.uleb128 0xa
+ 1639 0382 97000000 		.4byte	0x97
+ 1640 0386 92030000 		.4byte	0x392
+ 1641 038a 15       		.uleb128 0x15
+ 1642 038b C9000000 		.4byte	0xc9
+ 1643 038f EF03     		.2byte	0x3ef
+ 1644 0391 00       		.byte	0
+ 1645 0392 16       		.uleb128 0x16
+ 1646 0393 1C020000 		.4byte	.LASF30
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 32
+
+
+ 1647 0397 01       		.byte	0x1
+ 1648 0398 11       		.byte	0x11
+ 1649 0399 B5010000 		.4byte	0x1b5
+ 1650 039d 05       		.uleb128 0x5
+ 1651 039e 03       		.byte	0x3
+ 1652 039f 00000000 		.4byte	vid_buf
+ 1653 03a3 17       		.uleb128 0x17
+ 1654 03a4 65000000 		.4byte	.LASF61
+ 1655 03a8 65000000 		.4byte	.LASF61
+ 1656 03ac 18       		.uleb128 0x18
+ 1657 03ad B9000000 		.4byte	.LASF49
+ 1658 03b1 B9000000 		.4byte	.LASF49
+ 1659 03b5 05       		.byte	0x5
+ 1660 03b6 93       		.byte	0x93
+ 1661 03b7 18       		.uleb128 0x18
+ 1662 03b8 00000000 		.4byte	.LASF50
+ 1663 03bc 00000000 		.4byte	.LASF50
+ 1664 03c0 06       		.byte	0x6
+ 1665 03c1 2B       		.byte	0x2b
+ 1666 03c2 18       		.uleb128 0x18
+ 1667 03c3 24020000 		.4byte	.LASF51
+ 1668 03c7 24020000 		.4byte	.LASF51
+ 1669 03cb 04       		.byte	0x4
+ 1670 03cc 61       		.byte	0x61
+ 1671 03cd 18       		.uleb128 0x18
+ 1672 03ce 14000000 		.4byte	.LASF52
+ 1673 03d2 14000000 		.4byte	.LASF52
+ 1674 03d6 04       		.byte	0x4
+ 1675 03d7 62       		.byte	0x62
+ 1676 03d8 18       		.uleb128 0x18
+ 1677 03d9 89000000 		.4byte	.LASF53
+ 1678 03dd 89000000 		.4byte	.LASF53
+ 1679 03e1 04       		.byte	0x4
+ 1680 03e2 63       		.byte	0x63
+ 1681 03e3 18       		.uleb128 0x18
+ 1682 03e4 E2010000 		.4byte	.LASF54
+ 1683 03e8 E2010000 		.4byte	.LASF54
+ 1684 03ec 04       		.byte	0x4
+ 1685 03ed 6E       		.byte	0x6e
+ 1686 03ee 18       		.uleb128 0x18
+ 1687 03ef 35020000 		.4byte	.LASF55
+ 1688 03f3 35020000 		.4byte	.LASF55
+ 1689 03f7 04       		.byte	0x4
+ 1690 03f8 6C       		.byte	0x6c
+ 1691 03f9 18       		.uleb128 0x18
+ 1692 03fa B8010000 		.4byte	.LASF56
+ 1693 03fe B8010000 		.4byte	.LASF56
+ 1694 0402 06       		.byte	0x6
+ 1695 0403 2C       		.byte	0x2c
+ 1696 0404 00       		.byte	0
+ 1697              		.section	.debug_abbrev,"",%progbits
+ 1698              	.Ldebug_abbrev0:
+ 1699 0000 01       		.uleb128 0x1
+ 1700 0001 11       		.uleb128 0x11
+ 1701 0002 01       		.byte	0x1
+ 1702 0003 25       		.uleb128 0x25
+ 1703 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 33
+
+
+ 1704 0005 13       		.uleb128 0x13
+ 1705 0006 0B       		.uleb128 0xb
+ 1706 0007 03       		.uleb128 0x3
+ 1707 0008 0E       		.uleb128 0xe
+ 1708 0009 1B       		.uleb128 0x1b
+ 1709 000a 0E       		.uleb128 0xe
+ 1710 000b 55       		.uleb128 0x55
+ 1711 000c 17       		.uleb128 0x17
+ 1712 000d 11       		.uleb128 0x11
+ 1713 000e 01       		.uleb128 0x1
+ 1714 000f 10       		.uleb128 0x10
+ 1715 0010 17       		.uleb128 0x17
+ 1716 0011 00       		.byte	0
+ 1717 0012 00       		.byte	0
+ 1718 0013 02       		.uleb128 0x2
+ 1719 0014 16       		.uleb128 0x16
+ 1720 0015 00       		.byte	0
+ 1721 0016 03       		.uleb128 0x3
+ 1722 0017 0E       		.uleb128 0xe
+ 1723 0018 3A       		.uleb128 0x3a
+ 1724 0019 0B       		.uleb128 0xb
+ 1725 001a 3B       		.uleb128 0x3b
+ 1726 001b 0B       		.uleb128 0xb
+ 1727 001c 49       		.uleb128 0x49
+ 1728 001d 13       		.uleb128 0x13
+ 1729 001e 00       		.byte	0
+ 1730 001f 00       		.byte	0
+ 1731 0020 03       		.uleb128 0x3
+ 1732 0021 24       		.uleb128 0x24
+ 1733 0022 00       		.byte	0
+ 1734 0023 0B       		.uleb128 0xb
+ 1735 0024 0B       		.uleb128 0xb
+ 1736 0025 3E       		.uleb128 0x3e
+ 1737 0026 0B       		.uleb128 0xb
+ 1738 0027 03       		.uleb128 0x3
+ 1739 0028 0E       		.uleb128 0xe
+ 1740 0029 00       		.byte	0
+ 1741 002a 00       		.byte	0
+ 1742 002b 04       		.uleb128 0x4
+ 1743 002c 24       		.uleb128 0x24
+ 1744 002d 00       		.byte	0
+ 1745 002e 0B       		.uleb128 0xb
+ 1746 002f 0B       		.uleb128 0xb
+ 1747 0030 3E       		.uleb128 0x3e
+ 1748 0031 0B       		.uleb128 0xb
+ 1749 0032 03       		.uleb128 0x3
+ 1750 0033 08       		.uleb128 0x8
+ 1751 0034 00       		.byte	0
+ 1752 0035 00       		.byte	0
+ 1753 0036 05       		.uleb128 0x5
+ 1754 0037 04       		.uleb128 0x4
+ 1755 0038 01       		.byte	0x1
+ 1756 0039 03       		.uleb128 0x3
+ 1757 003a 0E       		.uleb128 0xe
+ 1758 003b 0B       		.uleb128 0xb
+ 1759 003c 0B       		.uleb128 0xb
+ 1760 003d 49       		.uleb128 0x49
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 34
+
+
+ 1761 003e 13       		.uleb128 0x13
+ 1762 003f 3A       		.uleb128 0x3a
+ 1763 0040 0B       		.uleb128 0xb
+ 1764 0041 3B       		.uleb128 0x3b
+ 1765 0042 0B       		.uleb128 0xb
+ 1766 0043 01       		.uleb128 0x1
+ 1767 0044 13       		.uleb128 0x13
+ 1768 0045 00       		.byte	0
+ 1769 0046 00       		.byte	0
+ 1770 0047 06       		.uleb128 0x6
+ 1771 0048 28       		.uleb128 0x28
+ 1772 0049 00       		.byte	0
+ 1773 004a 03       		.uleb128 0x3
+ 1774 004b 0E       		.uleb128 0xe
+ 1775 004c 1C       		.uleb128 0x1c
+ 1776 004d 0B       		.uleb128 0xb
+ 1777 004e 00       		.byte	0
+ 1778 004f 00       		.byte	0
+ 1779 0050 07       		.uleb128 0x7
+ 1780 0051 13       		.uleb128 0x13
+ 1781 0052 01       		.byte	0x1
+ 1782 0053 03       		.uleb128 0x3
+ 1783 0054 0E       		.uleb128 0xe
+ 1784 0055 0B       		.uleb128 0xb
+ 1785 0056 0B       		.uleb128 0xb
+ 1786 0057 3A       		.uleb128 0x3a
+ 1787 0058 0B       		.uleb128 0xb
+ 1788 0059 3B       		.uleb128 0x3b
+ 1789 005a 0B       		.uleb128 0xb
+ 1790 005b 01       		.uleb128 0x1
+ 1791 005c 13       		.uleb128 0x13
+ 1792 005d 00       		.byte	0
+ 1793 005e 00       		.byte	0
+ 1794 005f 08       		.uleb128 0x8
+ 1795 0060 0D       		.uleb128 0xd
+ 1796 0061 00       		.byte	0
+ 1797 0062 03       		.uleb128 0x3
+ 1798 0063 0E       		.uleb128 0xe
+ 1799 0064 3A       		.uleb128 0x3a
+ 1800 0065 0B       		.uleb128 0xb
+ 1801 0066 3B       		.uleb128 0x3b
+ 1802 0067 0B       		.uleb128 0xb
+ 1803 0068 49       		.uleb128 0x49
+ 1804 0069 13       		.uleb128 0x13
+ 1805 006a 38       		.uleb128 0x38
+ 1806 006b 0B       		.uleb128 0xb
+ 1807 006c 00       		.byte	0
+ 1808 006d 00       		.byte	0
+ 1809 006e 09       		.uleb128 0x9
+ 1810 006f 0F       		.uleb128 0xf
+ 1811 0070 00       		.byte	0
+ 1812 0071 0B       		.uleb128 0xb
+ 1813 0072 0B       		.uleb128 0xb
+ 1814 0073 49       		.uleb128 0x49
+ 1815 0074 13       		.uleb128 0x13
+ 1816 0075 00       		.byte	0
+ 1817 0076 00       		.byte	0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 35
+
+
+ 1818 0077 0A       		.uleb128 0xa
+ 1819 0078 01       		.uleb128 0x1
+ 1820 0079 01       		.byte	0x1
+ 1821 007a 49       		.uleb128 0x49
+ 1822 007b 13       		.uleb128 0x13
+ 1823 007c 01       		.uleb128 0x1
+ 1824 007d 13       		.uleb128 0x13
+ 1825 007e 00       		.byte	0
+ 1826 007f 00       		.byte	0
+ 1827 0080 0B       		.uleb128 0xb
+ 1828 0081 21       		.uleb128 0x21
+ 1829 0082 00       		.byte	0
+ 1830 0083 49       		.uleb128 0x49
+ 1831 0084 13       		.uleb128 0x13
+ 1832 0085 2F       		.uleb128 0x2f
+ 1833 0086 0B       		.uleb128 0xb
+ 1834 0087 00       		.byte	0
+ 1835 0088 00       		.byte	0
+ 1836 0089 0C       		.uleb128 0xc
+ 1837 008a 13       		.uleb128 0x13
+ 1838 008b 01       		.byte	0x1
+ 1839 008c 0B       		.uleb128 0xb
+ 1840 008d 0B       		.uleb128 0xb
+ 1841 008e 3A       		.uleb128 0x3a
+ 1842 008f 0B       		.uleb128 0xb
+ 1843 0090 3B       		.uleb128 0x3b
+ 1844 0091 0B       		.uleb128 0xb
+ 1845 0092 01       		.uleb128 0x1
+ 1846 0093 13       		.uleb128 0x13
+ 1847 0094 00       		.byte	0
+ 1848 0095 00       		.byte	0
+ 1849 0096 0D       		.uleb128 0xd
+ 1850 0097 0D       		.uleb128 0xd
+ 1851 0098 00       		.byte	0
+ 1852 0099 03       		.uleb128 0x3
+ 1853 009a 08       		.uleb128 0x8
+ 1854 009b 3A       		.uleb128 0x3a
+ 1855 009c 0B       		.uleb128 0xb
+ 1856 009d 3B       		.uleb128 0x3b
+ 1857 009e 0B       		.uleb128 0xb
+ 1858 009f 49       		.uleb128 0x49
+ 1859 00a0 13       		.uleb128 0x13
+ 1860 00a1 38       		.uleb128 0x38
+ 1861 00a2 0B       		.uleb128 0xb
+ 1862 00a3 00       		.byte	0
+ 1863 00a4 00       		.byte	0
+ 1864 00a5 0E       		.uleb128 0xe
+ 1865 00a6 2E       		.uleb128 0x2e
+ 1866 00a7 01       		.byte	0x1
+ 1867 00a8 3F       		.uleb128 0x3f
+ 1868 00a9 19       		.uleb128 0x19
+ 1869 00aa 03       		.uleb128 0x3
+ 1870 00ab 0E       		.uleb128 0xe
+ 1871 00ac 3A       		.uleb128 0x3a
+ 1872 00ad 0B       		.uleb128 0xb
+ 1873 00ae 3B       		.uleb128 0x3b
+ 1874 00af 0B       		.uleb128 0xb
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 36
+
+
+ 1875 00b0 27       		.uleb128 0x27
+ 1876 00b1 19       		.uleb128 0x19
+ 1877 00b2 49       		.uleb128 0x49
+ 1878 00b3 13       		.uleb128 0x13
+ 1879 00b4 8701     		.uleb128 0x87
+ 1880 00b6 19       		.uleb128 0x19
+ 1881 00b7 11       		.uleb128 0x11
+ 1882 00b8 01       		.uleb128 0x1
+ 1883 00b9 12       		.uleb128 0x12
+ 1884 00ba 06       		.uleb128 0x6
+ 1885 00bb 40       		.uleb128 0x40
+ 1886 00bc 18       		.uleb128 0x18
+ 1887 00bd 9742     		.uleb128 0x2117
+ 1888 00bf 19       		.uleb128 0x19
+ 1889 00c0 01       		.uleb128 0x1
+ 1890 00c1 13       		.uleb128 0x13
+ 1891 00c2 00       		.byte	0
+ 1892 00c3 00       		.byte	0
+ 1893 00c4 0F       		.uleb128 0xf
+ 1894 00c5 34       		.uleb128 0x34
+ 1895 00c6 00       		.byte	0
+ 1896 00c7 03       		.uleb128 0x3
+ 1897 00c8 08       		.uleb128 0x8
+ 1898 00c9 3A       		.uleb128 0x3a
+ 1899 00ca 0B       		.uleb128 0xb
+ 1900 00cb 3B       		.uleb128 0x3b
+ 1901 00cc 0B       		.uleb128 0xb
+ 1902 00cd 49       		.uleb128 0x49
+ 1903 00ce 13       		.uleb128 0x13
+ 1904 00cf 02       		.uleb128 0x2
+ 1905 00d0 18       		.uleb128 0x18
+ 1906 00d1 00       		.byte	0
+ 1907 00d2 00       		.byte	0
+ 1908 00d3 10       		.uleb128 0x10
+ 1909 00d4 34       		.uleb128 0x34
+ 1910 00d5 00       		.byte	0
+ 1911 00d6 03       		.uleb128 0x3
+ 1912 00d7 0E       		.uleb128 0xe
+ 1913 00d8 3A       		.uleb128 0x3a
+ 1914 00d9 0B       		.uleb128 0xb
+ 1915 00da 3B       		.uleb128 0x3b
+ 1916 00db 0B       		.uleb128 0xb
+ 1917 00dc 49       		.uleb128 0x49
+ 1918 00dd 13       		.uleb128 0x13
+ 1919 00de 02       		.uleb128 0x2
+ 1920 00df 18       		.uleb128 0x18
+ 1921 00e0 00       		.byte	0
+ 1922 00e1 00       		.byte	0
+ 1923 00e2 11       		.uleb128 0x11
+ 1924 00e3 898201   		.uleb128 0x4109
+ 1925 00e6 01       		.byte	0x1
+ 1926 00e7 11       		.uleb128 0x11
+ 1927 00e8 01       		.uleb128 0x1
+ 1928 00e9 31       		.uleb128 0x31
+ 1929 00ea 13       		.uleb128 0x13
+ 1930 00eb 01       		.uleb128 0x1
+ 1931 00ec 13       		.uleb128 0x13
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 37
+
+
+ 1932 00ed 00       		.byte	0
+ 1933 00ee 00       		.byte	0
+ 1934 00ef 12       		.uleb128 0x12
+ 1935 00f0 8A8201   		.uleb128 0x410a
+ 1936 00f3 00       		.byte	0
+ 1937 00f4 02       		.uleb128 0x2
+ 1938 00f5 18       		.uleb128 0x18
+ 1939 00f6 9142     		.uleb128 0x2111
+ 1940 00f8 18       		.uleb128 0x18
+ 1941 00f9 00       		.byte	0
+ 1942 00fa 00       		.byte	0
+ 1943 00fb 13       		.uleb128 0x13
+ 1944 00fc 898201   		.uleb128 0x4109
+ 1945 00ff 00       		.byte	0
+ 1946 0100 11       		.uleb128 0x11
+ 1947 0101 01       		.uleb128 0x1
+ 1948 0102 31       		.uleb128 0x31
+ 1949 0103 13       		.uleb128 0x13
+ 1950 0104 00       		.byte	0
+ 1951 0105 00       		.byte	0
+ 1952 0106 14       		.uleb128 0x14
+ 1953 0107 898201   		.uleb128 0x4109
+ 1954 010a 01       		.byte	0x1
+ 1955 010b 11       		.uleb128 0x11
+ 1956 010c 01       		.uleb128 0x1
+ 1957 010d 31       		.uleb128 0x31
+ 1958 010e 13       		.uleb128 0x13
+ 1959 010f 00       		.byte	0
+ 1960 0110 00       		.byte	0
+ 1961 0111 15       		.uleb128 0x15
+ 1962 0112 21       		.uleb128 0x21
+ 1963 0113 00       		.byte	0
+ 1964 0114 49       		.uleb128 0x49
+ 1965 0115 13       		.uleb128 0x13
+ 1966 0116 2F       		.uleb128 0x2f
+ 1967 0117 05       		.uleb128 0x5
+ 1968 0118 00       		.byte	0
+ 1969 0119 00       		.byte	0
+ 1970 011a 16       		.uleb128 0x16
+ 1971 011b 34       		.uleb128 0x34
+ 1972 011c 00       		.byte	0
+ 1973 011d 03       		.uleb128 0x3
+ 1974 011e 0E       		.uleb128 0xe
+ 1975 011f 3A       		.uleb128 0x3a
+ 1976 0120 0B       		.uleb128 0xb
+ 1977 0121 3B       		.uleb128 0x3b
+ 1978 0122 0B       		.uleb128 0xb
+ 1979 0123 49       		.uleb128 0x49
+ 1980 0124 13       		.uleb128 0x13
+ 1981 0125 3F       		.uleb128 0x3f
+ 1982 0126 19       		.uleb128 0x19
+ 1983 0127 02       		.uleb128 0x2
+ 1984 0128 18       		.uleb128 0x18
+ 1985 0129 00       		.byte	0
+ 1986 012a 00       		.byte	0
+ 1987 012b 17       		.uleb128 0x17
+ 1988 012c 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 38
+
+
+ 1989 012d 00       		.byte	0
+ 1990 012e 3F       		.uleb128 0x3f
+ 1991 012f 19       		.uleb128 0x19
+ 1992 0130 3C       		.uleb128 0x3c
+ 1993 0131 19       		.uleb128 0x19
+ 1994 0132 6E       		.uleb128 0x6e
+ 1995 0133 0E       		.uleb128 0xe
+ 1996 0134 03       		.uleb128 0x3
+ 1997 0135 0E       		.uleb128 0xe
+ 1998 0136 00       		.byte	0
+ 1999 0137 00       		.byte	0
+ 2000 0138 18       		.uleb128 0x18
+ 2001 0139 2E       		.uleb128 0x2e
+ 2002 013a 00       		.byte	0
+ 2003 013b 3F       		.uleb128 0x3f
+ 2004 013c 19       		.uleb128 0x19
+ 2005 013d 3C       		.uleb128 0x3c
+ 2006 013e 19       		.uleb128 0x19
+ 2007 013f 6E       		.uleb128 0x6e
+ 2008 0140 0E       		.uleb128 0xe
+ 2009 0141 03       		.uleb128 0x3
+ 2010 0142 0E       		.uleb128 0xe
+ 2011 0143 3A       		.uleb128 0x3a
+ 2012 0144 0B       		.uleb128 0xb
+ 2013 0145 3B       		.uleb128 0x3b
+ 2014 0146 0B       		.uleb128 0xb
+ 2015 0147 00       		.byte	0
+ 2016 0148 00       		.byte	0
+ 2017 0149 00       		.byte	0
+ 2018              		.section	.debug_aranges,"",%progbits
+ 2019 0000 1C000000 		.4byte	0x1c
+ 2020 0004 0200     		.2byte	0x2
+ 2021 0006 00000000 		.4byte	.Ldebug_info0
+ 2022 000a 04       		.byte	0x4
+ 2023 000b 00       		.byte	0
+ 2024 000c 0000     		.2byte	0
+ 2025 000e 0000     		.2byte	0
+ 2026 0010 00000000 		.4byte	.LFB0
+ 2027 0014 94000000 		.4byte	.LFE0-.LFB0
+ 2028 0018 00000000 		.4byte	0
+ 2029 001c 00000000 		.4byte	0
+ 2030              		.section	.debug_ranges,"",%progbits
+ 2031              	.Ldebug_ranges0:
+ 2032 0000 00000000 		.4byte	.LFB0
+ 2033 0004 94000000 		.4byte	.LFE0
+ 2034 0008 00000000 		.4byte	0
+ 2035 000c 00000000 		.4byte	0
+ 2036              		.section	.debug_line,"",%progbits
+ 2037              	.Ldebug_line0:
+ 2038 0000 AF010000 		.section	.debug_str,"MS",%progbits,1
+ 2038      02008701 
+ 2038      00000201 
+ 2038      FB0E0D00 
+ 2038      01010101 
+ 2039              	.LASF50:
+ 2040 0000 696E6974 		.ascii	"init_display\000"
+ 2040      5F646973 
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 39
+
+
+ 2040      706C6179 
+ 2040      00
+ 2041              	.LASF42:
+ 2042 000d 68656164 		.ascii	"header\000"
+ 2042      657200
+ 2043              	.LASF52:
+ 2044 0014 7365745F 		.ascii	"set_mode\000"
+ 2044      6D6F6465 
+ 2044      00
+ 2045              	.LASF35:
+ 2046 001d 725F6D61 		.ascii	"r_matrix\000"
+ 2046      74726978 
+ 2046      00
+ 2047              	.LASF12:
+ 2048 0026 696E7438 		.ascii	"int8_t\000"
+ 2048      5F7400
+ 2049              	.LASF20:
+ 2050 002d 4E4F524D 		.ascii	"NORMAL\000"
+ 2050      414C00
+ 2051              	.LASF44:
+ 2052 0034 666F6E74 		.ascii	"fonts_size\000"
+ 2052      735F7369 
+ 2052      7A6500
+ 2053              	.LASF4:
+ 2054 003f 73686F72 		.ascii	"short int\000"
+ 2054      7420696E 
+ 2054      7400
+ 2055              	.LASF19:
+ 2056 0049 73697A65 		.ascii	"sizetype\000"
+ 2056      74797065 
+ 2056      00
+ 2057              	.LASF28:
+ 2058 0052 73697A65 		.ascii	"size_x\000"
+ 2058      5F7800
+ 2059              	.LASF29:
+ 2060 0059 73697A65 		.ascii	"size_y\000"
+ 2060      5F7900
+ 2061              	.LASF60:
+ 2062 0060 6D61696E 		.ascii	"main\000"
+ 2062      00
+ 2063              	.LASF61:
+ 2064 0065 6D656D63 		.ascii	"memcpy\000"
+ 2064      707900
+ 2065              	.LASF46:
+ 2066 006c 4D454449 		.ascii	"MEDIUM\000"
+ 2066      554D00
+ 2067              	.LASF22:
+ 2068 0073 6D6F6465 		.ascii	"mode\000"
+ 2068      00
+ 2069              	.LASF45:
+ 2070 0078 534D414C 		.ascii	"SMALL\000"
+ 2070      4C00
+ 2071              	.LASF5:
+ 2072 007e 5F5F7569 		.ascii	"__uint16_t\000"
+ 2072      6E743136 
+ 2072      5F7400
+ 2073              	.LASF53:
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 40
+
+
+ 2074 0089 7365745F 		.ascii	"set_orientation\000"
+ 2074      6F726965 
+ 2074      6E746174 
+ 2074      696F6E00 
+ 2075              	.LASF47:
+ 2076 0099 4C415247 		.ascii	"LARGE\000"
+ 2076      4500
+ 2077              	.LASF37:
+ 2078 009f 77696474 		.ascii	"width\000"
+ 2078      6800
+ 2079              	.LASF15:
+ 2080 00a5 666C6F61 		.ascii	"float\000"
+ 2080      7400
+ 2081              	.LASF9:
+ 2082 00ab 6C6F6E67 		.ascii	"long long int\000"
+ 2082      206C6F6E 
+ 2082      6720696E 
+ 2082      7400
+ 2083              	.LASF49:
+ 2084 00b9 6F6C6564 		.ascii	"oled_Start\000"
+ 2084      5F537461 
+ 2084      727400
+ 2085              	.LASF7:
+ 2086 00c4 6C6F6E67 		.ascii	"long int\000"
+ 2086      20696E74 
+ 2086      00
+ 2087              	.LASF25:
+ 2088 00cd 4C414E44 		.ascii	"LANDSCAPE_INVERTED\000"
+ 2088      53434150 
+ 2088      455F494E 
+ 2088      56455254 
+ 2088      454400
+ 2089              	.LASF33:
+ 2090 00e0 6F726965 		.ascii	"orient\000"
+ 2090      6E7400
+ 2091              	.LASF43:
+ 2092 00e7 626F6479 		.ascii	"body\000"
+ 2092      00
+ 2093              	.LASF1:
+ 2094 00ec 5F5F7569 		.ascii	"__uint8_t\000"
+ 2094      6E74385F 
+ 2094      7400
+ 2095              	.LASF0:
+ 2096 00f6 5F5F696E 		.ascii	"__int8_t\000"
+ 2096      74385F74 
+ 2096      00
+ 2097              	.LASF18:
+ 2098 00ff 6C6F6E67 		.ascii	"long double\000"
+ 2098      20646F75 
+ 2098      626C6500 
+ 2099              	.LASF26:
+ 2100 010b 504F5254 		.ascii	"PORTRAIT\000"
+ 2100      52414954 
+ 2100      00
+ 2101              	.LASF3:
+ 2102 0114 756E7369 		.ascii	"unsigned char\000"
+ 2102      676E6564 
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 41
+
+
+ 2102      20636861 
+ 2102      7200
+ 2103              	.LASF2:
+ 2104 0122 7369676E 		.ascii	"signed char\000"
+ 2104      65642063 
+ 2104      68617200 
+ 2105              	.LASF10:
+ 2106 012e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2106      206C6F6E 
+ 2106      6720756E 
+ 2106      7369676E 
+ 2106      65642069 
+ 2107              	.LASF39:
+ 2108 0145 62797465 		.ascii	"byte_cnt_h\000"
+ 2108      5F636E74 
+ 2108      5F6800
+ 2109              	.LASF48:
+ 2110 0150 615F7376 		.ascii	"a_sv\000"
+ 2110      00
+ 2111              	.LASF38:
+ 2112 0155 68656967 		.ascii	"height\000"
+ 2112      687400
+ 2113              	.LASF11:
+ 2114 015c 756E7369 		.ascii	"unsigned int\000"
+ 2114      676E6564 
+ 2114      20696E74 
+ 2114      00
+ 2115              	.LASF41:
+ 2116 0169 7662635F 		.ascii	"vbc_file\000"
+ 2116      66696C65 
+ 2116      00
+ 2117              	.LASF36:
+ 2118 0172 76696465 		.ascii	"video_buffer\000"
+ 2118      6F5F6275 
+ 2118      66666572 
+ 2118      00
+ 2119              	.LASF23:
+ 2120 017f 6F726965 		.ascii	"orientation\000"
+ 2120      6E746174 
+ 2120      696F6E00 
+ 2121              	.LASF32:
+ 2122 018b 62797465 		.ascii	"byte_buffer_cnt\000"
+ 2122      5F627566 
+ 2122      6665725F 
+ 2122      636E7400 
+ 2123              	.LASF6:
+ 2124 019b 73686F72 		.ascii	"short unsigned int\000"
+ 2124      7420756E 
+ 2124      7369676E 
+ 2124      65642069 
+ 2124      6E7400
+ 2125              	.LASF24:
+ 2126 01ae 4C414E44 		.ascii	"LANDSCAPE\000"
+ 2126      53434150 
+ 2126      4500
+ 2127              	.LASF56:
+ 2128 01b8 75706461 		.ascii	"update_display\000"
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 42
+
+
+ 2128      74655F64 
+ 2128      6973706C 
+ 2128      617900
+ 2129              	.LASF31:
+ 2130 01c7 62797465 		.ascii	"byte_col_cnt\000"
+ 2130      5F636F6C 
+ 2130      5F636E74 
+ 2130      00
+ 2131              	.LASF17:
+ 2132 01d4 63686172 		.ascii	"char\000"
+ 2132      00
+ 2133              	.LASF14:
+ 2134 01d9 75696E74 		.ascii	"uint16_t\000"
+ 2134      31365F74 
+ 2134      00
+ 2135              	.LASF54:
+ 2136 01e2 7075745F 		.ascii	"put_vbc\000"
+ 2136      76626300 
+ 2137              	.LASF40:
+ 2138 01ea 62797465 		.ascii	"byte_cnt_l\000"
+ 2138      5F636E74 
+ 2138      5F6C00
+ 2139              	.LASF58:
+ 2140 01f5 6D61696E 		.ascii	"main.c\000"
+ 2140      2E6300
+ 2141              	.LASF8:
+ 2142 01fc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2142      20756E73 
+ 2142      69676E65 
+ 2142      6420696E 
+ 2142      7400
+ 2143              	.LASF16:
+ 2144 020e 646F7562 		.ascii	"double\000"
+ 2144      6C6500
+ 2145              	.LASF34:
+ 2146 0215 6F726967 		.ascii	"origin\000"
+ 2146      696E00
+ 2147              	.LASF30:
+ 2148 021c 7669645F 		.ascii	"vid_buf\000"
+ 2148      62756600 
+ 2149              	.LASF51:
+ 2150 0224 696E6974 		.ascii	"init_buf\000"
+ 2150      5F627566 
+ 2150      00
+ 2151              	.LASF13:
+ 2152 022d 75696E74 		.ascii	"uint8_t\000"
+ 2152      385F7400 
+ 2153              	.LASF55:
+ 2154 0235 7075745F 		.ascii	"put_string\000"
+ 2154      73747269 
+ 2154      6E6700
+ 2155              	.LASF27:
+ 2156 0240 504F5254 		.ascii	"PORTRAIT_INVERTED\000"
+ 2156      52414954 
+ 2156      5F494E56 
+ 2156      45525445 
+ 2156      4400
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccQFxUIO.s 			page 43
+
+
+ 2157              	.LASF21:
+ 2158 0252 494E5645 		.ascii	"INVERTED\000"
+ 2158      52544544 
+ 2158      00
+ 2159              	.LASF57:
+ 2160 025b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2160      43313120 
+ 2160      352E342E 
+ 2160      31203230 
+ 2160      31363036 
+ 2161 028e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2161      20726576 
+ 2161      6973696F 
+ 2161      6E203233 
+ 2161      37373135 
+ 2162 02c1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2162      66756E63 
+ 2162      74696F6E 
+ 2162      2D736563 
+ 2162      74696F6E 
+ 2163              	.LASF59:
+ 2164 02e9 5A3A5C41 		.ascii	"Z:\\ATTECH\\UTILITY Dep\\PCB-OVEN\\PCB-OVEN\\PSOC\\"
+ 2164      54544543 
+ 2164      485C5554 
+ 2164      494C4954 
+ 2164      59204465 
+ 2165 0316 50434220 		.ascii	"PCB oven controller.cydsn\000"
+ 2165      6F76656E 
+ 2165      20636F6E 
+ 2165      74726F6C 
+ 2165      6C65722E 
+ 2166              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

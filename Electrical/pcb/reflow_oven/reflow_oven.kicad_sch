@@ -1,0 +1,89 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 45844e6c-2718-4770-9b23-4fc28dba2db3)
+
+  (paper "A4")
+
+  (title_block
+    (title "Reflow Controller")
+    (rev "1.0")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 46.99 88.9) (size 30.48 22.86) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid e529b68e-658c-449e-b839-b72d069f9257)
+    (property "Sheet name" "Power Stage" (id 0) (at 46.99 88.1884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "Power Stage.kicad_sch" (id 1) (at 46.99 112.3446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/e529b68e-658c-449e-b839-b72d069f9257" (page "2"))
+  )
+
+  (symbol_instances
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/7735fb4f-7f8f-49c5-86c4-2dc790d816fc"
+      (reference "#PWR01") (unit 1) (value "GNDREF") (footprint "")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/701a046a-09e5-468e-a05d-4c3087fe2f34"
+      (reference "#PWR02") (unit 1) (value "GNDREF") (footprint "")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/bcd5b02a-1aeb-42e4-bdc6-ab85ae19ff74"
+      (reference "#PWR03") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/3a97b4f3-32b9-4eba-83bd-472e4448915d"
+      (reference "#PWR04") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/7bdaf1f5-cac4-4c0d-9fac-2760dd003fdf"
+      (reference "#PWR05") (unit 1) (value "+3V3") (footprint "")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/0032ab92-3d2c-4df8-b4c4-beb277ac11bb"
+      (reference "C1") (unit 1) (value "C") (footprint "footprint_lib:MXH104K305E10")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/3f895f56-834a-4cc3-baa2-a123958d1d40"
+      (reference "C2") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/5e066c26-3466-4202-8028-f1b6948a4cbf"
+      (reference "C3") (unit 1) (value "1uF") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/513f0394-5f68-402c-967a-6019783434be"
+      (reference "D1") (unit 1) (value "DSS34") (footprint "Diode_SMD:D_SOD-123F")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/3ba8d671-2fdc-4ab4-8f30-75ab70e97c72"
+      (reference "D2") (unit 1) (value "DSS34") (footprint "Diode_SMD:D_SOD-123F")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/24d3ac8d-9943-4e47-b5c8-a1f942f339b6"
+      (reference "D3") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/c7baae09-cf3e-4c79-bc1f-39f91f3a5580"
+      (reference "F1") (unit 1) (value "fuse_holder") (footprint "footprint_lib:64600001223")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/5287dcad-a80f-4270-b0f3-86c3ca3d6a2a"
+      (reference "J1") (unit 1) (value "1711738") (footprint "footprint_lib:1711738")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/159ca541-0175-4c88-ad29-8d0e58aabb20"
+      (reference "R1") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/5c5583d6-ae8a-4491-81cc-046920b3a447"
+      (reference "RV1") (unit 1) (value "470") (footprint "footprint_lib:MOV_20D241k")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/19583f1a-38e0-4e31-b5fb-2ce981141fbc"
+      (reference "RV2") (unit 1) (value "Varistor") (footprint "footprint_lib:MOV_20D241k")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/98d7ed3a-b3ed-4687-a873-0e3dc9b06557"
+      (reference "U1") (unit 1) (value "LH05-10B05") (footprint "footprint_lib:LH05-13B05")
+    )
+    (path "/e529b68e-658c-449e-b839-b72d069f9257/94ecd152-6c6c-4da2-a4c0-157b0af59001"
+      (reference "U2") (unit 1) (value "AP1117-33") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+    )
+  )
+)

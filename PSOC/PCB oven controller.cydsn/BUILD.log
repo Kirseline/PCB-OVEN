@@ -1,0 +1,47 @@
+--------------- Build Started: 07/29/2023 09:56:00 Project: PCB oven controller, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+In file included from display\driver\psoc5_ssd1306_i2c.h:11:0,
+                 from main.c:13:
+c:\users\arist\desktop\geva\geva.h:10:0: warning: "_B" redefined
+ #define _B 1
+ ^
+In file included from Generated_Source\PSoC5/CyLib.h:24:0,
+                 from Generated_Source\PSoC5/oled.h:21,
+                 from Generated_Source\PSoC5/project.h:26,
+                 from main.c:12:
+c:\program files (x86)\cypress\psoc creator\4.4\psoc creator\import\gnu\arm\5.4.1\arm-none-eabi\include\ctype.h:41:0: note: this is the location of the previous definition
+ #define _B 0200
+ ^
+In file included from display\driver\psoc5_ssd1306_i2c.h:11:0,
+                 from main.c:13:
+c:\users\arist\desktop\geva\geva.h:11:0: warning: "_C" redefined
+ #define _C 2
+ ^
+In file included from Generated_Source\PSoC5/CyLib.h:24:0,
+                 from Generated_Source\PSoC5/oled.h:21,
+                 from Generated_Source\PSoC5/project.h:26,
+                 from main.c:12:
+c:\program files (x86)\cypress\psoc creator\4.4\psoc creator\import\gnu\arm\5.4.1\arm-none-eabi\include\ctype.h:39:0: note: this is the location of the previous definition
+ #define _C 040
+ ^
+main.c: In function 'main':
+main.c:114:21: warning: pointer targets in passing argument 3 of 'put_string' differ in signedness [-Wpointer-sign]
+     put_string(0,50,"CAZZOMENE \n\rCAZZI TUOI",SMALL, &vid_buf);
+                     ^
+In file included from display\driver\psoc5_ssd1306_i2c.h:11:0,
+                 from main.c:13:
+c:\users\arist\desktop\geva\geva.h:108:9: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ uint8_t put_string(uint8_t pos_x, uint8_t pos_y, uint8_t* chr, enum fonts_size ff, video_buffer* buf);
+         ^
+arm-none-eabi-ar.exe -rs ".\CortexM3\ARM_GCC_541\Debug\PCB oven controller.a" .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\SDA_1.o .\CortexM3\ARM_GCC_541\Debug\SCL_1.o .\CortexM3\ARM_GCC_541\Debug\oled.o .\CortexM3\ARM_GCC_541\Debug\oled_BOOT.o .\CortexM3\ARM_GCC_541\Debug\oled_INT.o .\CortexM3\ARM_GCC_541\Debug\oled_PM.o .\CortexM3\ARM_GCC_541\Debug\oled_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\oled_MASTER.o .\CortexM3\ARM_GCC_541\Debug\OK_BUTTON.o .\CortexM3\ARM_GCC_541\Debug\UP_BUTTON.o .\CortexM3\ARM_GCC_541\Debug\DOWN_BUTTON.o .\CortexM3\ARM_GCC_541\Debug\UART_1.o .\CortexM3\ARM_GCC_541\Debug\UART_1_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_1_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_1_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_1_IntClock.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\PCB oven controller.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o "Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\CortexM3\ARM_GCC_541\Debug\PCB oven controller.elf" .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\psoc5_ssd1306_i2c.o .\CortexM3\ARM_GCC_541\Debug\GEVA.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o ".\CortexM3\ARM_GCC_541\Debug\PCB oven controller.a" "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 "-Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PCB oven controller.map" -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C "Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\CortexM3\ARM_GCC_541\Debug\PCB oven controller.elf" --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S "Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\CortexM3\ARM_GCC_541\Debug\PCB oven controller.elf"
+Flash used: 20352 of 262144 bytes (7.8%).
+SRAM used: 18065 of 65536 bytes (27.6%). Stack: 2048 bytes. Heap: 1280 bytes.
+--------------- Build Succeeded: 07/29/2023 09:56:02 ---------------

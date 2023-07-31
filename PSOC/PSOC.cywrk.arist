@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\TopDesign</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Pins</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Analog</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Clocks</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Interrupts</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\DMA</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\System</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Directives</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Flash Security</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\EEPROM</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Header Files</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Header Files\cyapicallbacks.h</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Header Files\main.h</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files\coldJnTemp.c</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files\main.c</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files\removeOffsetNoise.c</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\TopDesign</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Pins</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Analog</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Clocks</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Interrupts</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\DMA</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\System</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Directives</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Flash Security</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\EEPROM</v>
+<v>PSOC\PCB oven controller\display</v>
+<v>PSOC\PCB oven controller\display\driver</v>
+<v>PSOC\PCB oven controller\display\driver\psoc5_ssd1306_i2c.c</v>
+<v>PSOC\PCB oven controller\display\driver\psoc5_ssd1306_i2c.h</v>
+<v>PSOC\PCB oven controller\display\GEVA.c</v>
+<v>PSOC\PCB oven controller\display\GEVA.h</v>
+<v>PSOC\PCB oven controller\display\GEVA_font.h</v>
+<v>PSOC\PCB oven controller\Header Files</v>
+<v>PSOC\PCB oven controller\Header Files\cyapicallbacks.h</v>
+<v>PSOC\PCB oven controller\Source Files</v>
+<v>PSOC\PCB oven controller\Source Files\main.c</v>
+<v>PSOC\PCB oven controller\Generated_Source</v>
+<v>PSOC\CE219905_PSoC3_5_Temperature_Sensing_with_a_Thermocouple.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\TopDesign</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Pins</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Analog</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Clocks</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Interrupts</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\DMA</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\System</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Directives</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\Flash Security</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.cydwr\EEPROM</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Header Files</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Header Files\cyapicallbacks.h</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Header Files\main.h</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files\coldJnTemp.c</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files\main.c</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Source Files\removeOffsetNoise.c</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\TopDesign</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Pins</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Analog</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Clocks</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Interrupts</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\DMA</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\System</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Directives</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\Flash Security</v>
+<v>PSOC\PCB oven controller\PCB oven controller.cydwr\EEPROM</v>
+<v>PSOC\PCB oven controller\display</v>
+<v>PSOC\PCB oven controller\display\driver</v>
+<v>PSOC\PCB oven controller\display\driver\psoc5_ssd1306_i2c.c</v>
+<v>PSOC\PCB oven controller\display\driver\psoc5_ssd1306_i2c.h</v>
+<v>PSOC\PCB oven controller\display\GEVA.c</v>
+<v>PSOC\PCB oven controller\display\GEVA.h</v>
+<v>PSOC\PCB oven controller\display\GEVA_font.h</v>
+<v>PSOC\PCB oven controller\Header Files</v>
+<v>PSOC\PCB oven controller\Header Files\cyapicallbacks.h</v>
+<v>PSOC\PCB oven controller\Source Files</v>
+<v>PSOC\PCB oven controller\Source Files\main.c</v>
+<v>PSOC\PCB oven controller\Generated_Source</v>
+<v>PSOC\PCB oven controller\Generated_Source\PSoC5</v>
+<v>PSOC\CE219905_PSoC3_5_Temperature_Sensing_with_a_Thermocouple.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\TopDesign</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\TopDesign\TopDesign.cysch</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\TopDesign</v>
+<v>PSOC\PCB oven controller\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\TopDesign</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\TopDesign\TopDesign.cysch</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\TopDesign</v>
+<v>PSOC\PCB oven controller\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.gpdsc</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.rpt</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01_timing.html</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\CortexM3</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\DOWN_BUTTON.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\GEVA.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\OK_BUTTON.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_BOOT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_INT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_MASTER.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_PM.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_SLAVE.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\psoc5_ssd1306_i2c.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UP_BUTTON.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\PCB oven controller.elf</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\PCB oven controller.hex</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\PCB oven controller.map</v>
+<v>PSOC\PCB oven controller\PCB oven controller.gpdsc</v>
+<v>PSOC\PCB oven controller\PCB oven controller.rpt</v>
+<v>PSOC\PCB oven controller\PCB oven controller_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.gpdsc</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01.rpt</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CE219905_PSoC3_5_Thermocouple_Low_End01_timing.html</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\CortexM3</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\DOWN_BUTTON.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\GEVA.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\OK_BUTTON.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_BOOT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_INT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_MASTER.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_PM.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\oled_SLAVE.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\psoc5_ssd1306_i2c.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\Listing Files\UP_BUTTON.lst</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\PCB oven controller.elf</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\PCB oven controller.hex</v>
+<v>PSOC\PCB oven controller\CortexM3\ARM_GCC_541\Debug\PCB oven controller.map</v>
+<v>PSOC\PCB oven controller\PCB oven controller.gpdsc</v>
+<v>PSOC\PCB oven controller\PCB oven controller.rpt</v>
+<v>PSOC\PCB oven controller\PCB oven controller_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\PSoC 5LP Architecture TRM</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CY8C58LP Family Datasheet</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\System Reference Guides</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\System Reference Guides\cy_boot_v5_70</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\ADC_DelSig_v3_30.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\AMux_v1_80.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CharLCD_v2_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_clock_v2_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_isr_v1_70.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_pins_v2_20</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_vref_v1_70.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Debouncer_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Gnd_v1_0</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\OpAmp_v1_90.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Power_v1_0</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Power_v1_0\Power_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Resistor_v1_0</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\SwitchSPST_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Thermistor_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\ThermistorCalc_v1_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Thermocouple_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\ThermocoupleCalc_v1_20.pdf</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\PSoC 5LP Architecture TRM</v>
+<v>PSOC\PCB oven controller\CY8C58LP Family Datasheet</v>
+<v>PSOC\PCB oven controller\System Reference Guides</v>
+<v>PSOC\PCB oven controller\System Reference Guides\cy_boot_v6_0</v>
+<v>PSOC\PCB oven controller\cy_pins_v2_20</v>
+<v>PSOC\PCB oven controller\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSOC\PCB oven controller\I2C_v3_50.pdf</v>
+<v>PSOC\PCB oven controller\ThermistorCalc_v1_20.pdf</v>
+<v>PSOC\PCB oven controller\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\PSoC 5LP Architecture TRM</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CY8C58LP Family Datasheet</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\System Reference Guides</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\System Reference Guides\cy_boot_v5_70</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\ADC_DelSig_v3_30.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\AMux_v1_80.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\CharLCD_v2_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_clock_v2_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_isr_v1_70.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_pins_v2_20</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\cy_vref_v1_70.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Debouncer_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Gnd_v1_0</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\OpAmp_v1_90.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Power_v1_0</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Power_v1_0\Power_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Resistor_v1_0</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\SwitchSPST_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Thermistor_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\ThermistorCalc_v1_20.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\Thermocouple_v1_0.pdf</v>
+<v>PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01\ThermocoupleCalc_v1_20.pdf</v>
+<v>PSOC\PCB oven controller</v>
+<v>PSOC\PCB oven controller\PSoC 5LP Architecture TRM</v>
+<v>PSOC\PCB oven controller\CY8C58LP Family Datasheet</v>
+<v>PSOC\PCB oven controller\System Reference Guides</v>
+<v>PSOC\PCB oven controller\System Reference Guides\cy_boot_v6_0</v>
+<v>PSOC\PCB oven controller\cy_pins_v2_20</v>
+<v>PSOC\PCB oven controller\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSOC\PCB oven controller\I2C_v3_50.pdf</v>
+<v>PSOC\PCB oven controller\ThermistorCalc_v1_20.pdf</v>
+<v>PSOC\PCB oven controller\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\PCB oven controller.cydsn\main.c" />
+<name v=".\PCB oven controller.cydsn\display\GEVA.h" />
+<name v=".\PCB oven controller.cydsn\PCB oven controller.cydwr" />
+<name v=".\PCB oven controller.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PCB oven controller.cydsn\display\driver\psoc5_ssd1306_i2c.h" />
+<name v=".\PCB oven controller.cydsn\display\driver\psoc5_ssd1306_i2c.c" />
+<name v=".\CE219905_PSoC3_5_Thermocouple_Low_End01.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1873, 1062" SelectedTabbedMdiWindow="8430bb8d-0930-41f4-86f2-f3fa9a1c006d"><DocumentWindow Key="Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\main.c" Guid="155231e5-4ea1-48be-add3-279f4dbd61e7" /><DocumentWindow Key="Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\display\GEVA.h" Guid="9239a6e8-ba64-4574-801f-5487e548076e" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="c43ce7ce-ae9e-4673-9b4b-a38c8a300ef2" /><DocumentWindow Key="Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\PCB oven controller.cydwr" Guid="e93e947e-4d05-446b-8c49-8d755b51d9e8" /><DocumentWindow Key="Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\TopDesign\TopDesign.cysch" Guid="328053dd-a2f8-45d5-a1d0-d2361b318bd5" /><DocumentWindow Key="Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\display\driver\psoc5_ssd1306_i2c.h" Guid="7ae72c20-dacc-4d9c-9537-8aab0115541e" /><DocumentWindow Key="Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\display\driver\psoc5_ssd1306_i2c.c" Guid="191ed5c7-640e-41d9-bb95-81bfff4fc850" /><DocumentWindow Key="Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\CE219905_PSoC3_5_Thermocouple_Low_End01.cydsn\TopDesign\TopDesign.cysch" Guid="8430bb8d-0930-41f4-86f2-f3fa9a1c006d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

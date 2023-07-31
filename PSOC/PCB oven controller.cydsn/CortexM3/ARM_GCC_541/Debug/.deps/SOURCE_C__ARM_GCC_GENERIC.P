@@ -1,0 +1,66 @@
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/arist/Desktop/GEVA/GEVA.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CyDmac.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CyFlash.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CyLib.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CySpc.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/DOWN_BUTTON.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/DOWN_BUTTON_aliases.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/OK_BUTTON.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/OK_BUTTON_aliases.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SCL_1.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SCL_1_aliases.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SDA_1.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SDA_1_aliases.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UART_1.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UP_BUTTON.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UP_BUTTON_aliases.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cyPm.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cydevice.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cydevice_trm.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cydisabledsheets.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cyfitter.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cypins.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cytypes.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/oled.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/oled_PVT.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/project.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/display/GEVA.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/display/driver/psoc5_ssd1306_i2c.h Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/main.c 
+
+C:/Users/arist/Desktop/GEVA/GEVA.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/DOWN_BUTTON.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/DOWN_BUTTON_aliases.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/OK_BUTTON.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/OK_BUTTON_aliases.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SCL_1.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SCL_1_aliases.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SDA_1.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/SDA_1_aliases.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UART_1.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UP_BUTTON.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/UP_BUTTON_aliases.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/oled.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/oled_PVT.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/Generated_Source/PSoC5/project.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/display/GEVA.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/display/driver/psoc5_ssd1306_i2c.h : 
+
+Z:/ATTECH/UTILITY\ Dep/PCB-OVEN/PCB-OVEN/PSOC/PCB\ oven\ controller.cydsn/main.c : 
+
