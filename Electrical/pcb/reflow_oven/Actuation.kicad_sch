@@ -1,0 +1,19 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid a34ceb19-b496-48cc-aa09-5e1cec222941)
+
+  (paper "A4")
+
+  (title_block
+    (title "Reflow Controller")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "TODO\n- ssr transistor\n- fan control\n" (at 40.64 38.1 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 5c27a658-474b-4cbe-8c54-d6aa28ee5122)
+  )
+)

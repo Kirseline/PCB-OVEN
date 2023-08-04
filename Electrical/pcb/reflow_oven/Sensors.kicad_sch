@@ -1,0 +1,20 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 3cb0b5cb-1f23-4b3c-b196-4e01e03daae2)
+
+  (paper "A4")
+
+  (title_block
+    (title "Reflow Controller")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "TODO\n-thermocouple\n-current and voltage with current transformer\n-ntc"
+    (at 25.4 31.75 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 83ba0abd-5f9d-4fb5-9fa3-f02b36c8137b)
+  )
+)

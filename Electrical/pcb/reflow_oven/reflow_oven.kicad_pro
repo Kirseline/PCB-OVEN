@@ -418,6 +418,22 @@
     [
       "e529b68e-658c-449e-b839-b72d069f9257",
       "Power Stage"
+    ],
+    [
+      "53a208f1-6323-4fa9-b554-8d00eaeb3dc8",
+      "MCU_User"
+    ],
+    [
+      "a4495d77-238e-40f1-9ffb-145d8b1cecb5",
+      "Actuation"
+    ],
+    [
+      "279cec42-405f-4c6c-bb46-6dc3df4390ae",
+      "Interfaces"
+    ],
+    [
+      "df7b56df-bc8c-4e9a-b93d-276a440dc537",
+      "Sensors"
     ]
   ],
   "text_variables": {}
