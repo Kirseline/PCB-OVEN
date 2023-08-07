@@ -1,4 +1,4 @@
-20598597537324155
+20605363129440348
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -86443,6 +86443,13 @@ varistor
 2
 2
 footprint_lib
+11-4L1S_5-PIN-SOIC_
+11-4L1S(5-Pin SOIC)
+Integrated Circuit
+0
+5
+5
+footprint_lib
 1711738
 1711738
 Connector
@@ -86456,6 +86463,27 @@ Fuse
 0
 2
 2
+footprint_lib
+Circular_fuse
+
+
+0
+2
+1
+footprint_lib
+DIP825W58P510L832H472Q4N
+DB104G
+Bridge Rectifier
+0
+4
+4
+footprint_lib
+KMR621NGLFS
+KMR621NGLFS-2
+Switch
+0
+4
+4
 footprint_lib
 LH05-13B05
 
