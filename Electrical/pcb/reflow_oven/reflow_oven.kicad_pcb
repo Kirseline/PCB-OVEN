@@ -278,7 +278,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 029abb48-8e23-4965-93a6-9c0f1b5136c0)
-    (at -588.409 25.1378)
+    (at -595.7906 43.3072)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -320,7 +320,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 03d5d35f-0398-45dd-b098-2e7a1265b17d)
-    (at -515.319 -6.8122)
+    (at -522.7006 11.3572)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -446,7 +446,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 0886bca0-b738-4c8f-a5e8-3f3f321c6e08)
-    (at -519.329 -4.0222)
+    (at -526.7106 14.1472)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -572,7 +572,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 13146dbe-e2af-430f-8112-7c0321a98d90)
-    (at -527.909 4.2378)
+    (at -535.2906 22.4072)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -614,7 +614,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 138b35b3-0cf9-4b5c-a2aa-dede17e81986)
-    (at -495.979 -25.7522)
+    (at -489.3372 3.4578)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -656,14 +656,14 @@
 
   (footprint "NetTie:NetTie-2_SMD_Pad2.0mm" (layer "F.Cu")
     (tedit 5A1CF73E) (tstamp 1ce0967c-454e-4bde-82c8-bc0a33c13c0f)
-    (at -586.639 31.4178)
+    (at -579.9972 60.6278)
     (descr "Net tie, 2 pin, 2.0mm square SMD pads")
     (tags "net tie")
     (property "Sheetfile" "MCU_User.kicad_sch")
     (property "Sheetname" "MCU_User")
     (path "/53a208f1-6323-4fa9-b554-8d00eaeb3dc8/b9e66a0b-a2bc-42bd-b165-c75f315fb9a7")
     (attr exclude_from_pos_files)
-    (fp_text reference "N1" (at 0 -2) (layer "F.SilkS")
+    (fp_text reference "N1" (at -14.0234 -13.0406) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp bb7e32b6-ec75-434e-959c-892bc5f8975d)
     )
@@ -689,7 +689,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23" (layer "F.Cu")
     (tedit 5FA16958) (tstamp 1e3bf758-c9dc-4d3e-8664-f62707801c3c)
-    (at -550.429 21.6378)
+    (at -557.8106 39.8072)
     (descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -736,7 +736,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 1e4a24fe-7481-41bf-a330-9f1ff9c2de99)
-    (at -572.369 25.1378)
+    (at -579.7506 43.3072)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -912,7 +912,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 2176f516-83ed-46d5-9858-797e53dc7c13)
-    (at -500.359 -28.0422)
+    (at -493.7172 1.1678)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -954,7 +954,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 2252f65a-def2-4e40-9fed-e61a7ae5813b)
-    (at -510.159 -14.2222)
+    (at -503.5172 14.9878)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1471,7 +1471,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 2ecc9866-9437-4b4d-82cc-b291ea94eb36)
-    (at -501.259 -20.2922)
+    (at -494.6172 8.9178)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1513,7 +1513,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 2f69bc6f-d683-4565-86f8-798202e42aea)
-    (at -548.099 10.0278)
+    (at -555.4806 28.1972)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1555,7 +1555,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 2fe64569-2d07-401b-9988-f0a569bd6fd6)
-    (at -495.979 -28.2622)
+    (at -489.3372 0.9478)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1597,7 +1597,7 @@
 
   (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" (layer "F.Cu")
     (tedit 5B294F98) (tstamp 3096acdd-7374-43d4-9d2d-ae4be62082c1)
-    (at -538.879 -5.5922)
+    (at -546.2606 12.5772)
     (descr "Terminal Block Phoenix MPT-0,5-2-2.54, 2 pins, pitch 2.54mm, size 5.54x6.2mm^2, drill diamater 1.1mm, pad diameter 2.2mm, see http://www.mouser.com/ds/2/324/ItemDetail_1725656-920552.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
     (tags "THT Terminal Block Phoenix MPT-0,5-2-2.54 pitch 2.54mm size 5.54x6.2mm^2 drill 1.1mm pad 2.2mm")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1660,7 +1660,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 319d0205-e186-47b2-9d99-94153628a496)
-    (at -520.789 -9.4322)
+    (at -528.1706 8.7372)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1702,7 +1702,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 3429a0d3-61bb-4531-acd7-5ee06f4ed702)
-    (at -533.519 9.2578)
+    (at -540.9006 27.4272)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1744,7 +1744,7 @@
 
   (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" (layer "F.Cu")
     (tedit 59FF03AB) (tstamp 37badbd5-894a-4046-b54f-e20fd8f32d78)
-    (at -554.979 -5.1922)
+    (at -562.3606 12.9772)
     (descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
     (tags "terminal block bornier2")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1790,7 +1790,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23" (layer "F.Cu")
     (tedit 5FA16958) (tstamp 38a4614c-35e9-48ff-845c-f1720b9aca0a)
-    (at -523.779 -5.5622)
+    (at -531.1606 12.6072)
     (descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1837,7 +1837,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 3bb0f9c5-9dfb-418e-83a8-027d30c647d7)
-    (at -529.509 9.2578)
+    (at -536.8906 27.4272)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1879,7 +1879,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 3d504280-057d-4a68-a7bc-8998672cfa28)
-    (at -509.499 -16.9822)
+    (at -502.8572 12.2278)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1921,7 +1921,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23" (layer "F.Cu")
     (tedit 5FA16958) (tstamp 3d779061-60c1-4af5-99e8-2beadc3bc588)
-    (at -505.179 -27.2922)
+    (at -498.5372 1.9178)
     (descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -1968,7 +1968,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 3d90f760-1890-487f-8d7a-e8871b51cd59)
-    (at -584.399 25.1378)
+    (at -591.7806 43.3072)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2010,7 +2010,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 3eac1a23-9699-41db-b300-e51218623742)
-    (at -514.169 -14.2222)
+    (at -521.5506 3.9472)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2052,7 +2052,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 3f8174ac-0741-4de0-b7f2-ec29d1d93509)
-    (at -519.329 -6.5322)
+    (at -526.7106 11.6372)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2444,7 +2444,7 @@
 
   (footprint "footprint_lib:Circular_fuse" (layer "F.Cu")
     (tedit 0) (tstamp 4917420b-b37b-4797-90c1-6d612cfe5c2a)
-    (at -518.667 -24.4202)
+    (at -526.0486 -6.2508)
     (property "Sheetfile" "Sensors.kicad_sch")
     (property "Sheetname" "Sensors")
     (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/a0f16c09-9956-4b86-89c9-d9fa4e659716")
@@ -2518,7 +2518,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23-5" (layer "F.Cu")
     (tedit 5F6F9B37) (tstamp 4c063ad5-d010-469f-b885-a20cd88166be)
-    (at -510.999 -20.7122)
+    (at -504.3572 8.4978)
     (descr "SOT, 5 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2611,7 +2611,7 @@
 
   (footprint "footprint_lib:TC33X2503E" (layer "F.Cu")
     (tedit 0) (tstamp 4ea695b9-321a-43c4-a255-1285cef67ded)
-    (at -566.414 22.4228)
+    (at -573.7956 40.5922)
     (descr "TC33X-2_1")
     (tags "Variable Resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2659,7 +2659,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 50b0dd38-bcb9-4ecf-be8a-5344beac2884)
-    (at -545.719 19.2278)
+    (at -553.1006 37.3972)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2701,7 +2701,7 @@
 
   (footprint "footprint_lib:11-4L1S_5-PIN-SOIC_" (layer "F.Cu")
     (tedit 0) (tstamp 51f7ea04-1959-4760-bd89-59daf530f050)
-    (at -543.87229 -5.4672)
+    (at -551.25389 12.7022)
     (descr "11-4L1S(5-Pin SOIC)")
     (tags "Integrated Circuit")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2837,7 +2837,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 569507fd-0f46-4c83-9eca-c544f8e923d6)
-    (at -545.979 24.2478)
+    (at -553.3606 42.4172)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -2957,7 +2957,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 5bd8f577-e96e-4f5f-a3f8-23bc11cec40c)
-    (at -513.949 -16.9822)
+    (at -521.3306 1.1872)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3052,7 +3052,7 @@
 
   (footprint "footprint_lib:ZMPT101B" (layer "F.Cu")
     (tedit 0) (tstamp 5ecc471b-881a-482e-bc51-8477f0b66e07)
-    (at -539.914 -25.9672)
+    (at -547.2956 -7.7978)
     (descr "ZMPT101B-4")
     (tags "Transformer")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3104,7 +3104,7 @@
 
   (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" (layer "F.Cu")
     (tedit 5B294F98) (tstamp 5f58e534-555d-4f7b-81e5-101ca9592cc5)
-    (at -521.239 -15.2022)
+    (at -528.6206 2.9672)
     (descr "Terminal Block Phoenix MPT-0,5-2-2.54, 2 pins, pitch 2.54mm, size 5.54x6.2mm^2, drill diamater 1.1mm, pad diameter 2.2mm, see http://www.mouser.com/ds/2/324/ItemDetail_1725656-920552.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
     (tags "THT Terminal Block Phoenix MPT-0,5-2-2.54 pitch 2.54mm size 5.54x6.2mm^2 drill 1.1mm pad 2.2mm")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3167,7 +3167,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 63c09485-0d58-4b7e-95c8-c5adeee0f05a)
-    (at -531.919 4.2378)
+    (at -539.3006 22.4072)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3209,7 +3209,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 6904b791-3a2b-4457-9dfe-114d783303dd)
-    (at -545.499 16.4678)
+    (at -552.8806 34.6372)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3251,7 +3251,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 69f4a120-189f-41a4-b467-f93f2eea4b36)
-    (at -510.599 -24.5822)
+    (at -503.9572 4.6278)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3293,7 +3293,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23" (layer "F.Cu")
     (tedit 5FA16958) (tstamp 6bf9af37-f045-455d-9271-14f72f503bc5)
-    (at -530.679 0.7578)
+    (at -538.0606 18.9272)
     (descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3340,7 +3340,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 6d68eb79-d5a8-49a9-a1f2-fd9e16da2d78)
-    (at -555.939 24.4378)
+    (at -563.3206 42.6072)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3382,7 +3382,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 6d85a72a-9603-499b-a411-b045758e842c)
-    (at -533.959 11.7678)
+    (at -541.3406 29.9372)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3803,7 +3803,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 7465f3e1-998d-4f53-8577-f26f6649d7de)
-    (at -580.389 25.1378)
+    (at -587.7706 43.3072)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3894,7 +3894,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23-5" (layer "F.Cu")
     (tedit 5F6F9B37) (tstamp 7a120995-25f8-423a-a5c4-ffee93ed787a)
-    (at -592.6074 10.2108)
+    (at -599.989 28.3802)
     (descr "SOT, 5 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -3945,7 +3945,7 @@
 
   (footprint "footprint_lib:Circular_fuse" (layer "F.Cu")
     (tedit 0) (tstamp 7bfe7f7c-abb4-43f1-a582-df7ae1283ee8)
-    (at -564.667 13.4798)
+    (at -572.0486 31.6492)
     (property "Sheetfile" "Sensors.kicad_sch")
     (property "Sheetname" "Sensors")
     (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/0030df55-db09-42e6-be20-b89fbb39fcdd")
@@ -4187,7 +4187,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 84afc784-1358-4702-842b-cf9f36ead626)
-    (at -536.099 0.1778)
+    (at -543.4806 18.3472)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4287,7 +4287,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 8677cfbe-b72a-4dbb-b61d-e79f5c5aaafc)
-    (at -541.269 16.0978)
+    (at -548.6506 34.2672)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4329,7 +4329,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 8b20f344-5433-47a7-9b26-c0d78e95bfcd)
-    (at -542.899 13.3378)
+    (at -550.2806 31.5072)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4419,7 +4419,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 8b70db1f-3d3b-46ea-8010-3fcd04263078)
-    (at -537.749 8.8878)
+    (at -545.1306 27.0572)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4550,7 +4550,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23-5" (layer "F.Cu")
     (tedit 5F6F9B37) (tstamp 9685b75c-2899-459a-a900-9fa64c715019)
-    (at -542.549 9.6078)
+    (at -549.9306 27.7772)
     (descr "SOT, 5 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4601,7 +4601,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp 96e5b621-bb74-4ea4-af85-d6b95f37f762)
-    (at -511.359 -11.7122)
+    (at -504.7172 17.4978)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4685,7 +4685,7 @@
 
   (footprint "footprint_lib:SOIC127P600X175-8N" (layer "F.Cu")
     (tedit 0) (tstamp 97bf28d5-5ace-4331-acdd-0267a115c438)
-    (at -555.324 11.6578)
+    (at -562.7056 29.8272)
     (descr "8 SO")
     (tags "Integrated Circuit")
     (property "Datasheet_1" "https://datasheets.maximintegrated.com/en/ds/MAX6675.pdf")
@@ -4752,7 +4752,7 @@
 
   (footprint "Package_TO_SOT_SMD:SOT-23-5" (layer "F.Cu")
     (tedit 5F6F9B37) (tstamp 9c1116f6-768d-4a1e-80cc-0cc95d2b07e9)
-    (at -536.499 4.0478)
+    (at -543.8806 22.2172)
     (descr "SOT, 5 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4887,7 +4887,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp a3f7a30c-211d-4628-8099-9fbc8840e93e)
-    (at -506.419 -20.8622)
+    (at -499.7772 8.3478)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -4929,7 +4929,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp a46e56d0-cc7d-48b0-9681-1482704eb78a)
-    (at -551.559 25.1178)
+    (at -558.9406 43.2872)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5013,7 +5013,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp a9409e2a-0173-4726-9bfa-e99f723ada53)
-    (at -510.599 -27.8722)
+    (at -503.9572 1.3378)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5097,7 +5097,7 @@
 
   (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp abc25d5b-6485-416c-9a35-c3fc2d790559)
-    (at -548.099 13.3178)
+    (at -555.4806 31.4872)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5139,7 +5139,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp ae25d4f5-d733-46c3-8a2e-69165f8ad4f5)
-    (at -527.909 6.7478)
+    (at -535.2906 24.9172)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5181,7 +5181,7 @@
 
   (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" (layer "F.Cu")
     (tedit 5B294F98) (tstamp b2c593a3-0041-4365-bb36-dd18780b5f36)
-    (at -531.289 -5.5922)
+    (at -538.6706 12.5772)
     (descr "Terminal Block Phoenix MPT-0,5-2-2.54, 2 pins, pitch 2.54mm, size 5.54x6.2mm^2, drill diamater 1.1mm, pad diameter 2.2mm, see http://www.mouser.com/ds/2/324/ItemDetail_1725656-920552.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
     (tags "THT Terminal Block Phoenix MPT-0,5-2-2.54 pitch 2.54mm size 5.54x6.2mm^2 drill 1.1mm pad 2.2mm")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5244,7 +5244,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp b38f97ca-26d0-445e-b7fd-c26baf1ead41)
-    (at -524.219 -2.0822)
+    (at -531.6006 16.0872)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5286,7 +5286,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp b6bef763-3f67-4f72-9c46-4b3091976af7)
-    (at -531.919 6.7478)
+    (at -539.3006 24.9172)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5412,7 +5412,7 @@
 
   (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" (layer "F.Cu")
     (tedit 5B294F98) (tstamp bb6c1305-f84f-47a1-b2ea-5c32e06262c9)
-    (at -544.139 3.2578)
+    (at -551.5206 21.4272)
     (descr "Terminal Block Phoenix MPT-0,5-2-2.54, 2 pins, pitch 2.54mm, size 5.54x6.2mm^2, drill diamater 1.1mm, pad diameter 2.2mm, see http://www.mouser.com/ds/2/324/ItemDetail_1725656-920552.pdf, script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
     (tags "THT Terminal Block Phoenix MPT-0,5-2-2.54 pitch 2.54mm size 5.54x6.2mm^2 drill 1.1mm pad 2.2mm")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5517,7 +5517,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp bff8c043-97e7-4ad2-aea6-02a39e744a11)
-    (at -500.729 -25.3122)
+    (at -494.0872 3.8978)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5714,7 +5714,7 @@
 
   (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" (layer "F.Cu")
     (tedit 59FF03AB) (tstamp c4833d43-7338-4b68-b054-57283531d891)
-    (at -566.529 3.8578)
+    (at -573.9106 22.0272)
     (descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
     (tags "terminal block bornier2")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5760,7 +5760,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp c5711834-f05a-4940-9788-834c7fdc01b4)
-    (at -505.249 -23.5922)
+    (at -498.6072 5.6178)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -5974,7 +5974,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp cbc2f3b4-e59f-4647-ac77-bbcacb28d7d5)
-    (at -505.269 -18.3522)
+    (at -498.6272 10.8578)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6016,7 +6016,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp d0691e6f-bd3d-48a1-94db-29baae2a54da)
-    (at -576.379 25.1378)
+    (at -583.7606 43.3072)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6058,7 +6058,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp d096dfed-a55a-4469-80f0-46ab90bbfb4e)
-    (at -505.269 -15.8422)
+    (at -498.6272 13.3678)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6142,7 +6142,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp d1e7fcfd-2a8d-4b8b-baf8-608bb57ddf8d)
-    (at -537.969 11.6478)
+    (at -545.3506 29.8172)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6226,7 +6226,7 @@
 
   (footprint "footprint_lib:ZMPT101B" (layer "F.Cu")
     (tedit 0) (tstamp d4994ee6-c1cc-466c-b73d-9e83de70deeb)
-    (at -562.914 -25.9672)
+    (at -570.2956 -7.7978)
     (descr "ZMPT101B-4")
     (tags "Transformer")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6366,7 +6366,7 @@
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp d6c0acae-0aaa-443e-80f3-94c332b7b0b2)
-    (at -560.689 24.4378)
+    (at -568.0706 42.6072)
     (descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor handsolder")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6499,7 +6499,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp d9f8b3dd-7e00-4b65-b03e-068e88986c57)
-    (at -541.269 18.6078)
+    (at -548.6506 36.7772)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6583,7 +6583,7 @@
 
   (footprint "Capacitor_SMD:C_0805_2012Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp db237b44-8b7f-4caa-b626-fa4db9966425)
-    (at -515.589 -9.5722)
+    (at -522.9706 8.5972)
     (descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6667,7 +6667,7 @@
 
   (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" (layer "F.Cu")
     (tedit 59FF03AB) (tstamp dd28ea5f-a477-4492-af5e-fd361c50fbf5)
-    (at -554.979 3.8578)
+    (at -562.3606 22.0272)
     (descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
     (tags "terminal block bornier2")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6713,7 +6713,7 @@
 
   (footprint "Sensor_Current:Allegro_CB_PFF" (layer "F.Cu")
     (tedit 59D526FA) (tstamp dd6c66df-c7a5-47e8-9180-7984b3b549ee)
-    (at -581.989 -4.3422)
+    (at -589.3706 13.8272)
     (descr "Allegro MicroSystems, CB-PFF Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx) !PADS 4-5 DO NOT MATCH DATASHEET!")
     (tags "Allegro CB-PFF")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -6975,7 +6975,7 @@
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp e130bd05-75c4-4f3e-b090-1681aa29ebd5)
-    (at -545.979 21.7378)
+    (at -553.3606 39.9072)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -7133,7 +7133,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp e8aa827b-c7eb-43d1-9201-1daf64807d49)
-    (at -522.219 0.4278)
+    (at -529.6006 18.5972)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -7175,7 +7175,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp eb525bf5-6360-4c13-afa5-dc6f9000f3f8)
-    (at -526.229 0.4278)
+    (at -533.6106 18.5972)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -7259,7 +7259,7 @@
 
   (footprint "footprint_lib:TC33X2503E" (layer "F.Cu")
     (tedit 0) (tstamp ed321889-5ca5-4154-93a7-53a5c4f70e30)
-    (at -556.224 18.7828)
+    (at -563.6056 36.9522)
     (descr "TC33X-2_1")
     (tags "Variable Resistor")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -7307,7 +7307,7 @@
 
   (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" (layer "F.Cu")
     (tedit 59FF03AB) (tstamp ee33f9ee-eff1-4521-8309-10abafdb2596)
-    (at -566.529 -5.1922)
+    (at -573.9106 12.9772)
     (descr "simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2")
     (tags "terminal block bornier2")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -7408,7 +7408,7 @@
 
   (footprint "Sensor_Current:Allegro_CB_PFF" (layer "F.Cu")
     (tedit 59D526FA) (tstamp f0c85916-9502-4be3-a193-749c1f1d4e63)
-    (at -581.989 22.3578)
+    (at -589.3706 40.5272)
     (descr "Allegro MicroSystems, CB-PFF Package (http://www.allegromicro.com/en/Products/Current-Sensor-ICs/Fifty-To-Two-Hundred-Amp-Integrated-Conductor-Sensor-ICs/ACS758.aspx) !PADS 4-5 DO NOT MATCH DATASHEET!")
     (tags "Allegro CB-PFF")
     (property "Sheetfile" "Sensors.kicad_sch")
@@ -7606,7 +7606,7 @@
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
     (tedit 5F68FEEE) (tstamp f8ac04a9-96a6-4274-8044-24bc0326967d)
-    (at -500.869 -22.8022)
+    (at -494.2272 6.4078)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
     (tags "capacitor")
     (property "Sheetfile" "Sensors.kicad_sch")
