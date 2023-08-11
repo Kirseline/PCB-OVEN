@@ -2446,9 +2446,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d1124dd1-2103-4a35-85e3-ceffaf194245))
-    (pin "4" (uuid 8102e88d-9c93-45e3-a2cf-72ec2cb4c82b))
-    (pin "3" (uuid 9d2f2918-9ae5-443c-a433-af69d8bf5166))
     (pin "2" (uuid 4380b7c3-7814-49d8-a271-99430373a589))
+    (pin "3" (uuid 9d2f2918-9ae5-443c-a433-af69d8bf5166))
+    (pin "4" (uuid 8102e88d-9c93-45e3-a2cf-72ec2cb4c82b))
   )
 
   (symbol (lib_id "Device:C") (at 39.37 142.24 270) (unit 1)
