@@ -1338,7 +1338,7 @@
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (id 2) (at 67.31 130.175 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
-    (property "Datasheet" "http://www.diodes.com/assets/Datasheets/DMN13H750S.pdf" (id 3) (at 62.23 128.27 0)
+    (property "Datasheet" ".\\datasheets\\2003241510_MDD-Microdiode-Electronics--AO3402_C427384.pdf" (id 3) (at 62.23 128.27 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (pin "1" (uuid 997de4d4-de78-4f1b-bc3c-275785fd2de3))
