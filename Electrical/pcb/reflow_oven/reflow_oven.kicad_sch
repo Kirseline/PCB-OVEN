@@ -1075,8 +1075,8 @@
     (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/6e8bb932-6fd9-48ad-8489-e99c03622104"
       (reference "J6") (unit 1) (value "Line IN") (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm")
     )
-    (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/d58cb73c-74e9-4bc7-9537-c406b1644f46"
-      (reference "J7") (unit 1) (value "Heater_A") (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm")
+    (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/a7d3322b-9355-49bf-a501-aa08bbb4e32d"
+      (reference "J7") (unit 1) (value "Line IN") (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm")
     )
     (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/72b637ce-c5f3-4b5c-ba8c-12d51907359b"
       (reference "J8") (unit 1) (value "Line IN") (footprint "TerminalBlock:TerminalBlock_bornier-2_P5.08mm")
@@ -1380,6 +1380,12 @@
     )
     (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/8f53af53-7646-41cf-894e-c015b6cefdd8"
       (reference "T2") (unit 1) (value "ZMPT101B") (footprint "footprint_lib:ZMPT101B")
+    )
+    (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/05cba9f9-80c2-4ce0-a2d2-929348244e5d"
+      (reference "TP?") (unit 1) (value "Csense_A") (footprint "")
+    )
+    (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/be287dc0-b07c-4555-a1c3-af6efcac8fdf"
+      (reference "TP?") (unit 1) (value "Csense_B") (footprint "")
     )
     (path "/e529b68e-658c-449e-b839-b72d069f9257/98d7ed3a-b3ed-4687-a873-0e3dc9b06557"
       (reference "U1") (unit 1) (value "LH05-10B05") (footprint "footprint_lib:LH05-13B05")
