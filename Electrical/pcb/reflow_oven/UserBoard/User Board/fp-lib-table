@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "footprint_lib")(type "KiCad")(uri "Z:/ATTECH/UTILITY Dep/PCB-OVEN/PCB-OVEN/Electrical/pcb/reflow_oven/lib/footprint_lib.pretty")(options "")(descr ""))
+)

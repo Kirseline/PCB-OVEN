@@ -1,6 +1,0 @@
-Z:\ATTECH\UTILITY Dep\PCB-OVEN\PCB-OVEN\PSOC\PCB oven controller.cydsn\PCB oven controller.cyprj|2fe4c18e-6f0b-47f4-87f6-e069494c0cb7
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|16ce1074-d8d5-4e1b-8605-407165229d8e
-C:\Users\arist\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|99d72cdd-e292-4e1b-b48b-7e45b5690b6d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0dbf1f34-9af7-4833-a854-c53883fa7b0c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|62bc84ed-1504-4783-a8c8-2378982bac8d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0e08da54-d145-49b1-a9d9-c8da02880c5f

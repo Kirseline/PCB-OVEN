@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "lib")(type "KiCad")(uri "${KIPRJMOD}/lib.kicad_sym")(options "")(descr ""))
+  (lib (name "comp_lib")(type "KiCad")(uri "Z:/ATTECH/UTILITY Dep/PCB-OVEN/PCB-OVEN/Electrical/pcb/reflow_oven/lib/comp_lib.kicad_sym")(options "")(descr ""))
+)
