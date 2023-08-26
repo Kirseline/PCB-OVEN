@@ -1019,10 +1019,10 @@
       (reference "D13") (unit 1) (value "BAT54S") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/e529b68e-658c-449e-b839-b72d069f9257/19104c48-71f9-46cb-a01d-54d9b4e25a70"
-      (reference "D14") (unit 1) (value "DSS34") (footprint "Diode_SMD:D_SOD-123F")
+      (reference "D14") (unit 1) (value "BAS85") (footprint "Diode_SMD:D_SOD-123F")
     )
     (path "/e529b68e-658c-449e-b839-b72d069f9257/e4825afd-2c1e-44d7-9612-a52ab7b4d02a"
-      (reference "D15") (unit 1) (value "DSS34") (footprint "Diode_SMD:D_SOD-123F")
+      (reference "D15") (unit 1) (value "BAS85") (footprint "Diode_SMD:D_SOD-123F")
     )
     (path "/a4495d77-238e-40f1-9ffb-145d8b1cecb5/8e026688-5571-487b-94ed-82bb53331610"
       (reference "D16") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
@@ -1031,7 +1031,7 @@
       (reference "D17") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
     )
     (path "/a4495d77-238e-40f1-9ffb-145d8b1cecb5/8e456664-4859-4c71-8079-46bb79535cf4"
-      (reference "D18") (unit 1) (value "DSS34") (footprint "Diode_SMD:D_SOD-123F")
+      (reference "D18") (unit 1) (value "BAS85") (footprint "Diode_SMD:D_SOD-123F")
     )
     (path "/e529b68e-658c-449e-b839-b72d069f9257/c7baae09-cf3e-4c79-bc1f-39f91f3a5580"
       (reference "F1") (unit 1) (value "fuse_holder") (footprint "footprint_lib:64600001223")
@@ -1046,7 +1046,7 @@
       (reference "F4") (unit 1) (value "300mA") (footprint "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
     )
     (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/984f582c-42b5-415b-a149-8a637e6999df"
-      (reference "F5") (unit 1) (value "Fuse") (footprint "footprint_lib:Circular_fuse")
+      (reference "F5") (unit 1) (value "250mA") (footprint "footprint_lib:Circular_fuse")
     )
     (path "/df7b56df-bc8c-4e9a-b93d-276a440dc537/a0f16c09-9956-4b86-89c9-d9fa4e659716"
       (reference "F6") (unit 1) (value "250mA") (footprint "footprint_lib:Circular_fuse")

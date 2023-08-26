@@ -2011,7 +2011,7 @@
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 45.72 86.36 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 887bbe99-8827-4af5-b493-12f2cf21b5c7)
     (property "Reference" "TP4" (id 0) (at 44.45 81.28 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -2169,7 +2169,7 @@
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 34.29 86.36 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid b5f74c21-7e7c-4f5b-ad65-197765ade427)
     (property "Reference" "TP3" (id 0) (at 33.02 81.28 0)
       (effects (font (size 1.27 1.27)) (justify left))

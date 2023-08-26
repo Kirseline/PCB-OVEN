@@ -1394,8 +1394,8 @@
     (property "Datasheet" "~" (id 3) (at 77.47 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid c6e4fc43-eabc-4bf9-b3d4-d60655029c57))
     (pin "1" (uuid 70b37785-9fd5-416f-857b-87fa38f3be61))
+    (pin "2" (uuid c6e4fc43-eabc-4bf9-b3d4-d60655029c57))
   )
 
   (symbol (lib_id "power:GND") (at 64.77 76.2 0) (unit 1)
@@ -1685,7 +1685,7 @@
     (in_bom yes) (on_board yes)
     (uuid 8e456664-4859-4c71-8079-46bb79535cf4)
     (property "Reference" "D18" (id 0) (at 57.15 116.84 0))
-    (property "Value" "DSS34" (id 1) (at 62.23 116.84 0))
+    (property "Value" "BAS85" (id 1) (at 62.23 116.84 0))
     (property "Footprint" "Diode_SMD:D_SOD-123F" (id 2) (at 59.69 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1736,7 +1736,7 @@
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 55.88 125.73 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid b0644649-2ebc-4513-95f5-58b69e281819)
     (property "Reference" "TP5" (id 0) (at 54.61 120.65 0)
       (effects (font (size 1.27 1.27)) (justify left))
@@ -1799,8 +1799,8 @@
     (property "Datasheet" "~" (id 3) (at 129.54 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 02e4f10a-80aa-4d7f-96da-11dd1fb3c075))
     (pin "1" (uuid b4362b18-fe7f-416c-82d9-0939477d53de))
+    (pin "2" (uuid 02e4f10a-80aa-4d7f-96da-11dd1fb3c075))
   )
 
   (symbol (lib_id "Device:R") (at 64.77 40.64 180) (unit 1)
