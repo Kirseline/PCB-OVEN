@@ -1,4 +1,4 @@
-20613822972644692
+20617208834506495
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -86450,6 +86450,13 @@ Integrated Circuit
 5
 5
 footprint_lib
+128x64OLED
+
+
+0
+4
+4
+footprint_lib
 1711738
 1711738
 Connector
@@ -86505,6 +86512,13 @@ Capacitor
 0
 2
 2
+footprint_lib
+NHD12864AZFSWGBWVZ
+NHD-12864AZ-FSW-GBW-VZ-2
+Display
+0
+24
+24
 footprint_lib
 QFP80P900X900X160-32N
 LQFp32-pin, 7 x 7 mm low-profile quad flat package.

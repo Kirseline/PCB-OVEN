@@ -1,0 +1,2507 @@
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32f0xx_hal_uart_ex.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c"
+  18              		.section	.text.HAL_RS485Ex_Init,"ax",%progbits
+  19              		.align	1
+  20              		.global	HAL_RS485Ex_Init
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  25              	HAL_RS485Ex_Init:
+  26              	.LVL0:
+  27              	.LFB40:
+   1:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+   2:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ******************************************************************************
+   3:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @file    stm32f0xx_hal_uart_ex.c
+   4:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @author  MCD Application Team
+   5:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief   Extended UART HAL module driver.
+   6:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          This file provides firmware functions to manage the following extended
+   7:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          functionalities of the Universal Asynchronous Receiver Transmitter Peripheral (UART).
+   8:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *           + Initialization and de-initialization functions
+   9:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *           + Peripheral Control functions
+  10:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+  11:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+  12:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ******************************************************************************
+  13:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @attention
+  14:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+  15:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * Copyright (c) 2016 STMicroelectronics.
+  16:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * All rights reserved.
+  17:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+  18:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  19:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * in the root directory of this software component.
+  20:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  21:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+  22:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ******************************************************************************
+  23:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   @verbatim
+  24:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ==============================================================================
+  25:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****                ##### UART peripheral extended features  #####
+  26:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ==============================================================================
+  27:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  28:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) Declare a UART_HandleTypeDef handle structure.
+  29:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  30:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) For the UART RS485 Driver Enable mode, initialize the UART registers
+  31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         by calling the HAL_RS485Ex_Init() API.
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 2
+
+
+  32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  33:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   @endverbatim
+  34:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ******************************************************************************
+  35:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+  36:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  37:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /* Includes ------------------------------------------------------------------*/
+  38:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #include "stm32f0xx_hal.h"
+  39:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  40:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /** @addtogroup STM32F0xx_HAL_Driver
+  41:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @{
+  42:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+  43:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  44:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /** @defgroup UARTEx UARTEx
+  45:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief UART Extended HAL module driver
+  46:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @{
+  47:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+  48:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  49:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #ifdef HAL_UART_MODULE_ENABLED
+  50:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  51:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /* Private typedef -----------------------------------------------------------*/
+  52:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /* Private define ------------------------------------------------------------*/
+  53:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  54:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /* Private macros ------------------------------------------------------------*/
+  55:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /* Private variables ---------------------------------------------------------*/
+  56:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /* Private function prototypes -----------------------------------------------*/
+  57:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /** @defgroup UARTEx_Private_Functions UARTEx Private Functions
+  58:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @{
+  59:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+  60:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR1_UESM)
+  61:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** static void UARTEx_Wakeup_AddressConfig(UART_HandleTypeDef *huart, UART_WakeUpTypeDef WakeUpSelecti
+  62:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* USART_CR1_UESM */
+  63:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+  64:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @}
+  65:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+  66:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  67:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /* Exported functions --------------------------------------------------------*/
+  68:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  69:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /** @defgroup UARTEx_Exported_Functions  UARTEx Exported Functions
+  70:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @{
+  71:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+  72:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+  73:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /** @defgroup UARTEx_Exported_Functions_Group1 Initialization and de-initialization functions
+  74:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief    Extended Initialization and Configuration Functions
+  75:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+  76:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** @verbatim
+  77:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** ===============================================================================
+  78:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****             ##### Initialization and Configuration functions #####
+  79:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****  ===============================================================================
+  80:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     [..]
+  81:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     This subsection provides a set of functions allowing to initialize the USARTx or the UARTy
+  82:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     in asynchronous mode.
+  83:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       (+) For the asynchronous mode the parameters below can be configured:
+  84:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Baud Rate
+  85:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Word Length
+  86:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Stop Bit
+  87:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Parity: If the parity is enabled, then the MSB bit of the data written
+  88:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****              in the data register is transmitted but is changed by the parity bit.
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 3
+
+
+  89:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Hardware flow control
+  90:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Receiver/transmitter modes
+  91:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Over Sampling Method
+  92:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) One-Bit Sampling Method
+  93:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       (+) For the asynchronous mode, the following advanced features can be configured as well:
+  94:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) TX and/or RX pin level inversion
+  95:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) data logical level inversion
+  96:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) RX and TX pins swap
+  97:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) RX overrun detection disabling
+  98:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) DMA disabling on RX error
+  99:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) MSB first on communication line
+ 100:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) auto Baud rate detection
+ 101:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     [..]
+ 102:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     The HAL_RS485Ex_Init() API follows the UART RS485 mode configuration
+ 103:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****      procedures (details for the procedures are available in reference manual).
+ 104:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 105:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** @endverbatim
+ 106:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 107:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   Depending on the frame length defined by the M1 and M0 bits (7-bit,
+ 108:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   8-bit or 9-bit), the possible UART formats are listed in the
+ 109:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   following table.
+ 110:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 111:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     Table 1. UART frame format.
+ 112:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     +-----------------------------------------------------------------------+
+ 113:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |  M1 bit |  M0 bit |  PCE bit  |             UART frame                |
+ 114:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
+ 115:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |    0    |    0    |    0      |    | SB |    8 bit data   | STB |     |
+ 116:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
+ 117:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |    0    |    0    |    1      |    | SB | 7 bit data | PB | STB |     |
+ 118:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
+ 119:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |    0    |    1    |    0      |    | SB |    9 bit data   | STB |     |
+ 120:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
+ 121:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |    0    |    1    |    1      |    | SB | 8 bit data | PB | STB |     |
+ 122:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
+ 123:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |    1    |    0    |    0      |    | SB |    7 bit data   | STB |     |
+ 124:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
+ 125:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     |    1    |    0    |    1      |    | SB | 6 bit data | PB | STB |     |
+ 126:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     +-----------------------------------------------------------------------+
+ 127:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 128:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @{
+ 129:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 130:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 131:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 132:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Initialize the RS485 Driver enable feature according to the specified
+ 133:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *         parameters in the UART_InitTypeDef and creates the associated handle.
+ 134:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart            UART handle.
+ 135:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param Polarity         Select the driver enable polarity.
+ 136:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          This parameter can be one of the following values:
+ 137:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          @arg @ref UART_DE_POLARITY_HIGH DE signal is active high
+ 138:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          @arg @ref UART_DE_POLARITY_LOW  DE signal is active low
+ 139:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param AssertionTime    Driver Enable assertion time:
+ 140:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       5-bit value defining the time between the activation of the DE (Driver Enable)
+ 141:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       signal and the beginning of the start bit. It is expressed in sample time
+ 142:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       units (1/8 or 1/16 bit time, depending on the oversampling rate)
+ 143:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param DeassertionTime  Driver Enable deassertion time:
+ 144:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       5-bit value defining the time between the end of the last stop bit, in a
+ 145:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       transmitted message, and the de-activation of the DE (Driver Enable) signal.
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 4
+
+
+ 146:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       It is expressed in sample time units (1/8 or 1/16 bit time, depending on the
+ 147:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       oversampling rate).
+ 148:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 149:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 150:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_RS485Ex_Init(UART_HandleTypeDef *huart, uint32_t Polarity, uint32_t Assertion
+ 151:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****                                    uint32_t DeassertionTime)
+ 152:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+  28              		.loc 1 152 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 152 1 is_stmt 0 view .LVU1
+  33 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  34              		.cfi_def_cfa_offset 24
+  35              		.cfi_offset 3, -24
+  36              		.cfi_offset 4, -20
+  37              		.cfi_offset 5, -16
+  38              		.cfi_offset 6, -12
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 0400     		movs	r4, r0
+  42 0004 0F00     		movs	r7, r1
+  43 0006 1600     		movs	r6, r2
+  44 0008 1D00     		movs	r5, r3
+ 153:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   uint32_t temp;
+  45              		.loc 1 153 3 is_stmt 1 view .LVU2
+ 154:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 155:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check the UART handle allocation */
+ 156:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart == NULL)
+  46              		.loc 1 156 3 view .LVU3
+  47              		.loc 1 156 6 is_stmt 0 view .LVU4
+  48 000a 0028     		cmp	r0, #0
+  49 000c 39D0     		beq	.L5
+ 157:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 158:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return HAL_ERROR;
+ 159:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 160:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check the Driver Enable UART instance */
+ 161:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   assert_param(IS_UART_DRIVER_ENABLE_INSTANCE(huart->Instance));
+  50              		.loc 1 161 3 is_stmt 1 view .LVU5
+ 162:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 163:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check the Driver Enable polarity */
+ 164:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   assert_param(IS_UART_DE_POLARITY(Polarity));
+  51              		.loc 1 164 3 view .LVU6
+ 165:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 166:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check the Driver Enable assertion time */
+ 167:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   assert_param(IS_UART_ASSERTIONTIME(AssertionTime));
+  52              		.loc 1 167 3 view .LVU7
+ 168:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 169:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check the Driver Enable deassertion time */
+ 170:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   assert_param(IS_UART_DEASSERTIONTIME(DeassertionTime));
+  53              		.loc 1 170 3 view .LVU8
+ 171:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 172:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart->gState == HAL_UART_STATE_RESET)
+  54              		.loc 1 172 3 view .LVU9
+  55              		.loc 1 172 12 is_stmt 0 view .LVU10
+  56 000e C36F     		ldr	r3, [r0, #124]
+  57              	.LVL1:
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 5
+
+
+  58              		.loc 1 172 6 view .LVU11
+  59 0010 002B     		cmp	r3, #0
+  60 0012 2CD0     		beq	.L6
+  61              	.LVL2:
+  62              	.L3:
+ 173:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 174:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Allocate lock resource and initialize it */
+ 175:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->Lock = HAL_UNLOCKED;
+ 176:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 177:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
+ 178:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     UART_InitCallbacksToDefault(huart);
+ 179:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 180:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if (huart->MspInitCallback == NULL)
+ 181:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 182:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       huart->MspInitCallback = HAL_UART_MspInit;
+ 183:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 184:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 185:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Init the low level hardware */
+ 186:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->MspInitCallback(huart);
+ 187:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #else
+ 188:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Init the low level hardware : GPIO, CLOCK, CORTEX */
+ 189:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     HAL_UART_MspInit(huart);
+ 190:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* (USE_HAL_UART_REGISTER_CALLBACKS) */
+ 191:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 192:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 193:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   huart->gState = HAL_UART_STATE_BUSY;
+  63              		.loc 1 193 3 is_stmt 1 view .LVU12
+  64              		.loc 1 193 17 is_stmt 0 view .LVU13
+  65 0014 2423     		movs	r3, #36
+  66 0016 E367     		str	r3, [r4, #124]
+ 194:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 195:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Disable the Peripheral */
+ 196:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UART_DISABLE(huart);
+  67              		.loc 1 196 3 is_stmt 1 view .LVU14
+  68 0018 2268     		ldr	r2, [r4]
+  69 001a 1368     		ldr	r3, [r2]
+  70 001c 0121     		movs	r1, #1
+  71 001e 8B43     		bics	r3, r1
+  72 0020 1360     		str	r3, [r2]
+ 197:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 198:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Set the UART Communication parameters */
+ 199:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (UART_SetConfig(huart) == HAL_ERROR)
+  73              		.loc 1 199 3 view .LVU15
+  74              		.loc 1 199 7 is_stmt 0 view .LVU16
+  75 0022 2000     		movs	r0, r4
+  76 0024 FFF7FEFF 		bl	UART_SetConfig
+  77              	.LVL3:
+  78              		.loc 1 199 6 view .LVU17
+  79 0028 0128     		cmp	r0, #1
+  80 002a 1FD0     		beq	.L2
+ 200:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 201:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return HAL_ERROR;
+ 202:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 203:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 204:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart->AdvancedInit.AdvFeatureInit != UART_ADVFEATURE_NO_INIT)
+  81              		.loc 1 204 3 is_stmt 1 view .LVU18
+  82              		.loc 1 204 26 is_stmt 0 view .LVU19
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 6
+
+
+  83 002c 636A     		ldr	r3, [r4, #36]
+  84              		.loc 1 204 6 view .LVU20
+  85 002e 002B     		cmp	r3, #0
+  86 0030 23D1     		bne	.L7
+  87              	.L4:
+ 205:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 206:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     UART_AdvFeatureConfig(huart);
+ 207:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 208:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 209:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Enable the Driver Enable mode by setting the DEM bit in the CR3 register */
+ 210:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   SET_BIT(huart->Instance->CR3, USART_CR3_DEM);
+  88              		.loc 1 210 3 is_stmt 1 view .LVU21
+  89 0032 2268     		ldr	r2, [r4]
+  90 0034 9168     		ldr	r1, [r2, #8]
+  91 0036 8023     		movs	r3, #128
+  92 0038 DB01     		lsls	r3, r3, #7
+  93 003a 0B43     		orrs	r3, r1
+  94 003c 9360     		str	r3, [r2, #8]
+ 211:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 212:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Set the Driver Enable polarity */
+ 213:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   MODIFY_REG(huart->Instance->CR3, USART_CR3_DEP, Polarity);
+  95              		.loc 1 213 3 view .LVU22
+  96 003e 2268     		ldr	r2, [r4]
+  97 0040 9368     		ldr	r3, [r2, #8]
+  98 0042 1149     		ldr	r1, .L8
+  99 0044 0B40     		ands	r3, r1
+ 100 0046 3B43     		orrs	r3, r7
+ 101 0048 9360     		str	r3, [r2, #8]
+ 214:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 215:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Set the Driver Enable assertion and deassertion times */
+ 216:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   temp = (AssertionTime << UART_CR1_DEAT_ADDRESS_LSB_POS);
+ 102              		.loc 1 216 3 view .LVU23
+ 103              		.loc 1 216 8 is_stmt 0 view .LVU24
+ 104 004a 7605     		lsls	r6, r6, #21
+ 105              	.LVL4:
+ 217:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   temp |= (DeassertionTime << UART_CR1_DEDT_ADDRESS_LSB_POS);
+ 106              		.loc 1 217 3 is_stmt 1 view .LVU25
+ 107              		.loc 1 217 28 is_stmt 0 view .LVU26
+ 108 004c 2D04     		lsls	r5, r5, #16
+ 109              	.LVL5:
+ 110              		.loc 1 217 8 view .LVU27
+ 111 004e 3543     		orrs	r5, r6
+ 112              	.LVL6:
+ 218:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   MODIFY_REG(huart->Instance->CR1, (USART_CR1_DEDT | USART_CR1_DEAT), temp);
+ 113              		.loc 1 218 3 is_stmt 1 view .LVU28
+ 114 0050 2268     		ldr	r2, [r4]
+ 115 0052 1368     		ldr	r3, [r2]
+ 116 0054 0D49     		ldr	r1, .L8+4
+ 117 0056 0B40     		ands	r3, r1
+ 118 0058 2B43     		orrs	r3, r5
+ 119 005a 1360     		str	r3, [r2]
+ 219:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 220:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Enable the Peripheral */
+ 221:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UART_ENABLE(huart);
+ 120              		.loc 1 221 3 view .LVU29
+ 121 005c 2268     		ldr	r2, [r4]
+ 122 005e 1368     		ldr	r3, [r2]
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 7
+
+
+ 123 0060 0121     		movs	r1, #1
+ 124 0062 0B43     		orrs	r3, r1
+ 125 0064 1360     		str	r3, [r2]
+ 222:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 223:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* TEACK and/or REACK to check before moving huart->gState and huart->RxState to Ready */
+ 224:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   return (UART_CheckIdleState(huart));
+ 126              		.loc 1 224 3 view .LVU30
+ 127              		.loc 1 224 11 is_stmt 0 view .LVU31
+ 128 0066 2000     		movs	r0, r4
+ 129 0068 FFF7FEFF 		bl	UART_CheckIdleState
+ 130              	.LVL7:
+ 131              	.L2:
+ 225:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 132              		.loc 1 225 1 view .LVU32
+ 133              		@ sp needed
+ 134              	.LVL8:
+ 135              	.LVL9:
+ 136              		.loc 1 225 1 view .LVU33
+ 137 006c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 138              	.LVL10:
+ 139              	.L6:
+ 175:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 140              		.loc 1 175 5 is_stmt 1 view .LVU34
+ 175:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 141              		.loc 1 175 17 is_stmt 0 view .LVU35
+ 142 006e 7833     		adds	r3, r3, #120
+ 143 0070 0022     		movs	r2, #0
+ 144              	.LVL11:
+ 175:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 145              		.loc 1 175 17 view .LVU36
+ 146 0072 C254     		strb	r2, [r0, r3]
+ 189:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* (USE_HAL_UART_REGISTER_CALLBACKS) */
+ 147              		.loc 1 189 5 is_stmt 1 view .LVU37
+ 148 0074 FFF7FEFF 		bl	HAL_UART_MspInit
+ 149              	.LVL12:
+ 189:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* (USE_HAL_UART_REGISTER_CALLBACKS) */
+ 150              		.loc 1 189 5 is_stmt 0 view .LVU38
+ 151 0078 CCE7     		b	.L3
+ 152              	.L7:
+ 206:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 153              		.loc 1 206 5 is_stmt 1 view .LVU39
+ 154 007a 2000     		movs	r0, r4
+ 155 007c FFF7FEFF 		bl	UART_AdvFeatureConfig
+ 156              	.LVL13:
+ 157 0080 D7E7     		b	.L4
+ 158              	.LVL14:
+ 159              	.L5:
+ 158:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 160              		.loc 1 158 12 is_stmt 0 view .LVU40
+ 161 0082 0120     		movs	r0, #1
+ 162              	.LVL15:
+ 158:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 163              		.loc 1 158 12 view .LVU41
+ 164 0084 F2E7     		b	.L2
+ 165              	.L9:
+ 166 0086 C046     		.align	2
+ 167              	.L8:
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 8
+
+
+ 168 0088 FF7FFFFF 		.word	-32769
+ 169 008c FFFF00FC 		.word	-67043329
+ 170              		.cfi_endproc
+ 171              	.LFE40:
+ 173              		.section	.text.HAL_MultiProcessorEx_AddressLength_Set,"ax",%progbits
+ 174              		.align	1
+ 175              		.global	HAL_MultiProcessorEx_AddressLength_Set
+ 176              		.syntax unified
+ 177              		.code	16
+ 178              		.thumb_func
+ 180              	HAL_MultiProcessorEx_AddressLength_Set:
+ 181              	.LVL16:
+ 182              	.LFB41:
+ 226:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 227:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 228:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @}
+ 229:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 230:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 231:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /** @defgroup UARTEx_Exported_Functions_Group2 IO operation functions
+ 232:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *  @brief Extended functions
+ 233:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+ 234:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** @verbatim
+ 235:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****  ===============================================================================
+ 236:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****                       ##### IO operation functions #####
+ 237:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****  ===============================================================================
+ 238:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     This subsection provides a set of Wakeup and FIFO mode related callback functions.
+ 239:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 240:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR1_UESM)
+ 241:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR3_WUFIE)
+ 242:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) Wakeup from Stop mode Callback:
+ 243:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (+) HAL_UARTEx_WakeupCallback()
+ 244:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 245:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif
+ 246:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif
+ 247:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** @endverbatim
+ 248:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @{
+ 249:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 250:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 251:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR1_UESM)
+ 252:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR3_WUFIE)
+ 253:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 254:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief UART wakeup from Stop mode callback.
+ 255:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart UART handle.
+ 256:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval None
+ 257:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 258:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** __weak void HAL_UARTEx_WakeupCallback(UART_HandleTypeDef *huart)
+ 259:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 260:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Prevent unused argument(s) compilation warning */
+ 261:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   UNUSED(huart);
+ 262:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 263:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* NOTE : This function should not be modified, when the callback is needed,
+ 264:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****             the HAL_UARTEx_WakeupCallback can be implemented in the user file.
+ 265:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****    */
+ 266:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 267:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 268:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* USART_CR3_WUFIE */
+ 269:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* USART_CR1_UESM */
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 9
+
+
+ 270:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 271:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 272:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @}
+ 273:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 274:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 275:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /** @defgroup UARTEx_Exported_Functions_Group3 Peripheral Control functions
+ 276:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief    Extended Peripheral Control functions
+ 277:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *
+ 278:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** @verbatim
+ 279:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****  ===============================================================================
+ 280:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****                       ##### Peripheral Control functions #####
+ 281:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****  ===============================================================================
+ 282:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     [..] This section provides the following functions:
+ 283:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****      (+) HAL_MultiProcessorEx_AddressLength_Set() API optionally sets the UART node address
+ 284:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****          detection length to more than 4 bits for multiprocessor address mark wake up.
+ 285:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR1_UESM)
+ 286:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****      (+) HAL_UARTEx_StopModeWakeUpSourceConfig() API defines the wake-up from stop mode
+ 287:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****          trigger: address match, Start Bit detection or RXNE bit status.
+ 288:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****      (+) HAL_UARTEx_EnableStopMode() API enables the UART to wake up the MCU from stop mode
+ 289:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****      (+) HAL_UARTEx_DisableStopMode() API disables the above functionality
+ 290:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif
+ 291:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 292:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     [..] This subsection also provides a set of additional functions providing enhanced reception
+ 293:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     services to user. (For example, these functions allow application to handle use cases
+ 294:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     where number of data to be received is unknown).
+ 295:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 296:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) Compared to standard reception services which only consider number of received
+ 297:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         data elements as reception completion criteria, these functions also consider additional ev
+ 298:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         as triggers for updating reception status to caller :
+ 299:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        (+) Detection of inactivity period (RX line has not been active for a given period).
+ 300:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           (++) RX inactivity detected by IDLE event, i.e. RX line has been in idle state (normally 
+ 301:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****                for 1 frame time, after last received byte.
+ 302:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           (++) RX inactivity detected by RTO, i.e. line has been in idle state
+ 303:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****                for a programmable time, after last received byte.
+ 304:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        (+) Detection that a specific character has been received.
+ 305:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 306:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) There are two mode of transfer:
+ 307:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        (+) Blocking mode: The reception is performed in polling mode, until either expected number 
+ 308:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            or till IDLE event occurs. Reception is handled only during function execution.
+ 309:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            When function exits, no data reception could occur. HAL status and number of actually re
+ 310:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            are returned by function after finishing transfer.
+ 311:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        (+) Non-Blocking mode: The reception is performed using Interrupts or DMA.
+ 312:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            These API's return the HAL status.
+ 313:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            The end of the data processing will be indicated through the
+ 314:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            dedicated UART IRQ when using Interrupt mode or the DMA IRQ when using DMA mode.
+ 315:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            The HAL_UARTEx_RxEventCallback() user callback will be executed during Receive process
+ 316:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            The HAL_UART_ErrorCallback()user callback will be executed when a reception error is det
+ 317:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 318:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) Blocking mode API:
+ 319:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (+) HAL_UARTEx_ReceiveToIdle()
+ 320:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 321:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) Non-Blocking mode API with Interrupt:
+ 322:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (+) HAL_UARTEx_ReceiveToIdle_IT()
+ 323:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 324:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) Non-Blocking mode API with DMA:
+ 325:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (+) HAL_UARTEx_ReceiveToIdle_DMA()
+ 326:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 10
+
+
+ 327:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** @endverbatim
+ 328:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @{
+ 329:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 330:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 331:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 332:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief By default in multiprocessor mode, when the wake up method is set
+ 333:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        to address mark, the UART handles only 4-bit long addresses detection;
+ 334:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        this API allows to enable longer addresses detection (6-, 7- or 8-bit
+ 335:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        long).
+ 336:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  Addresses detection lengths are: 6-bit address detection in 7-bit data mode,
+ 337:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        7-bit address detection in 8-bit data mode, 8-bit address detection in 9-bit data mode.
+ 338:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart         UART handle.
+ 339:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param AddressLength This parameter can be one of the following values:
+ 340:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          @arg @ref UART_ADDRESS_DETECT_4B 4-bit long address
+ 341:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          @arg @ref UART_ADDRESS_DETECT_7B 6-, 7- or 8-bit long address
+ 342:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 343:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 344:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_MultiProcessorEx_AddressLength_Set(UART_HandleTypeDef *huart, uint32_t Addres
+ 345:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 183              		.loc 1 345 1 is_stmt 1 view -0
+ 184              		.cfi_startproc
+ 185              		@ args = 0, pretend = 0, frame = 0
+ 186              		@ frame_needed = 0, uses_anonymous_args = 0
+ 187              		.loc 1 345 1 is_stmt 0 view .LVU43
+ 188 0000 70B5     		push	{r4, r5, r6, lr}
+ 189              		.cfi_def_cfa_offset 16
+ 190              		.cfi_offset 4, -16
+ 191              		.cfi_offset 5, -12
+ 192              		.cfi_offset 6, -8
+ 193              		.cfi_offset 14, -4
+ 194 0002 0B00     		movs	r3, r1
+ 346:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check the UART handle allocation */
+ 347:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart == NULL)
+ 195              		.loc 1 347 3 is_stmt 1 view .LVU44
+ 196              		.loc 1 347 6 is_stmt 0 view .LVU45
+ 197 0004 0028     		cmp	r0, #0
+ 198 0006 13D0     		beq	.L12
+ 348:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 349:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return HAL_ERROR;
+ 350:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 351:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 352:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check the address length parameter */
+ 353:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   assert_param(IS_UART_ADDRESSLENGTH_DETECT(AddressLength));
+ 199              		.loc 1 353 3 is_stmt 1 view .LVU46
+ 354:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 355:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   huart->gState = HAL_UART_STATE_BUSY;
+ 200              		.loc 1 355 3 view .LVU47
+ 201              		.loc 1 355 17 is_stmt 0 view .LVU48
+ 202 0008 2422     		movs	r2, #36
+ 203 000a C267     		str	r2, [r0, #124]
+ 356:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 357:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Disable the Peripheral */
+ 358:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UART_DISABLE(huart);
+ 204              		.loc 1 358 3 is_stmt 1 view .LVU49
+ 205 000c 0168     		ldr	r1, [r0]
+ 206              	.LVL17:
+ 207              		.loc 1 358 3 is_stmt 0 view .LVU50
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 11
+
+
+ 208 000e 0A68     		ldr	r2, [r1]
+ 209 0010 0124     		movs	r4, #1
+ 210 0012 A243     		bics	r2, r4
+ 211 0014 0A60     		str	r2, [r1]
+ 359:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 360:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Set the address length */
+ 361:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   MODIFY_REG(huart->Instance->CR2, USART_CR2_ADDM7, AddressLength);
+ 212              		.loc 1 361 3 is_stmt 1 view .LVU51
+ 213 0016 0268     		ldr	r2, [r0]
+ 214 0018 5168     		ldr	r1, [r2, #4]
+ 215 001a 1025     		movs	r5, #16
+ 216 001c A943     		bics	r1, r5
+ 217 001e 1943     		orrs	r1, r3
+ 218 0020 5160     		str	r1, [r2, #4]
+ 362:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 363:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Enable the Peripheral */
+ 364:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UART_ENABLE(huart);
+ 219              		.loc 1 364 3 view .LVU52
+ 220 0022 0268     		ldr	r2, [r0]
+ 221 0024 1368     		ldr	r3, [r2]
+ 222              	.LVL18:
+ 223              		.loc 1 364 3 is_stmt 0 view .LVU53
+ 224 0026 2343     		orrs	r3, r4
+ 225 0028 1360     		str	r3, [r2]
+ 365:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 366:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* TEACK and/or REACK to check before moving huart->gState to Ready */
+ 367:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   return (UART_CheckIdleState(huart));
+ 226              		.loc 1 367 3 is_stmt 1 view .LVU54
+ 227              		.loc 1 367 11 is_stmt 0 view .LVU55
+ 228 002a FFF7FEFF 		bl	UART_CheckIdleState
+ 229              	.LVL19:
+ 230              	.L11:
+ 368:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 231              		.loc 1 368 1 view .LVU56
+ 232              		@ sp needed
+ 233 002e 70BD     		pop	{r4, r5, r6, pc}
+ 234              	.LVL20:
+ 235              	.L12:
+ 349:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 236              		.loc 1 349 12 view .LVU57
+ 237 0030 0120     		movs	r0, #1
+ 238              	.LVL21:
+ 349:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 239              		.loc 1 349 12 view .LVU58
+ 240 0032 FCE7     		b	.L11
+ 241              		.cfi_endproc
+ 242              	.LFE41:
+ 244              		.section	.text.HAL_UARTEx_ReceiveToIdle,"ax",%progbits
+ 245              		.align	1
+ 246              		.global	HAL_UARTEx_ReceiveToIdle
+ 247              		.syntax unified
+ 248              		.code	16
+ 249              		.thumb_func
+ 251              	HAL_UARTEx_ReceiveToIdle:
+ 252              	.LVL22:
+ 253              	.LFB42:
+ 369:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 12
+
+
+ 370:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR1_UESM)
+ 371:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 372:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Set Wakeup from Stop mode interrupt flag selection.
+ 373:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note It is the application responsibility to enable the interrupt used as
+ 374:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       usart_wkup interrupt source before entering low-power mode.
+ 375:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart           UART handle.
+ 376:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param WakeUpSelection Address match, Start Bit detection or RXNE/RXFNE bit status.
+ 377:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          This parameter can be one of the following values:
+ 378:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          @arg @ref UART_WAKEUP_ON_ADDRESS
+ 379:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          @arg @ref UART_WAKEUP_ON_STARTBIT
+ 380:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *          @arg @ref UART_WAKEUP_ON_READDATA_NONEMPTY
+ 381:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 382:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 383:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_StopModeWakeUpSourceConfig(UART_HandleTypeDef *huart, UART_WakeUpTypeD
+ 384:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 385:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
+ 386:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   uint32_t tickstart;
+ 387:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 388:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* check the wake-up from stop mode UART instance */
+ 389:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   assert_param(IS_UART_WAKEUP_FROMSTOP_INSTANCE(huart->Instance));
+ 390:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* check the wake-up selection parameter */
+ 391:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   assert_param(IS_UART_WAKEUP_SELECTION(WakeUpSelection.WakeUpEvent));
+ 392:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 393:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Process Locked */
+ 394:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_LOCK(huart);
+ 395:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 396:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   huart->gState = HAL_UART_STATE_BUSY;
+ 397:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 398:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Disable the Peripheral */
+ 399:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UART_DISABLE(huart);
+ 400:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 401:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR3_WUS)
+ 402:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Set the wake-up selection scheme */
+ 403:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   MODIFY_REG(huart->Instance->CR3, USART_CR3_WUS, WakeUpSelection.WakeUpEvent);
+ 404:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* USART_CR3_WUS */
+ 405:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 406:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (WakeUpSelection.WakeUpEvent == UART_WAKEUP_ON_ADDRESS)
+ 407:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 408:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     UARTEx_Wakeup_AddressConfig(huart, WakeUpSelection);
+ 409:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 410:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 411:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Enable the Peripheral */
+ 412:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UART_ENABLE(huart);
+ 413:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 414:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Init tickstart for timeout management */
+ 415:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   tickstart = HAL_GetTick();
+ 416:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 417:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Wait until REACK flag is set */
+ 418:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (UART_WaitOnFlagUntilTimeout(huart, USART_ISR_REACK, RESET, tickstart, HAL_UART_TIMEOUT_VALUE)
+ 419:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 420:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     status = HAL_TIMEOUT;
+ 421:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 422:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   else
+ 423:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 424:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Initialize the UART State */
+ 425:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->gState = HAL_UART_STATE_READY;
+ 426:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 13
+
+
+ 427:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 428:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Process Unlocked */
+ 429:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UNLOCK(huart);
+ 430:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 431:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   return status;
+ 432:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 433:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 434:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 435:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Enable UART Stop Mode.
+ 436:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note The UART is able to wake up the MCU from Stop 1 mode as long as UART clock is HSI or LSE.
+ 437:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart UART handle.
+ 438:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 439:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 440:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_EnableStopMode(UART_HandleTypeDef *huart)
+ 441:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 442:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Process Locked */
+ 443:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_LOCK(huart);
+ 444:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 445:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Set UESM bit */
+ 446:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_UESM);
+ 447:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 448:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Process Unlocked */
+ 449:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UNLOCK(huart);
+ 450:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 451:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   return HAL_OK;
+ 452:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 453:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 454:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 455:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Disable UART Stop Mode.
+ 456:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart UART handle.
+ 457:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 458:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 459:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_DisableStopMode(UART_HandleTypeDef *huart)
+ 460:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 461:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Process Locked */
+ 462:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_LOCK(huart);
+ 463:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 464:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Clear UESM bit */
+ 465:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   ATOMIC_CLEAR_BIT(huart->Instance->CR1, USART_CR1_UESM);
+ 466:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 467:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Process Unlocked */
+ 468:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   __HAL_UNLOCK(huart);
+ 469:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 470:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   return HAL_OK;
+ 471:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 472:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 473:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* USART_CR1_UESM */
+ 474:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 475:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Receive an amount of data in blocking mode till either the expected number of data
+ 476:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        is received or an IDLE event occurs.
+ 477:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  HAL_OK is returned if reception is completed (expected number of data has been received)
+ 478:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        or if reception is stopped after IDLE event (less than the expected number of data has b
+ 479:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        In this case, RxLen output parameter indicates number of data available in reception buf
+ 480:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-M
+ 481:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        the received data is handled as a set of uint16_t. In this case, Size must indicate the 
+ 482:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        of uint16_t available through pData.
+ 483:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note   When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 14
+
+
+ 484:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *         address of user data buffer for storing data to be received, should be aligned on a hal
+ 485:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *         (16 bits) (as received data will be handled using uint16_t pointer cast). Depending on 
+ 486:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *         use of specific alignment compilation directives or pragmas might be required to ensure
+ 487:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *         alignment for pData.
+ 488:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart   UART handle.
+ 489:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param pData   Pointer to data buffer (uint8_t or uint16_t data elements).
+ 490:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param Size    Amount of data elements (uint8_t or uint16_t) to be received.
+ 491:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param RxLen   Number of data elements finally received
+ 492:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *                (could be lower than Size, in case reception ends on IDLE event)
+ 493:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param Timeout Timeout duration expressed in ms (covers the whole reception sequence).
+ 494:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 495:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 496:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size
+ 497:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****                                            uint32_t Timeout)
+ 498:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 254              		.loc 1 498 1 is_stmt 1 view -0
+ 255              		.cfi_startproc
+ 256              		@ args = 4, pretend = 0, frame = 8
+ 257              		@ frame_needed = 0, uses_anonymous_args = 0
+ 258              		.loc 1 498 1 is_stmt 0 view .LVU60
+ 259 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 260              		.cfi_def_cfa_offset 20
+ 261              		.cfi_offset 4, -20
+ 262              		.cfi_offset 5, -16
+ 263              		.cfi_offset 6, -12
+ 264              		.cfi_offset 7, -8
+ 265              		.cfi_offset 14, -4
+ 266 0002 D646     		mov	lr, r10
+ 267 0004 4F46     		mov	r7, r9
+ 268 0006 4646     		mov	r6, r8
+ 269 0008 C0B5     		push	{r6, r7, lr}
+ 270              		.cfi_def_cfa_offset 32
+ 271              		.cfi_offset 8, -32
+ 272              		.cfi_offset 9, -28
+ 273              		.cfi_offset 10, -24
+ 274 000a 82B0     		sub	sp, sp, #8
+ 275              		.cfi_def_cfa_offset 40
+ 276 000c 0400     		movs	r4, r0
+ 277 000e 0D00     		movs	r5, r1
+ 278 0010 9046     		mov	r8, r2
+ 279 0012 1F00     		movs	r7, r3
+ 280 0014 0A9E     		ldr	r6, [sp, #40]
+ 499:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   uint8_t  *pdata8bits;
+ 281              		.loc 1 499 3 is_stmt 1 view .LVU61
+ 500:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   uint16_t *pdata16bits;
+ 282              		.loc 1 500 3 view .LVU62
+ 501:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   uint16_t uhMask;
+ 283              		.loc 1 501 3 view .LVU63
+ 502:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   uint32_t tickstart;
+ 284              		.loc 1 502 3 view .LVU64
+ 503:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 504:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check that a Rx process is not already ongoing */
+ 505:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart->RxState == HAL_UART_STATE_READY)
+ 285              		.loc 1 505 3 view .LVU65
+ 286              		.loc 1 505 12 is_stmt 0 view .LVU66
+ 287 0016 8023     		movs	r3, #128
+ 288              	.LVL23:
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 15
+
+
+ 289              		.loc 1 505 12 view .LVU67
+ 290 0018 C358     		ldr	r3, [r0, r3]
+ 291              		.loc 1 505 6 view .LVU68
+ 292 001a 202B     		cmp	r3, #32
+ 293 001c 00D0     		beq	.LCB260
+ 294 001e B1E0     		b	.L32	@long jump
+ 295              	.LCB260:
+ 506:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 507:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if ((pData == NULL) || (Size == 0U))
+ 296              		.loc 1 507 5 is_stmt 1 view .LVU69
+ 297              		.loc 1 507 8 is_stmt 0 view .LVU70
+ 298 0020 0029     		cmp	r1, #0
+ 299 0022 00D1     		bne	.LCB263
+ 300 0024 B5E0     		b	.L33	@long jump
+ 301              	.LCB263:
+ 302              		.loc 1 507 25 discriminator 1 view .LVU71
+ 303 0026 002A     		cmp	r2, #0
+ 304 0028 00D1     		bne	.LCB265
+ 305 002a B4E0     		b	.L34	@long jump
+ 306              	.LCB265:
+ 508:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 509:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       return  HAL_ERROR;
+ 510:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 511:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 512:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* In case of 9bits/No Parity transfer, pData buffer provided as input parameter
+ 513:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        should be aligned on a uint16_t frontier, as data to be received from RDR will be
+ 514:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        handled through a uint16_t cast. */
+ 515:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if ((huart->Init.WordLength == UART_WORDLENGTH_9B) && (huart->Init.Parity == UART_PARITY_NONE))
+ 307              		.loc 1 515 5 is_stmt 1 view .LVU72
+ 308              		.loc 1 515 21 is_stmt 0 view .LVU73
+ 309 002c 8268     		ldr	r2, [r0, #8]
+ 310              	.LVL24:
+ 311              		.loc 1 515 8 view .LVU74
+ 312 002e 8023     		movs	r3, #128
+ 313 0030 5B01     		lsls	r3, r3, #5
+ 314 0032 9A42     		cmp	r2, r3
+ 315 0034 05D1     		bne	.L15
+ 316              		.loc 1 515 71 discriminator 1 view .LVU75
+ 317 0036 0369     		ldr	r3, [r0, #16]
+ 318              		.loc 1 515 56 discriminator 1 view .LVU76
+ 319 0038 002B     		cmp	r3, #0
+ 320 003a 02D1     		bne	.L15
+ 516:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 517:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if ((((uint32_t)pData) & 1U) != 0U)
+ 321              		.loc 1 517 7 is_stmt 1 view .LVU77
+ 322              		.loc 1 517 10 is_stmt 0 view .LVU78
+ 323 003c CB07     		lsls	r3, r1, #31
+ 324 003e 00D5     		bpl	.LCB280
+ 325 0040 ABE0     		b	.L35	@long jump
+ 326              	.LCB280:
+ 327              	.L15:
+ 518:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 519:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         return  HAL_ERROR;
+ 520:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 521:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 522:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 523:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->ErrorCode = HAL_UART_ERROR_NONE;
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 16
+
+
+ 328              		.loc 1 523 5 is_stmt 1 view .LVU79
+ 329              		.loc 1 523 22 is_stmt 0 view .LVU80
+ 330 0042 0023     		movs	r3, #0
+ 331 0044 8422     		movs	r2, #132
+ 332 0046 A350     		str	r3, [r4, r2]
+ 524:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->RxState = HAL_UART_STATE_BUSY_RX;
+ 333              		.loc 1 524 5 is_stmt 1 view .LVU81
+ 334              		.loc 1 524 20 is_stmt 0 view .LVU82
+ 335 0048 043A     		subs	r2, r2, #4
+ 336 004a 2221     		movs	r1, #34
+ 337              	.LVL25:
+ 338              		.loc 1 524 20 view .LVU83
+ 339 004c A150     		str	r1, [r4, r2]
+ 525:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->ReceptionType = HAL_UART_RECEPTION_TOIDLE;
+ 340              		.loc 1 525 5 is_stmt 1 view .LVU84
+ 341              		.loc 1 525 26 is_stmt 0 view .LVU85
+ 342 004e 7F3A     		subs	r2, r2, #127
+ 343 0050 2266     		str	r2, [r4, #96]
+ 526:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->RxEventType = HAL_UART_RXEVENT_TC;
+ 344              		.loc 1 526 5 is_stmt 1 view .LVU86
+ 345              		.loc 1 526 24 is_stmt 0 view .LVU87
+ 346 0052 6366     		str	r3, [r4, #100]
+ 527:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 528:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Init tickstart for timeout management */
+ 529:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     tickstart = HAL_GetTick();
+ 347              		.loc 1 529 5 is_stmt 1 view .LVU88
+ 348              		.loc 1 529 17 is_stmt 0 view .LVU89
+ 349 0054 FFF7FEFF 		bl	HAL_GetTick
+ 350              	.LVL26:
+ 351              		.loc 1 529 17 view .LVU90
+ 352 0058 8146     		mov	r9, r0
+ 353              	.LVL27:
+ 530:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 531:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->RxXferSize  = Size;
+ 354              		.loc 1 531 5 is_stmt 1 view .LVU91
+ 355              		.loc 1 531 24 is_stmt 0 view .LVU92
+ 356 005a 5823     		movs	r3, #88
+ 357 005c 4246     		mov	r2, r8
+ 358 005e E252     		strh	r2, [r4, r3]
+ 532:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->RxXferCount = Size;
+ 359              		.loc 1 532 5 is_stmt 1 view .LVU93
+ 360              		.loc 1 532 24 is_stmt 0 view .LVU94
+ 361 0060 0233     		adds	r3, r3, #2
+ 362 0062 E252     		strh	r2, [r4, r3]
+ 533:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 534:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Computation of UART mask to apply to RDR register */
+ 535:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     UART_MASK_COMPUTATION(huart);
+ 363              		.loc 1 535 5 is_stmt 1 view .LVU95
+ 364              		.loc 1 535 5 view .LVU96
+ 365 0064 A368     		ldr	r3, [r4, #8]
+ 366 0066 8022     		movs	r2, #128
+ 367 0068 5201     		lsls	r2, r2, #5
+ 368 006a 9342     		cmp	r3, r2
+ 369 006c 08D0     		beq	.L41
+ 370              		.loc 1 535 5 discriminator 2 view .LVU97
+ 371 006e 002B     		cmp	r3, #0
+ 372 0070 15D1     		bne	.L19
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 17
+
+
+ 373              		.loc 1 535 5 discriminator 5 view .LVU98
+ 374 0072 2269     		ldr	r2, [r4, #16]
+ 375 0074 002A     		cmp	r2, #0
+ 376 0076 0ED1     		bne	.L20
+ 377              		.loc 1 535 5 discriminator 7 view .LVU99
+ 378 0078 5C32     		adds	r2, r2, #92
+ 379 007a FF21     		movs	r1, #255
+ 380 007c A152     		strh	r1, [r4, r2]
+ 381 007e 15E0     		b	.L18
+ 382              	.L41:
+ 383              		.loc 1 535 5 discriminator 1 view .LVU100
+ 384 0080 2269     		ldr	r2, [r4, #16]
+ 385 0082 002A     		cmp	r2, #0
+ 386 0084 03D1     		bne	.L17
+ 387              		.loc 1 535 5 discriminator 3 view .LVU101
+ 388 0086 5C32     		adds	r2, r2, #92
+ 389 0088 4549     		ldr	r1, .L48
+ 390 008a A152     		strh	r1, [r4, r2]
+ 391 008c 0EE0     		b	.L18
+ 392              	.L17:
+ 393              		.loc 1 535 5 discriminator 4 view .LVU102
+ 394 008e 5C22     		movs	r2, #92
+ 395 0090 FF21     		movs	r1, #255
+ 396 0092 A152     		strh	r1, [r4, r2]
+ 397 0094 0AE0     		b	.L18
+ 398              	.L20:
+ 399              		.loc 1 535 5 discriminator 8 view .LVU103
+ 400 0096 5C22     		movs	r2, #92
+ 401 0098 7F21     		movs	r1, #127
+ 402 009a A152     		strh	r1, [r4, r2]
+ 403 009c 06E0     		b	.L18
+ 404              	.L19:
+ 405              		.loc 1 535 5 discriminator 6 view .LVU104
+ 406 009e 8022     		movs	r2, #128
+ 407 00a0 5205     		lsls	r2, r2, #21
+ 408 00a2 9342     		cmp	r3, r2
+ 409 00a4 0ED0     		beq	.L42
+ 410              		.loc 1 535 5 discriminator 10 view .LVU105
+ 411 00a6 5C22     		movs	r2, #92
+ 412 00a8 0021     		movs	r1, #0
+ 413 00aa A152     		strh	r1, [r4, r2]
+ 414              	.L18:
+ 415              		.loc 1 535 5 discriminator 13 view .LVU106
+ 536:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     uhMask = huart->Mask;
+ 416              		.loc 1 536 5 discriminator 13 view .LVU107
+ 417              		.loc 1 536 12 is_stmt 0 discriminator 13 view .LVU108
+ 418 00ac 5C22     		movs	r2, #92
+ 419 00ae A25A     		ldrh	r2, [r4, r2]
+ 420 00b0 0192     		str	r2, [sp, #4]
+ 421              	.LVL28:
+ 537:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 538:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* In case of 9bits/No Parity transfer, pRxData needs to be handled as a uint16_t pointer */
+ 539:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if ((huart->Init.WordLength == UART_WORDLENGTH_9B) && (huart->Init.Parity == UART_PARITY_NONE))
+ 422              		.loc 1 539 5 is_stmt 1 discriminator 13 view .LVU109
+ 423              		.loc 1 539 8 is_stmt 0 discriminator 13 view .LVU110
+ 424 00b2 8022     		movs	r2, #128
+ 425 00b4 5201     		lsls	r2, r2, #5
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 18
+
+
+ 426 00b6 9342     		cmp	r3, r2
+ 427 00b8 0FD0     		beq	.L43
+ 540:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 541:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       pdata8bits  = NULL;
+ 542:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       pdata16bits = (uint16_t *) pData;
+ 543:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 544:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     else
+ 545:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 546:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       pdata8bits  = pData;
+ 547:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       pdata16bits = NULL;
+ 428              		.loc 1 547 19 view .LVU111
+ 429 00ba 0023     		movs	r3, #0
+ 430 00bc 9A46     		mov	r10, r3
+ 431              	.LVL29:
+ 432              	.L23:
+ 548:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 549:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 550:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Initialize output number of received elements */
+ 551:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     *RxLen = 0U;
+ 433              		.loc 1 551 5 is_stmt 1 view .LVU112
+ 434              		.loc 1 551 12 is_stmt 0 view .LVU113
+ 435 00be 0023     		movs	r3, #0
+ 436 00c0 3B80     		strh	r3, [r7]
+ 552:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 553:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* as long as data have to be received */
+ 554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     while (huart->RxXferCount > 0U)
+ 437              		.loc 1 554 5 is_stmt 1 view .LVU114
+ 438              		.loc 1 554 11 is_stmt 0 view .LVU115
+ 439 00c2 2CE0     		b	.L24
+ 440              	.LVL30:
+ 441              	.L42:
+ 535:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     uhMask = huart->Mask;
+ 442              		.loc 1 535 5 is_stmt 1 discriminator 9 view .LVU116
+ 443 00c4 2269     		ldr	r2, [r4, #16]
+ 444 00c6 002A     		cmp	r2, #0
+ 445 00c8 03D1     		bne	.L22
+ 535:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     uhMask = huart->Mask;
+ 446              		.loc 1 535 5 discriminator 11 view .LVU117
+ 447 00ca 5C32     		adds	r2, r2, #92
+ 448 00cc 7F21     		movs	r1, #127
+ 449 00ce A152     		strh	r1, [r4, r2]
+ 450 00d0 ECE7     		b	.L18
+ 451              	.L22:
+ 535:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     uhMask = huart->Mask;
+ 452              		.loc 1 535 5 discriminator 12 view .LVU118
+ 453 00d2 5C22     		movs	r2, #92
+ 454 00d4 3F21     		movs	r1, #63
+ 455 00d6 A152     		strh	r1, [r4, r2]
+ 456 00d8 E8E7     		b	.L18
+ 457              	.LVL31:
+ 458              	.L43:
+ 539:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 459              		.loc 1 539 71 is_stmt 0 discriminator 1 view .LVU119
+ 460 00da 2369     		ldr	r3, [r4, #16]
+ 539:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 461              		.loc 1 539 56 discriminator 1 view .LVU120
+ 462 00dc 002B     		cmp	r3, #0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 19
+
+
+ 463 00de 02D0     		beq	.L37
+ 547:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 464              		.loc 1 547 19 view .LVU121
+ 465 00e0 0023     		movs	r3, #0
+ 466 00e2 9A46     		mov	r10, r3
+ 467 00e4 EBE7     		b	.L23
+ 468              	.L37:
+ 542:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 469              		.loc 1 542 19 view .LVU122
+ 470 00e6 AA46     		mov	r10, r5
+ 541:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       pdata16bits = (uint16_t *) pData;
+ 471              		.loc 1 541 19 view .LVU123
+ 472 00e8 0025     		movs	r5, #0
+ 473              	.LVL32:
+ 541:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       pdata16bits = (uint16_t *) pData;
+ 474              		.loc 1 541 19 view .LVU124
+ 475 00ea E8E7     		b	.L23
+ 476              	.LVL33:
+ 477              	.L46:
+ 555:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 556:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       /* Check if IDLE flag is set */
+ 557:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if (__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE))
+ 558:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 559:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         /* Clear IDLE flag in ISR */
+ 560:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_IDLEF);
+ 561:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 562:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         /* If Set, but no data ever received, clear flag without exiting loop */
+ 563:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         /* If Set, and data has already been received, this means Idle Event is valid : End recepti
+ 564:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         if (*RxLen > 0U)
+ 565:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 566:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           huart->RxEventType = HAL_UART_RXEVENT_IDLE;
+ 478              		.loc 1 566 11 is_stmt 1 view .LVU125
+ 479              		.loc 1 566 30 is_stmt 0 view .LVU126
+ 480 00ec 0223     		movs	r3, #2
+ 481 00ee 6366     		str	r3, [r4, #100]
+ 567:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           huart->RxState = HAL_UART_STATE_READY;
+ 482              		.loc 1 567 11 is_stmt 1 view .LVU127
+ 483              		.loc 1 567 26 is_stmt 0 view .LVU128
+ 484 00f0 7E33     		adds	r3, r3, #126
+ 485 00f2 2022     		movs	r2, #32
+ 486 00f4 E250     		str	r2, [r4, r3]
+ 568:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 569:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           return HAL_OK;
+ 487              		.loc 1 569 11 is_stmt 1 view .LVU129
+ 488              		.loc 1 569 18 is_stmt 0 view .LVU130
+ 489 00f6 0020     		movs	r0, #0
+ 490 00f8 45E0     		b	.L14
+ 491              	.L47:
+ 570:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         }
+ 571:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 572:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 573:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       /* Check if RXNE flag is set */
+ 574:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if (__HAL_UART_GET_FLAG(huart, UART_FLAG_RXNE))
+ 575:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 576:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         if (pdata8bits == NULL)
+ 577:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 578:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           *pdata16bits = (uint16_t)(huart->Instance->RDR & uhMask);
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 20
+
+
+ 492              		.loc 1 578 11 is_stmt 1 view .LVU131
+ 493              		.loc 1 578 52 is_stmt 0 view .LVU132
+ 494 00fa 938C     		ldrh	r3, [r2, #36]
+ 495              		.loc 1 578 26 view .LVU133
+ 496 00fc 019A     		ldr	r2, [sp, #4]
+ 497 00fe 1340     		ands	r3, r2
+ 498              		.loc 1 578 24 view .LVU134
+ 499 0100 5246     		mov	r2, r10
+ 500 0102 1380     		strh	r3, [r2]
+ 579:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata16bits++;
+ 501              		.loc 1 579 11 is_stmt 1 view .LVU135
+ 502              		.loc 1 579 22 is_stmt 0 view .LVU136
+ 503 0104 0223     		movs	r3, #2
+ 504 0106 9C46     		mov	ip, r3
+ 505 0108 E244     		add	r10, r10, ip
+ 506              	.LVL34:
+ 507              	.L28:
+ 580:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         }
+ 581:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         else
+ 582:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 583:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           *pdata8bits = (uint8_t)(huart->Instance->RDR & (uint8_t)uhMask);
+ 584:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata8bits++;
+ 585:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         }
+ 586:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         /* Increment number of received elements */
+ 587:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         *RxLen += 1U;
+ 508              		.loc 1 587 9 is_stmt 1 view .LVU137
+ 509 010a 3B88     		ldrh	r3, [r7]
+ 510              		.loc 1 587 16 is_stmt 0 view .LVU138
+ 511 010c 0133     		adds	r3, r3, #1
+ 512 010e 3B80     		strh	r3, [r7]
+ 588:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         huart->RxXferCount--;
+ 513              		.loc 1 588 9 is_stmt 1 view .LVU139
+ 514              		.loc 1 588 14 is_stmt 0 view .LVU140
+ 515 0110 5A22     		movs	r2, #90
+ 516 0112 A35A     		ldrh	r3, [r4, r2]
+ 517              		.loc 1 588 27 view .LVU141
+ 518 0114 013B     		subs	r3, r3, #1
+ 519 0116 9BB2     		uxth	r3, r3
+ 520 0118 A352     		strh	r3, [r4, r2]
+ 521              	.L26:
+ 589:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 590:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 591:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       /* Check for the Timeout */
+ 592:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if (Timeout != HAL_MAX_DELAY)
+ 522              		.loc 1 592 7 is_stmt 1 view .LVU142
+ 523              		.loc 1 592 10 is_stmt 0 view .LVU143
+ 524 011a 731C     		adds	r3, r6, #1
+ 525 011c 1AD1     		bne	.L44
+ 526              	.L24:
+ 554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 527              		.loc 1 554 31 is_stmt 1 view .LVU144
+ 554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 528              		.loc 1 554 17 is_stmt 0 view .LVU145
+ 529 011e 5A23     		movs	r3, #90
+ 530 0120 E25A     		ldrh	r2, [r4, r3]
+ 531 0122 92B2     		uxth	r2, r2
+ 554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 21
+
+
+ 532              		.loc 1 554 31 view .LVU146
+ 533 0124 002A     		cmp	r2, #0
+ 534 0126 22D0     		beq	.L45
+ 557:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 535              		.loc 1 557 7 is_stmt 1 view .LVU147
+ 557:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 536              		.loc 1 557 11 is_stmt 0 view .LVU148
+ 537 0128 2268     		ldr	r2, [r4]
+ 538 012a D369     		ldr	r3, [r2, #28]
+ 557:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 539              		.loc 1 557 10 view .LVU149
+ 540 012c DB06     		lsls	r3, r3, #27
+ 541 012e 04D5     		bpl	.L25
+ 560:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 542              		.loc 1 560 9 is_stmt 1 view .LVU150
+ 543 0130 1023     		movs	r3, #16
+ 544 0132 1362     		str	r3, [r2, #32]
+ 564:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 545              		.loc 1 564 9 view .LVU151
+ 564:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 546              		.loc 1 564 13 is_stmt 0 view .LVU152
+ 547 0134 3B88     		ldrh	r3, [r7]
+ 564:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 548              		.loc 1 564 12 view .LVU153
+ 549 0136 002B     		cmp	r3, #0
+ 550 0138 D8D1     		bne	.L46
+ 551              	.L25:
+ 574:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 552              		.loc 1 574 7 is_stmt 1 view .LVU154
+ 574:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 553              		.loc 1 574 11 is_stmt 0 view .LVU155
+ 554 013a 2268     		ldr	r2, [r4]
+ 555 013c D369     		ldr	r3, [r2, #28]
+ 574:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 556              		.loc 1 574 10 view .LVU156
+ 557 013e 9B06     		lsls	r3, r3, #26
+ 558 0140 EBD5     		bpl	.L26
+ 576:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 559              		.loc 1 576 9 is_stmt 1 view .LVU157
+ 576:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 560              		.loc 1 576 12 is_stmt 0 view .LVU158
+ 561 0142 002D     		cmp	r5, #0
+ 562 0144 D9D0     		beq	.L47
+ 583:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata8bits++;
+ 563              		.loc 1 583 11 is_stmt 1 view .LVU159
+ 583:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata8bits++;
+ 564              		.loc 1 583 50 is_stmt 0 view .LVU160
+ 565 0146 938C     		ldrh	r3, [r2, #36]
+ 583:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata8bits++;
+ 566              		.loc 1 583 58 view .LVU161
+ 567 0148 6A46     		mov	r2, sp
+ 568 014a 1279     		ldrb	r2, [r2, #4]
+ 583:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata8bits++;
+ 569              		.loc 1 583 25 view .LVU162
+ 570 014c 1340     		ands	r3, r2
+ 583:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata8bits++;
+ 571              		.loc 1 583 23 view .LVU163
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 22
+
+
+ 572 014e 2B70     		strb	r3, [r5]
+ 584:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         }
+ 573              		.loc 1 584 11 is_stmt 1 view .LVU164
+ 584:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         }
+ 574              		.loc 1 584 21 is_stmt 0 view .LVU165
+ 575 0150 0135     		adds	r5, r5, #1
+ 576              	.LVL35:
+ 584:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         }
+ 577              		.loc 1 584 21 view .LVU166
+ 578 0152 DAE7     		b	.L28
+ 579              	.L44:
+ 593:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 594:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         if (((HAL_GetTick() - tickstart) > Timeout) || (Timeout == 0U))
+ 580              		.loc 1 594 9 is_stmt 1 view .LVU167
+ 581              		.loc 1 594 15 is_stmt 0 view .LVU168
+ 582 0154 FFF7FEFF 		bl	HAL_GetTick
+ 583              	.LVL36:
+ 584              		.loc 1 594 29 view .LVU169
+ 585 0158 4B46     		mov	r3, r9
+ 586 015a C01A     		subs	r0, r0, r3
+ 587              		.loc 1 594 12 view .LVU170
+ 588 015c B042     		cmp	r0, r6
+ 589 015e 01D8     		bhi	.L30
+ 590              	.LVL37:
+ 591              		.loc 1 594 53 discriminator 1 view .LVU171
+ 592 0160 002E     		cmp	r6, #0
+ 593 0162 DCD1     		bne	.L24
+ 594              	.L30:
+ 595:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
+ 596:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           huart->RxState = HAL_UART_STATE_READY;
+ 595              		.loc 1 596 11 is_stmt 1 view .LVU172
+ 596              		.loc 1 596 26 is_stmt 0 view .LVU173
+ 597 0164 8023     		movs	r3, #128
+ 598              	.LVL38:
+ 599              		.loc 1 596 26 view .LVU174
+ 600 0166 2022     		movs	r2, #32
+ 601 0168 E250     		str	r2, [r4, r3]
+ 597:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 598:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           return HAL_TIMEOUT;
+ 602              		.loc 1 598 11 is_stmt 1 view .LVU175
+ 603              		.loc 1 598 18 is_stmt 0 view .LVU176
+ 604 016a 0320     		movs	r0, #3
+ 605 016c 0BE0     		b	.L14
+ 606              	.L45:
+ 599:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         }
+ 600:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 601:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 602:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 603:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Set number of received elements in output parameter : RxLen */
+ 604:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     *RxLen = huart->RxXferSize - huart->RxXferCount;
+ 607              		.loc 1 604 5 is_stmt 1 view .LVU177
+ 608              		.loc 1 604 19 is_stmt 0 view .LVU178
+ 609 016e 023B     		subs	r3, r3, #2
+ 610 0170 E35A     		ldrh	r3, [r4, r3]
+ 611              		.loc 1 604 39 view .LVU179
+ 612 0172 5A32     		adds	r2, r2, #90
+ 613 0174 A25A     		ldrh	r2, [r4, r2]
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 23
+
+
+ 614              		.loc 1 604 32 view .LVU180
+ 615 0176 9B1A     		subs	r3, r3, r2
+ 616              		.loc 1 604 12 view .LVU181
+ 617 0178 3B80     		strh	r3, [r7]
+ 605:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* At end of Rx process, restore huart->RxState to Ready */
+ 606:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->RxState = HAL_UART_STATE_READY;
+ 618              		.loc 1 606 5 is_stmt 1 view .LVU182
+ 619              		.loc 1 606 20 is_stmt 0 view .LVU183
+ 620 017a 8023     		movs	r3, #128
+ 621 017c 2022     		movs	r2, #32
+ 622 017e E250     		str	r2, [r4, r3]
+ 607:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 608:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return HAL_OK;
+ 623              		.loc 1 608 5 is_stmt 1 view .LVU184
+ 624              		.loc 1 608 12 is_stmt 0 view .LVU185
+ 625 0180 0020     		movs	r0, #0
+ 626 0182 00E0     		b	.L14
+ 627              	.LVL39:
+ 628              	.L32:
+ 609:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 610:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   else
+ 611:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 612:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return HAL_BUSY;
+ 629              		.loc 1 612 12 view .LVU186
+ 630 0184 0220     		movs	r0, #2
+ 631              	.LVL40:
+ 632              	.L14:
+ 613:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 614:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 633              		.loc 1 614 1 view .LVU187
+ 634 0186 02B0     		add	sp, sp, #8
+ 635              		@ sp needed
+ 636              	.LVL41:
+ 637              	.LVL42:
+ 638              		.loc 1 614 1 view .LVU188
+ 639 0188 E0BC     		pop	{r5, r6, r7}
+ 640 018a BA46     		mov	r10, r7
+ 641 018c B146     		mov	r9, r6
+ 642 018e A846     		mov	r8, r5
+ 643 0190 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 644              	.LVL43:
+ 645              	.L33:
+ 509:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 646              		.loc 1 509 15 view .LVU189
+ 647 0192 0120     		movs	r0, #1
+ 648              	.LVL44:
+ 509:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 649              		.loc 1 509 15 view .LVU190
+ 650 0194 F7E7     		b	.L14
+ 651              	.LVL45:
+ 652              	.L34:
+ 509:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 653              		.loc 1 509 15 view .LVU191
+ 654 0196 0120     		movs	r0, #1
+ 655              	.LVL46:
+ 509:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 656              		.loc 1 509 15 view .LVU192
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 24
+
+
+ 657 0198 F5E7     		b	.L14
+ 658              	.LVL47:
+ 659              	.L35:
+ 519:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 660              		.loc 1 519 17 view .LVU193
+ 661 019a 0120     		movs	r0, #1
+ 662              	.LVL48:
+ 519:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 663              		.loc 1 519 17 view .LVU194
+ 664 019c F3E7     		b	.L14
+ 665              	.L49:
+ 666 019e C046     		.align	2
+ 667              	.L48:
+ 668 01a0 FF010000 		.word	511
+ 669              		.cfi_endproc
+ 670              	.LFE42:
+ 672              		.section	.text.HAL_UARTEx_ReceiveToIdle_IT,"ax",%progbits
+ 673              		.align	1
+ 674              		.global	HAL_UARTEx_ReceiveToIdle_IT
+ 675              		.syntax unified
+ 676              		.code	16
+ 677              		.thumb_func
+ 679              	HAL_UARTEx_ReceiveToIdle_IT:
+ 680              	.LVL49:
+ 681              	.LFB43:
+ 615:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 616:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 617:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Receive an amount of data in interrupt mode till either the expected number of data
+ 618:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        is received or an IDLE event occurs.
+ 619:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  Reception is initiated by this function call. Further progress of reception is achieved 
+ 620:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        to UART interrupts raised by RXNE and IDLE events. Callback is called at end of receptio
+ 621:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        number of received data elements.
+ 622:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-M
+ 623:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        the received data is handled as a set of uint16_t. In this case, Size must indicate the 
+ 624:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        of uint16_t available through pData.
+ 625:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-M
+ 626:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        address of user data buffer for storing data to be received, should be aligned on a half
+ 627:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        (16 bits) (as received data will be handled using uint16_t pointer cast). Depending on c
+ 628:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        use of specific alignment compilation directives or pragmas might be required
+ 629:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        to ensure proper alignment for pData.
+ 630:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart UART handle.
+ 631:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param pData Pointer to data buffer (uint8_t or uint16_t data elements).
+ 632:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param Size  Amount of data elements (uint8_t or uint16_t) to be received.
+ 633:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 634:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 635:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t S
+ 636:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 682              		.loc 1 636 1 is_stmt 1 view -0
+ 683              		.cfi_startproc
+ 684              		@ args = 0, pretend = 0, frame = 0
+ 685              		@ frame_needed = 0, uses_anonymous_args = 0
+ 686              		.loc 1 636 1 is_stmt 0 view .LVU196
+ 687 0000 10B5     		push	{r4, lr}
+ 688              		.cfi_def_cfa_offset 8
+ 689              		.cfi_offset 4, -8
+ 690              		.cfi_offset 14, -4
+ 691 0002 0400     		movs	r4, r0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 25
+
+
+ 637:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   HAL_StatusTypeDef status;
+ 692              		.loc 1 637 3 is_stmt 1 view .LVU197
+ 638:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 639:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check that a Rx process is not already ongoing */
+ 640:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart->RxState == HAL_UART_STATE_READY)
+ 693              		.loc 1 640 3 view .LVU198
+ 694              		.loc 1 640 12 is_stmt 0 view .LVU199
+ 695 0004 8023     		movs	r3, #128
+ 696 0006 C358     		ldr	r3, [r0, r3]
+ 697              		.loc 1 640 6 view .LVU200
+ 698 0008 202B     		cmp	r3, #32
+ 699 000a 2AD1     		bne	.L54
+ 641:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 642:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if ((pData == NULL) || (Size == 0U))
+ 700              		.loc 1 642 5 is_stmt 1 view .LVU201
+ 701              		.loc 1 642 8 is_stmt 0 view .LVU202
+ 702 000c 0029     		cmp	r1, #0
+ 703 000e 2AD0     		beq	.L55
+ 704              		.loc 1 642 25 discriminator 1 view .LVU203
+ 705 0010 002A     		cmp	r2, #0
+ 706 0012 2AD0     		beq	.L56
+ 643:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 644:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       return HAL_ERROR;
+ 645:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 646:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 647:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* In case of 9bits/No Parity transfer, pData buffer provided as input parameter
+ 648:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        should be aligned on a uint16_t frontier, as data to be received from RDR will be
+ 649:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        handled through a uint16_t cast. */
+ 650:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if ((huart->Init.WordLength == UART_WORDLENGTH_9B) && (huart->Init.Parity == UART_PARITY_NONE))
+ 707              		.loc 1 650 5 is_stmt 1 view .LVU204
+ 708              		.loc 1 650 21 is_stmt 0 view .LVU205
+ 709 0014 8068     		ldr	r0, [r0, #8]
+ 710              	.LVL50:
+ 711              		.loc 1 650 8 view .LVU206
+ 712 0016 8023     		movs	r3, #128
+ 713 0018 5B01     		lsls	r3, r3, #5
+ 714 001a 9842     		cmp	r0, r3
+ 715 001c 04D1     		bne	.L52
+ 716              		.loc 1 650 71 discriminator 1 view .LVU207
+ 717 001e 2369     		ldr	r3, [r4, #16]
+ 718              		.loc 1 650 56 discriminator 1 view .LVU208
+ 719 0020 002B     		cmp	r3, #0
+ 720 0022 01D1     		bne	.L52
+ 651:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 652:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if ((((uint32_t)pData) & 1U) != 0U)
+ 721              		.loc 1 652 7 is_stmt 1 view .LVU209
+ 722              		.loc 1 652 10 is_stmt 0 view .LVU210
+ 723 0024 CB07     		lsls	r3, r1, #31
+ 724 0026 22D4     		bmi	.L57
+ 725              	.L52:
+ 653:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 654:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         return  HAL_ERROR;
+ 655:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 656:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 657:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 658:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Set Reception type to reception till IDLE Event*/
+ 659:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->ReceptionType = HAL_UART_RECEPTION_TOIDLE;
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 26
+
+
+ 726              		.loc 1 659 5 is_stmt 1 view .LVU211
+ 727              		.loc 1 659 26 is_stmt 0 view .LVU212
+ 728 0028 0123     		movs	r3, #1
+ 729 002a 2366     		str	r3, [r4, #96]
+ 660:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->RxEventType = HAL_UART_RXEVENT_TC;
+ 730              		.loc 1 660 5 is_stmt 1 view .LVU213
+ 731              		.loc 1 660 24 is_stmt 0 view .LVU214
+ 732 002c 0023     		movs	r3, #0
+ 733 002e 6366     		str	r3, [r4, #100]
+ 661:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 662:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     status =  UART_Start_Receive_IT(huart, pData, Size);
+ 734              		.loc 1 662 5 is_stmt 1 view .LVU215
+ 735              		.loc 1 662 15 is_stmt 0 view .LVU216
+ 736 0030 2000     		movs	r0, r4
+ 737 0032 FFF7FEFF 		bl	UART_Start_Receive_IT
+ 738              	.LVL51:
+ 663:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 664:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Check Rx process has been successfully started */
+ 665:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if (status == HAL_OK)
+ 739              		.loc 1 665 5 is_stmt 1 view .LVU217
+ 740              		.loc 1 665 8 is_stmt 0 view .LVU218
+ 741 0036 0028     		cmp	r0, #0
+ 742 0038 14D1     		bne	.L51
+ 666:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 667:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if (huart->ReceptionType == HAL_UART_RECEPTION_TOIDLE)
+ 743              		.loc 1 667 7 is_stmt 1 view .LVU219
+ 744              		.loc 1 667 16 is_stmt 0 view .LVU220
+ 745 003a 236E     		ldr	r3, [r4, #96]
+ 746              		.loc 1 667 10 view .LVU221
+ 747 003c 012B     		cmp	r3, #1
+ 748 003e 01D0     		beq	.L59
+ 668:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 669:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_IDLEF);
+ 670:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
+ 671:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 672:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       else
+ 673:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 674:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         /* In case of errors already pending when reception is started,
+ 675:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            Interrupts may have already been raised and lead to reception abortion.
+ 676:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            (Overrun error for instance).
+ 677:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            In such case Reception Type has been reset to HAL_UART_RECEPTION_STANDARD. */
+ 678:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         status = HAL_ERROR;
+ 749              		.loc 1 678 16 view .LVU222
+ 750 0040 0120     		movs	r0, #1
+ 751              	.LVL52:
+ 679:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 680:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 681:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 682:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return status;
+ 752              		.loc 1 682 5 is_stmt 1 view .LVU223
+ 753              		.loc 1 682 12 is_stmt 0 view .LVU224
+ 754 0042 0FE0     		b	.L51
+ 755              	.LVL53:
+ 756              	.L59:
+ 669:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
+ 757              		.loc 1 669 9 is_stmt 1 view .LVU225
+ 758 0044 2368     		ldr	r3, [r4]
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 27
+
+
+ 759 0046 1021     		movs	r1, #16
+ 760 0048 1962     		str	r1, [r3, #32]
+ 670:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 761              		.loc 1 670 9 view .LVU226
+ 762              	.LBB16:
+ 670:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 763              		.loc 1 670 9 view .LVU227
+ 670:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 764              		.loc 1 670 9 view .LVU228
+ 765              	.LBB17:
+ 766              	.LBI17:
+ 767              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
+   1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.0.4
+   5:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @date     09. April 2018
+   6:Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:Drivers/CMSIS/Include/cmsis_gcc.h **** /*
+   8:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2018 Arm Limited. All rights reserved.
+   9:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  10:Drivers/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  12:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:Drivers/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:Drivers/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  16:Drivers/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:Drivers/CMSIS/Include/cmsis_gcc.h ****  *
+  18:Drivers/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:Drivers/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:Drivers/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:Drivers/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:Drivers/CMSIS/Include/cmsis_gcc.h ****  * limitations under the License.
+  23:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+  24:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  25:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  28:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:Drivers/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  38:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+  39:Drivers/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
+  41:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 28
+
+
+  46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  49:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif                                           
+  52:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
+  56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  61:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
+  62:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  64:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  67:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  70:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:Drivers/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  78:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  86:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+  94:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 102:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 29
+
+
+ 103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:Drivers/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 110:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 116:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 117:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 118:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 119:Drivers/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 120:Drivers/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 121:Drivers/CMSIS/Include/cmsis_gcc.h ****   @{
+ 122:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 123:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 124:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 125:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 126:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 127:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 128:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 129:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 130:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 131:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 132:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 133:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 134:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 135:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 136:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+ 137:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ 138:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 139:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 140:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
+ 141:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 142:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 143:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 144:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 145:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 146:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 147:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register
+ 148:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the Control Register.
+ 149:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Control Register value
+ 150:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 151:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_CONTROL(void)
+ 152:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 153:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 154:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 155:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+ 156:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 157:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 158:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 159:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 30
+
+
+ 160:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 161:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 162:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register (non-secure)
+ 163:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the non-secure Control Register when in secure mode.
+ 164:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               non-secure Control Register value
+ 165:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 166:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_CONTROL_NS(void)
+ 167:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 168:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 169:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 170:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control_ns" : "=r" (result) );
+ 171:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 172:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 173:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 174:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 175:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 176:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 177:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register
+ 178:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the Control Register.
+ 179:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 180:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 181:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_CONTROL(uint32_t control)
+ 182:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 183:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+ 184:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 185:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 186:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 187:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 188:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 189:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register (non-secure)
+ 190:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the non-secure Control Register when in secure state.
+ 191:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+ 192:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 193:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_CONTROL_NS(uint32_t control)
+ 194:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 195:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
+ 196:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 197:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 198:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 199:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 200:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 201:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get IPSR Register
+ 202:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
+ 203:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               IPSR Register value
+ 204:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 205:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_IPSR(void)
+ 206:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 207:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 208:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 209:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
+ 210:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 211:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 212:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 213:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 214:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 215:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get APSR Register
+ 216:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the APSR Register.
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 31
+
+
+ 217:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               APSR Register value
+ 218:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 219:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_APSR(void)
+ 220:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 221:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 222:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 223:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
+ 224:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 225:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 226:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 227:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 228:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 229:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get xPSR Register
+ 230:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
+ 231:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               xPSR Register value
+ 232:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 233:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_xPSR(void)
+ 234:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 235:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 236:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 237:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
+ 238:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 239:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 240:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 241:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 242:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 243:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer
+ 244:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
+ 245:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
+ 246:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 247:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PSP(void)
+ 248:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 249:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 250:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 251:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp"  : "=r" (result) );
+ 252:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 253:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 254:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 255:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 256:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 257:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 258:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer (non-secure)
+ 259:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Process Stack Pointer (PSP) when in secure s
+ 260:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
+ 261:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 262:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PSP_NS(void)
+ 263:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 264:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 265:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 266:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp_ns"  : "=r" (result) );
+ 267:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 268:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 269:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 270:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 271:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 272:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 273:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 32
+
+
+ 274:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
+ 275:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 276:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 277:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PSP(uint32_t topOfProcStack)
+ 278:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 279:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psp, %0" : : "r" (topOfProcStack) : );
+ 280:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 281:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 282:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 283:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 284:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 285:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
+ 286:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
+ 287:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 288:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 289:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PSP_NS(uint32_t topOfProcStack)
+ 290:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 291:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psp_ns, %0" : : "r" (topOfProcStack) : );
+ 292:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 293:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 294:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 295:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 296:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 297:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer
+ 298:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
+ 299:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
+ 300:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 301:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_MSP(void)
+ 302:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 303:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 304:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 305:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp" : "=r" (result) );
+ 306:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 307:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 308:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 309:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 310:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 311:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 312:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
+ 313:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Main Stack Pointer (MSP) when in secure stat
+ 314:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
+ 315:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 316:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_MSP_NS(void)
+ 317:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 318:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 319:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 320:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp_ns" : "=r" (result) );
+ 321:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 322:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 323:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 324:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 325:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 326:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 327:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer
+ 328:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
+ 329:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 330:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 33
+
+
+ 331:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSP(uint32_t topOfMainStack)
+ 332:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 333:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0" : : "r" (topOfMainStack) : );
+ 334:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 335:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 336:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 337:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 338:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 339:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer (non-secure)
+ 340:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer (MSP) when in secure state.
+ 341:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 342:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 343:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
+ 344:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 345:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
+ 346:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 347:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 348:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 349:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 350:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 351:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 352:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Stack Pointer (non-secure)
+ 353:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Stack Pointer (SP) when in secure state.
+ 354:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               SP Register value
+ 355:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 356:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_SP_NS(void)
+ 357:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 358:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 359:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 360:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, sp_ns" : "=r" (result) );
+ 361:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 362:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 363:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 364:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 365:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 366:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
+ 367:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
+ 368:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
+ 369:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 370:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_SP_NS(uint32_t topOfStack)
+ 371:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 372:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR sp_ns, %0" : : "r" (topOfStack) : );
+ 373:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 374:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 375:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 376:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 377:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 378:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Priority Mask
+ 379:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the priority mask bit from the Priority Mask Register.
+ 380:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
+ 381:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 382:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_PRIMASK(void)
+ 768              		.loc 2 382 31 view .LVU229
+ 769              	.LBB18:
+ 383:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 384:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 770              		.loc 2 384 3 view .LVU230
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 34
+
+
+ 385:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 386:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) :: "memory");
+ 771              		.loc 2 386 3 view .LVU231
+ 772              		.syntax divided
+ 773              	@ 386 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 774 004a EFF3108C 		MRS ip, primask
+ 775              	@ 0 "" 2
+ 776              	.LVL54:
+ 387:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 777              		.loc 2 387 3 view .LVU232
+ 778              		.loc 2 387 3 is_stmt 0 view .LVU233
+ 779              		.thumb
+ 780              		.syntax unified
+ 781              	.LBE18:
+ 782              	.LBE17:
+ 670:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 783              		.loc 1 670 9 is_stmt 1 view .LVU234
+ 784              	.LBB19:
+ 785              	.LBI19:
+ 388:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 389:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 390:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 391:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
+ 392:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 393:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Priority Mask (non-secure)
+ 394:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the non-secure priority mask bit from the Priority Mask Reg
+ 395:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
+ 396:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 397:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __TZ_get_PRIMASK_NS(void)
+ 398:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 399:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 400:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 401:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) :: "memory");
+ 402:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 403:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 404:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
+ 405:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 406:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 407:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
+ 408:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Priority Mask
+ 409:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
+ 410:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
+ 411:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
+ 412:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_PRIMASK(uint32_t priMask)
+ 786              		.loc 2 412 27 view .LVU235
+ 787              	.LBB20:
+ 413:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 414:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+ 788              		.loc 2 414 3 view .LVU236
+ 789 004e 0123     		movs	r3, #1
+ 790              		.syntax divided
+ 791              	@ 414 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 792 0050 83F31088 		MSR primask, r3
+ 793              	@ 0 "" 2
+ 794              	.LVL55:
+ 795              		.loc 2 414 3 is_stmt 0 view .LVU237
+ 796              		.thumb
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 35
+
+
+ 797              		.syntax unified
+ 798              	.LBE20:
+ 799              	.LBE19:
+ 670:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 800              		.loc 1 670 9 is_stmt 1 view .LVU238
+ 801 0054 2268     		ldr	r2, [r4]
+ 802 0056 1368     		ldr	r3, [r2]
+ 803 0058 0B43     		orrs	r3, r1
+ 804 005a 1360     		str	r3, [r2]
+ 670:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 805              		.loc 1 670 9 view .LVU239
+ 806              	.LVL56:
+ 807              	.LBB21:
+ 808              	.LBI21:
+ 412:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 809              		.loc 2 412 27 view .LVU240
+ 810              	.LBB22:
+ 811              		.loc 2 414 3 view .LVU241
+ 812              		.syntax divided
+ 813              	@ 414 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 814 005c 8CF31088 		MSR primask, ip
+ 815              	@ 0 "" 2
+ 415:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 816              		.loc 2 415 1 is_stmt 0 view .LVU242
+ 817              		.thumb
+ 818              		.syntax unified
+ 819 0060 00E0     		b	.L51
+ 820              	.LVL57:
+ 821              	.L54:
+ 822              		.loc 2 415 1 view .LVU243
+ 823              	.LBE22:
+ 824              	.LBE21:
+ 825              	.LBE16:
+ 683:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 684:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   else
+ 685:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 686:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return HAL_BUSY;
+ 826              		.loc 1 686 12 view .LVU244
+ 827 0062 0220     		movs	r0, #2
+ 828              	.LVL58:
+ 829              	.L51:
+ 687:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 688:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 830              		.loc 1 688 1 view .LVU245
+ 831              		@ sp needed
+ 832              	.LVL59:
+ 833              		.loc 1 688 1 view .LVU246
+ 834 0064 10BD     		pop	{r4, pc}
+ 835              	.LVL60:
+ 836              	.L55:
+ 644:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 837              		.loc 1 644 14 view .LVU247
+ 838 0066 0120     		movs	r0, #1
+ 839              	.LVL61:
+ 644:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 840              		.loc 1 644 14 view .LVU248
+ 841 0068 FCE7     		b	.L51
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 36
+
+
+ 842              	.LVL62:
+ 843              	.L56:
+ 644:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 844              		.loc 1 644 14 view .LVU249
+ 845 006a 0120     		movs	r0, #1
+ 846              	.LVL63:
+ 644:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 847              		.loc 1 644 14 view .LVU250
+ 848 006c FAE7     		b	.L51
+ 849              	.L57:
+ 654:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 850              		.loc 1 654 17 view .LVU251
+ 851 006e 0120     		movs	r0, #1
+ 852 0070 F8E7     		b	.L51
+ 853              		.cfi_endproc
+ 854              	.LFE43:
+ 856              		.section	.text.HAL_UARTEx_ReceiveToIdle_DMA,"ax",%progbits
+ 857              		.align	1
+ 858              		.global	HAL_UARTEx_ReceiveToIdle_DMA
+ 859              		.syntax unified
+ 860              		.code	16
+ 861              		.thumb_func
+ 863              	HAL_UARTEx_ReceiveToIdle_DMA:
+ 864              	.LVL64:
+ 865              	.LFB44:
+ 689:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 690:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 691:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Receive an amount of data in DMA mode till either the expected number
+ 692:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        of data is received or an IDLE event occurs.
+ 693:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  Reception is initiated by this function call. Further progress of reception is achieved 
+ 694:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        to DMA services, transferring automatically received data elements in user reception buf
+ 695:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        calling registered callbacks at half/end of reception. UART IDLE events are also used to
+ 696:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        reception phase as ended. In all cases, callback execution will indicate number of recei
+ 697:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  When the UART parity is enabled (PCE = 1), the received data contain
+ 698:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        the parity bit (MSB position).
+ 699:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-M
+ 700:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        the received data is handled as a set of uint16_t. In this case, Size must indicate the 
+ 701:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        of uint16_t available through pData.
+ 702:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-M
+ 703:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        address of user data buffer for storing data to be received, should be aligned on a half
+ 704:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        (16 bits) (as received data will be handled by DMA from halfword frontier). Depending on
+ 705:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        use of specific alignment compilation directives or pragmas might be required
+ 706:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        to ensure proper alignment for pData.
+ 707:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param huart UART handle.
+ 708:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param pData Pointer to data buffer (uint8_t or uint16_t data elements).
+ 709:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param Size  Amount of data elements (uint8_t or uint16_t) to be received.
+ 710:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval HAL status
+ 711:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 712:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_ReceiveToIdle_DMA(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t 
+ 713:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 866              		.loc 1 713 1 is_stmt 1 view -0
+ 867              		.cfi_startproc
+ 868              		@ args = 0, pretend = 0, frame = 0
+ 869              		@ frame_needed = 0, uses_anonymous_args = 0
+ 870              		.loc 1 713 1 is_stmt 0 view .LVU253
+ 871 0000 10B5     		push	{r4, lr}
+ 872              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 37
+
+
+ 873              		.cfi_offset 4, -8
+ 874              		.cfi_offset 14, -4
+ 875 0002 0400     		movs	r4, r0
+ 714:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   HAL_StatusTypeDef status;
+ 876              		.loc 1 714 3 is_stmt 1 view .LVU254
+ 715:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 716:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Check that a Rx process is not already ongoing */
+ 717:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart->RxState == HAL_UART_STATE_READY)
+ 877              		.loc 1 717 3 view .LVU255
+ 878              		.loc 1 717 12 is_stmt 0 view .LVU256
+ 879 0004 8023     		movs	r3, #128
+ 880 0006 C358     		ldr	r3, [r0, r3]
+ 881              		.loc 1 717 6 view .LVU257
+ 882 0008 202B     		cmp	r3, #32
+ 883 000a 2AD1     		bne	.L64
+ 718:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 719:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if ((pData == NULL) || (Size == 0U))
+ 884              		.loc 1 719 5 is_stmt 1 view .LVU258
+ 885              		.loc 1 719 8 is_stmt 0 view .LVU259
+ 886 000c 0029     		cmp	r1, #0
+ 887 000e 2AD0     		beq	.L65
+ 888              		.loc 1 719 25 discriminator 1 view .LVU260
+ 889 0010 002A     		cmp	r2, #0
+ 890 0012 2AD0     		beq	.L66
+ 720:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 721:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       return HAL_ERROR;
+ 722:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 723:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 724:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* In case of 9bits/No Parity transfer, pData buffer provided as input parameter
+ 725:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        should be aligned on a uint16_t frontier, as data copy from RDR will be
+ 726:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****        handled by DMA from a uint16_t frontier. */
+ 727:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if ((huart->Init.WordLength == UART_WORDLENGTH_9B) && (huart->Init.Parity == UART_PARITY_NONE))
+ 891              		.loc 1 727 5 is_stmt 1 view .LVU261
+ 892              		.loc 1 727 21 is_stmt 0 view .LVU262
+ 893 0014 8068     		ldr	r0, [r0, #8]
+ 894              	.LVL65:
+ 895              		.loc 1 727 8 view .LVU263
+ 896 0016 8023     		movs	r3, #128
+ 897 0018 5B01     		lsls	r3, r3, #5
+ 898 001a 9842     		cmp	r0, r3
+ 899 001c 04D1     		bne	.L62
+ 900              		.loc 1 727 71 discriminator 1 view .LVU264
+ 901 001e 2369     		ldr	r3, [r4, #16]
+ 902              		.loc 1 727 56 discriminator 1 view .LVU265
+ 903 0020 002B     		cmp	r3, #0
+ 904 0022 01D1     		bne	.L62
+ 728:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 729:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if ((((uint32_t)pData) & 1U) != 0U)
+ 905              		.loc 1 729 7 is_stmt 1 view .LVU266
+ 906              		.loc 1 729 10 is_stmt 0 view .LVU267
+ 907 0024 CB07     		lsls	r3, r1, #31
+ 908 0026 22D4     		bmi	.L67
+ 909              	.L62:
+ 730:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 731:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         return  HAL_ERROR;
+ 732:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 733:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 38
+
+
+ 734:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 735:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Set Reception type to reception till IDLE Event*/
+ 736:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->ReceptionType = HAL_UART_RECEPTION_TOIDLE;
+ 910              		.loc 1 736 5 is_stmt 1 view .LVU268
+ 911              		.loc 1 736 26 is_stmt 0 view .LVU269
+ 912 0028 0123     		movs	r3, #1
+ 913 002a 2366     		str	r3, [r4, #96]
+ 737:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->RxEventType = HAL_UART_RXEVENT_TC;
+ 914              		.loc 1 737 5 is_stmt 1 view .LVU270
+ 915              		.loc 1 737 24 is_stmt 0 view .LVU271
+ 916 002c 0023     		movs	r3, #0
+ 917 002e 6366     		str	r3, [r4, #100]
+ 738:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 739:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     status =  UART_Start_Receive_DMA(huart, pData, Size);
+ 918              		.loc 1 739 5 is_stmt 1 view .LVU272
+ 919              		.loc 1 739 15 is_stmt 0 view .LVU273
+ 920 0030 2000     		movs	r0, r4
+ 921 0032 FFF7FEFF 		bl	UART_Start_Receive_DMA
+ 922              	.LVL66:
+ 740:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 741:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Check Rx process has been successfully started */
+ 742:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     if (status == HAL_OK)
+ 923              		.loc 1 742 5 is_stmt 1 view .LVU274
+ 924              		.loc 1 742 8 is_stmt 0 view .LVU275
+ 925 0036 0028     		cmp	r0, #0
+ 926 0038 14D1     		bne	.L61
+ 743:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
+ 744:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       if (huart->ReceptionType == HAL_UART_RECEPTION_TOIDLE)
+ 927              		.loc 1 744 7 is_stmt 1 view .LVU276
+ 928              		.loc 1 744 16 is_stmt 0 view .LVU277
+ 929 003a 236E     		ldr	r3, [r4, #96]
+ 930              		.loc 1 744 10 view .LVU278
+ 931 003c 012B     		cmp	r3, #1
+ 932 003e 01D0     		beq	.L69
+ 745:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 746:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_IDLEF);
+ 747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
+ 748:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 749:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       else
+ 750:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       {
+ 751:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         /* In case of errors already pending when reception is started,
+ 752:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            Interrupts may have already been raised and lead to reception abortion.
+ 753:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            (Overrun error for instance).
+ 754:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****            In such case Reception Type has been reset to HAL_UART_RECEPTION_STANDARD. */
+ 755:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         status = HAL_ERROR;
+ 933              		.loc 1 755 16 view .LVU279
+ 934 0040 0120     		movs	r0, #1
+ 935              	.LVL67:
+ 756:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 757:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 758:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 759:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return status;
+ 936              		.loc 1 759 5 is_stmt 1 view .LVU280
+ 937              		.loc 1 759 12 is_stmt 0 view .LVU281
+ 938 0042 0FE0     		b	.L61
+ 939              	.LVL68:
+ 940              	.L69:
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 39
+
+
+ 746:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
+ 941              		.loc 1 746 9 is_stmt 1 view .LVU282
+ 942 0044 2368     		ldr	r3, [r4]
+ 943 0046 1021     		movs	r1, #16
+ 944 0048 1962     		str	r1, [r3, #32]
+ 747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 945              		.loc 1 747 9 view .LVU283
+ 946              	.LBB23:
+ 747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 947              		.loc 1 747 9 view .LVU284
+ 747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 948              		.loc 1 747 9 view .LVU285
+ 949              	.LBB24:
+ 950              	.LBI24:
+ 382:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 951              		.loc 2 382 31 view .LVU286
+ 952              	.LBB25:
+ 384:Drivers/CMSIS/Include/cmsis_gcc.h **** 
+ 953              		.loc 2 384 3 view .LVU287
+ 386:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 954              		.loc 2 386 3 view .LVU288
+ 955              		.syntax divided
+ 956              	@ 386 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 957 004a EFF3108C 		MRS ip, primask
+ 958              	@ 0 "" 2
+ 959              	.LVL69:
+ 387:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 960              		.loc 2 387 3 view .LVU289
+ 387:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 961              		.loc 2 387 3 is_stmt 0 view .LVU290
+ 962              		.thumb
+ 963              		.syntax unified
+ 964              	.LBE25:
+ 965              	.LBE24:
+ 747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 966              		.loc 1 747 9 is_stmt 1 view .LVU291
+ 967              	.LBB26:
+ 968              	.LBI26:
+ 412:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 969              		.loc 2 412 27 view .LVU292
+ 970              	.LBB27:
+ 414:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 971              		.loc 2 414 3 view .LVU293
+ 972 004e 0123     		movs	r3, #1
+ 973              		.syntax divided
+ 974              	@ 414 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 975 0050 83F31088 		MSR primask, r3
+ 976              	@ 0 "" 2
+ 977              	.LVL70:
+ 414:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 978              		.loc 2 414 3 is_stmt 0 view .LVU294
+ 979              		.thumb
+ 980              		.syntax unified
+ 981              	.LBE27:
+ 982              	.LBE26:
+ 747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 983              		.loc 1 747 9 is_stmt 1 view .LVU295
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 40
+
+
+ 984 0054 2268     		ldr	r2, [r4]
+ 985 0056 1368     		ldr	r3, [r2]
+ 986 0058 0B43     		orrs	r3, r1
+ 987 005a 1360     		str	r3, [r2]
+ 747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 988              		.loc 1 747 9 view .LVU296
+ 989              	.LVL71:
+ 990              	.LBB28:
+ 991              	.LBI28:
+ 412:Drivers/CMSIS/Include/cmsis_gcc.h **** {
+ 992              		.loc 2 412 27 view .LVU297
+ 993              	.LBB29:
+ 414:Drivers/CMSIS/Include/cmsis_gcc.h **** }
+ 994              		.loc 2 414 3 view .LVU298
+ 995              		.syntax divided
+ 996              	@ 414 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 997 005c 8CF31088 		MSR primask, ip
+ 998              	@ 0 "" 2
+ 999              		.loc 2 415 1 is_stmt 0 view .LVU299
+ 1000              		.thumb
+ 1001              		.syntax unified
+ 1002 0060 00E0     		b	.L61
+ 1003              	.LVL72:
+ 1004              	.L64:
+ 1005              		.loc 2 415 1 view .LVU300
+ 1006              	.LBE29:
+ 1007              	.LBE28:
+ 1008              	.LBE23:
+ 760:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 761:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   else
+ 762:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   {
+ 763:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     return HAL_BUSY;
+ 1009              		.loc 1 763 12 view .LVU301
+ 1010 0062 0220     		movs	r0, #2
+ 1011              	.LVL73:
+ 1012              	.L61:
+ 764:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
+ 765:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 1013              		.loc 1 765 1 view .LVU302
+ 1014              		@ sp needed
+ 1015              	.LVL74:
+ 1016              		.loc 1 765 1 view .LVU303
+ 1017 0064 10BD     		pop	{r4, pc}
+ 1018              	.LVL75:
+ 1019              	.L65:
+ 721:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 1020              		.loc 1 721 14 view .LVU304
+ 1021 0066 0120     		movs	r0, #1
+ 1022              	.LVL76:
+ 721:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 1023              		.loc 1 721 14 view .LVU305
+ 1024 0068 FCE7     		b	.L61
+ 1025              	.LVL77:
+ 1026              	.L66:
+ 721:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 1027              		.loc 1 721 14 view .LVU306
+ 1028 006a 0120     		movs	r0, #1
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 41
+
+
+ 1029              	.LVL78:
+ 721:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
+ 1030              		.loc 1 721 14 view .LVU307
+ 1031 006c FAE7     		b	.L61
+ 1032              	.L67:
+ 731:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
+ 1033              		.loc 1 731 17 view .LVU308
+ 1034 006e 0120     		movs	r0, #1
+ 1035 0070 F8E7     		b	.L61
+ 1036              		.cfi_endproc
+ 1037              	.LFE44:
+ 1039              		.section	.text.HAL_UARTEx_GetRxEventType,"ax",%progbits
+ 1040              		.align	1
+ 1041              		.global	HAL_UARTEx_GetRxEventType
+ 1042              		.syntax unified
+ 1043              		.code	16
+ 1044              		.thumb_func
+ 1046              	HAL_UARTEx_GetRxEventType:
+ 1047              	.LVL79:
+ 1048              	.LFB45:
+ 766:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
+ 767:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** /**
+ 768:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @brief Provide Rx Event type that has lead to RxEvent callback execution.
+ 769:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  When HAL_UARTEx_ReceiveToIdle_IT() or HAL_UARTEx_ReceiveToIdle_DMA() API are called, pro
+ 770:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        of reception process is provided to application through calls of Rx Event callback (eith
+ 771:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        HAL_UARTEx_RxEventCallback() or user registered one). As several types of events could o
+ 772:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        Half Transfer, or Transfer Complete), this function allows to retrieve the Rx Event type
+ 773:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        to Rx Event callback execution.
+ 774:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note  This function is expected to be called within the user implementation of Rx Event Callba
+ 775:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        in order to provide the accurate value :
+ 776:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        In Interrupt Mode :
+ 777:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *           - HAL_UART_RXEVENT_TC : when Reception has been completed (expected nb of data has be
+ 778:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *           - HAL_UART_RXEVENT_IDLE : when Idle event occurred prior reception has been completed
+ 779:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *             received data is lower than expected one)
+ 780:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        In DMA Mode :
+ 781:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *           - HAL_UART_RXEVENT_TC : when Reception has been completed (expected nb of data has be
+ 782:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *           - HAL_UART_RXEVENT_HT : when half of expected nb of data has been received
+ 783:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *           - HAL_UART_RXEVENT_IDLE : when Idle event occurred prior reception has been completed
+ 784:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *             received data is lower than expected one).
+ 785:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        In DMA mode, RxEvent callback could be called several times;
+ 786:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        When DMA is configured in Normal Mode, HT event does not stop Reception process;
+ 787:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        When DMA is configured in Circular Mode, HT, TC or IDLE events don't stop Reception proc
+ 788:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param  huart UART handle.
+ 789:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @retval Rx Event Type (return vale will be a value of @ref UART_RxEvent_Type_Values)
+ 790:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   */
+ 791:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** HAL_UART_RxEventTypeTypeDef HAL_UARTEx_GetRxEventType(UART_HandleTypeDef *huart)
+ 792:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** {
+ 1049              		.loc 1 792 1 is_stmt 1 view -0
+ 1050              		.cfi_startproc
+ 1051              		@ args = 0, pretend = 0, frame = 0
+ 1052              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1053              		@ link register save eliminated.
+ 793:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   /* Return Rx Event type value, as stored in UART handle */
+ 794:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   return (huart->RxEventType);
+ 1054              		.loc 1 794 3 view .LVU310
+ 1055              		.loc 1 794 16 is_stmt 0 view .LVU311
+ 1056 0000 406E     		ldr	r0, [r0, #100]
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 42
+
+
+ 1057              	.LVL80:
+ 795:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** }
+ 1058              		.loc 1 795 1 view .LVU312
+ 1059              		@ sp needed
+ 1060 0002 7047     		bx	lr
+ 1061              		.cfi_endproc
+ 1062              	.LFE45:
+ 1064              		.text
+ 1065              	.Letext0:
+ 1066              		.file 3 "c:\\users\\arist\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 1067              		.file 4 "c:\\users\\arist\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 1068              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030xc.h"
+ 1069              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
+ 1070              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
+ 1071              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h"
+ 1072              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 43
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_hal_uart_ex.c
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:19     .text.HAL_RS485Ex_Init:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:25     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:168    .text.HAL_RS485Ex_Init:00000088 $d
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:174    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:180    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:245    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:251    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:668    .text.HAL_UARTEx_ReceiveToIdle:000001a0 $d
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:673    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:679    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:857    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:863    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:1040   .text.HAL_UARTEx_GetRxEventType:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:1046   .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
+
+UNDEFINED SYMBOLS
+UART_SetConfig
+UART_CheckIdleState
+HAL_UART_MspInit
+UART_AdvFeatureConfig
+HAL_GetTick
+UART_Start_Receive_IT
+UART_Start_Receive_DMA
