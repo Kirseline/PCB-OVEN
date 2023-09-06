@@ -1493,7 +1493,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 58d0acd6-9762-4bac-a6f4-f122d83c429e)
   )
-  (text "Non-standard connetion" (at 104.14 73.66 0)
+  (text "Non-standard connetion" (at 104.14 80.01 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 903931ec-a63a-4d47-bcff-8dc6a4d40ed2)
   )
