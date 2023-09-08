@@ -36,7 +36,10 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+Core/Src/GEVA.c \
 Core/Src/main.c \
+Core/Src/stm32_max6675.c \
+Core/Src/stm32_ssd1306_i2c.c \
 Core/Src/stm32f0xx_hal_msp.c \
 Core/Src/stm32f0xx_it.c \
 Core/Src/system_stm32f0xx.c \

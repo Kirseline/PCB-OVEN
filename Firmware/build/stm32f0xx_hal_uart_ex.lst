@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
   29:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
   30:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) For the UART RS485 Driver Enable mode, initialize the UART registers
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         by calling the HAL_RS485Ex_Init() API.
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 2
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 2
 
 
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
   86:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Stop Bit
   87:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Parity: If the parity is enabled, then the MSB bit of the data written
   88:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****              in the data register is transmitted but is changed by the parity bit.
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 3
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 3
 
 
   89:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (++) Hardware flow control
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  143:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @param DeassertionTime  Driver Enable deassertion time:
  144:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       5-bit value defining the time between the end of the last stop bit, in a
  145:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       transmitted message, and the de-activation of the DE (Driver Enable) signal.
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 4
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 4
 
 
  146:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *       It is expressed in sample time units (1/8 or 1/16 bit time, depending on the
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
   55              		.loc 1 172 12 is_stmt 0 view .LVU10
   56 000e C36F     		ldr	r3, [r0, #124]
   57              	.LVL1:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 5
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 5
 
 
   58              		.loc 1 172 6 view .LVU11
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  204:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   if (huart->AdvancedInit.AdvFeatureInit != UART_ADVFEATURE_NO_INIT)
   81              		.loc 1 204 3 is_stmt 1 view .LVU18
   82              		.loc 1 204 26 is_stmt 0 view .LVU19
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 6
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 6
 
 
   83 002c 636A     		ldr	r3, [r4, #36]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  120              		.loc 1 221 3 view .LVU29
  121 005c 2268     		ldr	r2, [r4]
  122 005e 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 7
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 7
 
 
  123 0060 0121     		movs	r1, #1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  165              	.L9:
  166 0086 C046     		.align	2
  167              	.L8:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 8
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 8
 
 
  168 0088 FF7FFFFF 		.word	-32769
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  267:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
  268:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* USART_CR3_WUFIE */
  269:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #endif /* USART_CR1_UESM */
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 9
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 9
 
 
  270:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  324:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     (#) Non-Blocking mode API with DMA:
  325:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         (+) HAL_UARTEx_ReceiveToIdle_DMA()
  326:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 10
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 10
 
 
  327:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** @endverbatim
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  205 000c 0168     		ldr	r1, [r0]
  206              	.LVL17:
  207              		.loc 1 358 3 is_stmt 0 view .LVU50
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 11
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 11
 
 
  208 000e 0A68     		ldr	r2, [r1]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  252              	.LVL22:
  253              	.LFB42:
  369:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 12
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 12
 
 
  370:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** #if defined(USART_CR1_UESM)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  424:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Initialize the UART State */
  425:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->gState = HAL_UART_STATE_READY;
  426:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   }
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 13
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 13
 
 
  427:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  481:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        the received data is handled as a set of uint16_t. In this case, Size must indicate the 
  482:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *        of uint16_t available through pData.
  483:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   * @note   When UART parity is not enabled (PCE = 0), and Word Length is configured to 9 bits (M1-
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 14
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 14
 
 
  484:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   *         address of user data buffer for storing data to be received, should be aligned on a hal
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  286              		.loc 1 505 12 is_stmt 0 view .LVU66
  287 0016 8023     		movs	r3, #128
  288              	.LVL23:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 15
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 15
 
 
  289              		.loc 1 505 12 view .LVU67
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  521:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
  522:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
  523:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->ErrorCode = HAL_UART_ERROR_NONE;
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 16
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 16
 
 
  328              		.loc 1 523 5 is_stmt 1 view .LVU79
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  370              		.loc 1 535 5 discriminator 2 view .LVU97
  371 006e 002B     		cmp	r3, #0
  372 0070 15D1     		bne	.L19
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 17
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 17
 
 
  373              		.loc 1 535 5 discriminator 5 view .LVU98
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  423              		.loc 1 539 8 is_stmt 0 discriminator 13 view .LVU110
  424 00b2 8022     		movs	r2, #128
  425 00b4 5201     		lsls	r2, r2, #5
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 18
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 18
 
 
  426 00b6 9342     		cmp	r3, r2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  539:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
  461              		.loc 1 539 56 discriminator 1 view .LVU120
  462 00dc 002B     		cmp	r3, #0
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 19
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 19
 
 
  463 00de 02D0     		beq	.L37
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  576:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         if (pdata8bits == NULL)
  577:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         {
  578:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           *pdata16bits = (uint16_t)(huart->Instance->RDR & uhMask);
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 20
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 20
 
 
  492              		.loc 1 578 11 is_stmt 1 view .LVU131
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  530 0120 E25A     		ldrh	r2, [r4, r3]
  531 0122 92B2     		uxth	r2, r2
  554:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     {
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 21
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 21
 
 
  532              		.loc 1 554 31 view .LVU146
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  570 014c 1340     		ands	r3, r2
  583:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****           pdata8bits++;
  571              		.loc 1 583 23 view .LVU163
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 22
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 22
 
 
  572 014e 2B70     		strb	r3, [r5]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  611              		.loc 1 604 39 view .LVU179
  612 0172 5A32     		adds	r2, r2, #90
  613 0174 A25A     		ldrh	r2, [r4, r2]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 23
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 23
 
 
  614              		.loc 1 604 32 view .LVU180
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  655              	.LVL46:
  509:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
  656              		.loc 1 509 15 view .LVU192
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 24
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 24
 
 
  657 0198 F5E7     		b	.L14
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  689              		.cfi_offset 4, -8
  690              		.cfi_offset 14, -4
  691 0002 0400     		movs	r4, r0
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 25
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 25
 
 
  637:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****   HAL_StatusTypeDef status;
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  657:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
  658:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     /* Set Reception type to reception till IDLE Event*/
  659:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     huart->ReceptionType = HAL_UART_RECEPTION_TOIDLE;
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 26
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 26
 
 
  726              		.loc 1 659 5 is_stmt 1 view .LVU211
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  669:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
  757              		.loc 1 669 9 is_stmt 1 view .LVU225
  758 0044 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 27
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 27
 
 
  759 0046 1021     		movs	r1, #16
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
   43:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
   44:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
   45:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 28
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 28
 
 
   46:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  100:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
  101:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  102:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 29
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 29
 
 
  103:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  157:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  158:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  159:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 30
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 30
 
 
  160:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  214:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  215:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get APSR Register
  216:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the APSR Register.
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 31
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 31
 
 
  217:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               APSR Register value
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  271:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  272:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  273:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 32
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 32
 
 
  274:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  328:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
  329:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfMainStack  Main Stack Pointer value to set
  330:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 33
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 33
 
 
  331:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_MSP(uint32_t topOfMainStack)
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  383:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  384:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  770              		.loc 2 384 3 view .LVU230
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 34
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 34
 
 
  385:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  794              	.LVL55:
  795              		.loc 2 414 3 is_stmt 0 view .LVU237
  796              		.thumb
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 35
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 35
 
 
  797              		.syntax unified
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  644:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
  840              		.loc 1 644 14 view .LVU248
  841 0068 FCE7     		b	.L51
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 36
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 36
 
 
  842              	.LVL62:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  870              		.loc 1 713 1 is_stmt 0 view .LVU253
  871 0000 10B5     		push	{r4, lr}
  872              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 37
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 37
 
 
  873              		.cfi_offset 4, -8
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  731:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         return  HAL_ERROR;
  732:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
  733:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 38
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 38
 
 
  734:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  938 0042 0FE0     		b	.L61
  939              	.LVL68:
  940              	.L69:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 39
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 39
 
 
  746:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****         ATOMIC_SET_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  982              	.LBE26:
  747:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****       }
  983              		.loc 1 747 9 is_stmt 1 view .LVU295
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 40
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 40
 
 
  984 0054 2268     		ldr	r2, [r4]
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  721:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c ****     }
  1027              		.loc 1 721 14 view .LVU306
  1028 006a 0120     		movs	r0, #1
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 41
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 41
 
 
  1029              	.LVL78:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  1054              		.loc 1 794 3 view .LVU310
  1055              		.loc 1 794 16 is_stmt 0 view .LVU311
  1056 0000 406E     		ldr	r0, [r0, #100]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 42
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 42
 
 
  1057              	.LVL80:
@@ -2477,25 +2477,25 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 1
  1070              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
  1071              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h"
  1072              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s 			page 43
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cclvCV4U.s 			page 43
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_uart_ex.c
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:19     .text.HAL_RS485Ex_Init:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:25     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:168    .text.HAL_RS485Ex_Init:00000088 $d
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:174    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:180    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:245    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:251    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:668    .text.HAL_UARTEx_ReceiveToIdle:000001a0 $d
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:673    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:679    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:857    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:863    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:1040   .text.HAL_UARTEx_GetRxEventType:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cc0wIKlU.s:1046   .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:19     .text.HAL_RS485Ex_Init:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:25     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:168    .text.HAL_RS485Ex_Init:00000088 $d
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:174    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:180    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:245    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:251    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:668    .text.HAL_UARTEx_ReceiveToIdle:000001a0 $d
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:673    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:679    .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:857    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:863    .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:1040   .text.HAL_UARTEx_GetRxEventType:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cclvCV4U.s:1046   .text.HAL_UARTEx_GetRxEventType:00000000 HAL_UARTEx_GetRxEventType
 
 UNDEFINED SYMBOLS
 UART_SetConfig

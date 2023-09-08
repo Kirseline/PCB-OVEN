@@ -1,0 +1,276 @@
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32_max6675.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/stm32_max6675.c"
+  18              		.section	.text.max6675_init,"ax",%progbits
+  19              		.align	1
+  20              		.global	max6675_init
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  25              	max6675_init:
+  26              	.LVL0:
+  27              	.LFB40:
+   1:Core/Src/stm32_max6675.c **** #include"stm32_max6675.h"
+   2:Core/Src/stm32_max6675.c **** 
+   3:Core/Src/stm32_max6675.c **** void max6675_init(max6675 *chip, GPIO_TypeDef *cs_pin_port, uint16_t cs_pin, SPI_HandleTypeDef *spi
+  28              		.loc 1 3 101 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 3 101 is_stmt 0 view .LVU1
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  37 0002 0400     		movs	r4, r0
+  38 0004 0800     		movs	r0, r1
+  39              	.LVL1:
+  40              		.loc 1 3 101 view .LVU2
+  41 0006 1100     		movs	r1, r2
+  42              	.LVL2:
+   4:Core/Src/stm32_max6675.c **** 
+   5:Core/Src/stm32_max6675.c ****     chip->cs_pin_port = cs_pin_port;
+  43              		.loc 1 5 5 is_stmt 1 view .LVU3
+  44              		.loc 1 5 23 is_stmt 0 view .LVU4
+  45 0008 2060     		str	r0, [r4]
+   6:Core/Src/stm32_max6675.c ****     chip->cs_pin = cs_pin;
+  46              		.loc 1 6 5 is_stmt 1 view .LVU5
+  47              		.loc 1 6 18 is_stmt 0 view .LVU6
+  48 000a A280     		strh	r2, [r4, #4]
+   7:Core/Src/stm32_max6675.c ****     chip -> spi = spi;
+  49              		.loc 1 7 5 is_stmt 1 view .LVU7
+  50              		.loc 1 7 17 is_stmt 0 view .LVU8
+  51 000c A360     		str	r3, [r4, #8]
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s 			page 2
+
+
+   8:Core/Src/stm32_max6675.c ****     
+   9:Core/Src/stm32_max6675.c ****     HAL_GPIO_WritePin(chip->cs_pin_port, chip->cs_pin,GPIO_PIN_SET);
+  52              		.loc 1 9 5 is_stmt 1 view .LVU9
+  53 000e 0122     		movs	r2, #1
+  54              	.LVL3:
+  55              		.loc 1 9 5 is_stmt 0 view .LVU10
+  56 0010 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  57              	.LVL4:
+  10:Core/Src/stm32_max6675.c **** 
+  11:Core/Src/stm32_max6675.c ****     chip-> init_status = 1;
+  58              		.loc 1 11 5 is_stmt 1 view .LVU11
+  59              		.loc 1 11 24 is_stmt 0 view .LVU12
+  60 0014 0123     		movs	r3, #1
+  61 0016 2373     		strb	r3, [r4, #12]
+  12:Core/Src/stm32_max6675.c **** };
+  62              		.loc 1 12 1 view .LVU13
+  63              		@ sp needed
+  64              	.LVL5:
+  65              		.loc 1 12 1 view .LVU14
+  66 0018 10BD     		pop	{r4, pc}
+  67              		.cfi_endproc
+  68              	.LFE40:
+  70              		.global	__aeabi_i2f
+  71              		.global	__aeabi_fmul
+  72              		.section	.text.max6675_read_temp,"ax",%progbits
+  73              		.align	1
+  74              		.global	max6675_read_temp
+  75              		.syntax unified
+  76              		.code	16
+  77              		.thumb_func
+  79              	max6675_read_temp:
+  80              	.LFB41:
+  13:Core/Src/stm32_max6675.c **** 
+  14:Core/Src/stm32_max6675.c **** float max6675_read_temp(max6675 chip){
+  81              		.loc 1 14 38 is_stmt 1 view -0
+  82              		.cfi_startproc
+  83              		@ args = 0, pretend = 0, frame = 24
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85 0000 30B5     		push	{r4, r5, lr}
+  86              		.cfi_def_cfa_offset 12
+  87              		.cfi_offset 4, -12
+  88              		.cfi_offset 5, -8
+  89              		.cfi_offset 14, -4
+  90 0002 87B0     		sub	sp, sp, #28
+  91              		.cfi_def_cfa_offset 40
+  92 0004 0090     		str	r0, [sp]
+  93 0006 0191     		str	r1, [sp, #4]
+  94 0008 0292     		str	r2, [sp, #8]
+  95 000a 0393     		str	r3, [sp, #12]
+  15:Core/Src/stm32_max6675.c **** 
+  16:Core/Src/stm32_max6675.c **** if (!chip.init_status)
+  96              		.loc 1 16 1 view .LVU16
+  97              		.loc 1 16 10 is_stmt 0 view .LVU17
+  98 000c 6B46     		mov	r3, sp
+  99 000e 1B7B     		ldrb	r3, [r3, #12]
+ 100              		.loc 1 16 4 view .LVU18
+ 101 0010 002B     		cmp	r3, #0
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s 			page 3
+
+
+ 102 0012 02D1     		bne	.L6
+  17:Core/Src/stm32_max6675.c ****     return -9999;
+ 103              		.loc 1 17 12 view .LVU19
+ 104 0014 1348     		ldr	r0, .L7
+ 105              	.L2:
+  18:Core/Src/stm32_max6675.c **** 
+  19:Core/Src/stm32_max6675.c **** float temp=0;
+  20:Core/Src/stm32_max6675.c **** uint8_t TCF=0;                                          // Thermocouple Connection acknowledge Flag
+  21:Core/Src/stm32_max6675.c **** uint8_t DATARX[2];
+  22:Core/Src/stm32_max6675.c ****                                          // Temperature Variable
+  23:Core/Src/stm32_max6675.c **** HAL_GPIO_WritePin(chip.cs_pin_port, chip.cs_pin,GPIO_PIN_RESET);       // Low State for SPI Communi
+  24:Core/Src/stm32_max6675.c **** HAL_SPI_Receive(chip.spi,DATARX,1,50);                  // DATA Transfer
+  25:Core/Src/stm32_max6675.c **** HAL_GPIO_WritePin(chip.cs_pin_port, chip.cs_pin,GPIO_PIN_SET);         // High State for SPI Commun
+  26:Core/Src/stm32_max6675.c **** TCF=(((DATARX[0]|(DATARX[1]<<8))>>2)& 0x0001);        // State of Connecting
+  27:Core/Src/stm32_max6675.c **** 
+  28:Core/Src/stm32_max6675.c **** if(TCF)
+  29:Core/Src/stm32_max6675.c ****     return 9999;
+  30:Core/Src/stm32_max6675.c **** 
+  31:Core/Src/stm32_max6675.c **** temp=((((DATARX[0]|DATARX[1]<<8)))>>3);               // Temperature Data Extraction
+  32:Core/Src/stm32_max6675.c **** temp*=0.25;                                           // Data to Centigrade Conversation
+  33:Core/Src/stm32_max6675.c **** //HAL_Delay(250);                                       // Waits for Chip Ready(according to Datash
+  34:Core/Src/stm32_max6675.c **** return temp;
+  35:Core/Src/stm32_max6675.c **** }...
+ 106              		.loc 1 35 1 view .LVU20
+ 107 0016 07B0     		add	sp, sp, #28
+ 108              		@ sp needed
+ 109 0018 30BD     		pop	{r4, r5, pc}
+ 110              	.L6:
+  19:Core/Src/stm32_max6675.c **** float temp=0;
+ 111              		.loc 1 19 1 is_stmt 1 view .LVU21
+ 112              	.LVL6:
+  20:Core/Src/stm32_max6675.c **** uint8_t TCF=0;                                          // Thermocouple Connection acknowledge Flag
+ 113              		.loc 1 20 1 view .LVU22
+  21:Core/Src/stm32_max6675.c **** uint8_t DATARX[2];
+ 114              		.loc 1 21 1 view .LVU23
+  23:Core/Src/stm32_max6675.c **** HAL_GPIO_WritePin(chip.cs_pin_port, chip.cs_pin,GPIO_PIN_RESET);       // Low State for SPI Communi
+ 115              		.loc 1 23 1 view .LVU24
+ 116 001a 0400     		movs	r4, r0
+ 117 001c 6B46     		mov	r3, sp
+ 118 001e 9D88     		ldrh	r5, [r3, #4]
+ 119 0020 0022     		movs	r2, #0
+ 120 0022 2900     		movs	r1, r5
+ 121 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 122              	.LVL7:
+  24:Core/Src/stm32_max6675.c **** HAL_SPI_Receive(chip.spi,DATARX,1,50);                  // DATA Transfer
+ 123              		.loc 1 24 1 view .LVU25
+ 124 0028 0298     		ldr	r0, [sp, #8]
+ 125 002a 3223     		movs	r3, #50
+ 126 002c 0122     		movs	r2, #1
+ 127 002e 05A9     		add	r1, sp, #20
+ 128 0030 FFF7FEFF 		bl	HAL_SPI_Receive
+ 129              	.LVL8:
+  25:Core/Src/stm32_max6675.c **** HAL_GPIO_WritePin(chip.cs_pin_port, chip.cs_pin,GPIO_PIN_SET);         // High State for SPI Commun
+ 130              		.loc 1 25 1 view .LVU26
+ 131 0034 0122     		movs	r2, #1
+ 132 0036 2900     		movs	r1, r5
+ 133 0038 2000     		movs	r0, r4
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s 			page 4
+
+
+ 134 003a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 135              	.LVL9:
+  26:Core/Src/stm32_max6675.c **** TCF=(((DATARX[0]|(DATARX[1]<<8))>>2)& 0x0001);        // State of Connecting
+ 136              		.loc 1 26 1 view .LVU27
+  26:Core/Src/stm32_max6675.c **** TCF=(((DATARX[0]|(DATARX[1]<<8))>>2)& 0x0001);        // State of Connecting
+ 137              		.loc 1 26 14 is_stmt 0 view .LVU28
+ 138 003e 6B46     		mov	r3, sp
+ 139 0040 1B7D     		ldrb	r3, [r3, #20]
+  26:Core/Src/stm32_max6675.c **** TCF=(((DATARX[0]|(DATARX[1]<<8))>>2)& 0x0001);        // State of Connecting
+ 140              		.loc 1 26 25 view .LVU29
+ 141 0042 6A46     		mov	r2, sp
+ 142 0044 507D     		ldrb	r0, [r2, #21]
+  26:Core/Src/stm32_max6675.c **** TCF=(((DATARX[0]|(DATARX[1]<<8))>>2)& 0x0001);        // State of Connecting
+ 143              		.loc 1 26 28 view .LVU30
+ 144 0046 0002     		lsls	r0, r0, #8
+  26:Core/Src/stm32_max6675.c **** TCF=(((DATARX[0]|(DATARX[1]<<8))>>2)& 0x0001);        // State of Connecting
+ 145              		.loc 1 26 17 view .LVU31
+ 146 0048 1843     		orrs	r0, r3
+ 147              	.LVL10:
+  28:Core/Src/stm32_max6675.c **** if(TCF)
+ 148              		.loc 1 28 1 is_stmt 1 view .LVU32
+  28:Core/Src/stm32_max6675.c **** if(TCF)
+ 149              		.loc 1 28 3 is_stmt 0 view .LVU33
+ 150 004a 5B07     		lsls	r3, r3, #29
+ 151 004c 07D4     		bmi	.L5
+  31:Core/Src/stm32_max6675.c **** temp=((((DATARX[0]|DATARX[1]<<8)))>>3);               // Temperature Data Extraction
+ 152              		.loc 1 31 1 is_stmt 1 view .LVU34
+  31:Core/Src/stm32_max6675.c **** temp=((((DATARX[0]|DATARX[1]<<8)))>>3);               // Temperature Data Extraction
+ 153              		.loc 1 31 35 is_stmt 0 view .LVU35
+ 154 004e C010     		asrs	r0, r0, #3
+ 155              	.LVL11:
+  31:Core/Src/stm32_max6675.c **** temp=((((DATARX[0]|DATARX[1]<<8)))>>3);               // Temperature Data Extraction
+ 156              		.loc 1 31 5 view .LVU36
+ 157 0050 FFF7FEFF 		bl	__aeabi_i2f
+ 158              	.LVL12:
+  32:Core/Src/stm32_max6675.c **** temp*=0.25;                                           // Data to Centigrade Conversation
+ 159              		.loc 1 32 1 is_stmt 1 view .LVU37
+  32:Core/Src/stm32_max6675.c **** temp*=0.25;                                           // Data to Centigrade Conversation
+ 160              		.loc 1 32 5 is_stmt 0 view .LVU38
+ 161 0054 FA21     		movs	r1, #250
+ 162 0056 8905     		lsls	r1, r1, #22
+ 163 0058 FFF7FEFF 		bl	__aeabi_fmul
+ 164              	.LVL13:
+  34:Core/Src/stm32_max6675.c **** return temp;
+ 165              		.loc 1 34 1 is_stmt 1 view .LVU39
+  34:Core/Src/stm32_max6675.c **** return temp;
+ 166              		.loc 1 34 8 is_stmt 0 view .LVU40
+ 167 005c DBE7     		b	.L2
+ 168              	.LVL14:
+ 169              	.L5:
+  29:Core/Src/stm32_max6675.c ****     return 9999;
+ 170              		.loc 1 29 12 view .LVU41
+ 171 005e 0248     		ldr	r0, .L7+4
+ 172              	.LVL15:
+  29:Core/Src/stm32_max6675.c ****     return 9999;
+ 173              		.loc 1 29 12 view .LVU42
+ 174 0060 D9E7     		b	.L2
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s 			page 5
+
+
+ 175              	.L8:
+ 176 0062 C046     		.align	2
+ 177              	.L7:
+ 178 0064 003C1CC6 		.word	-971228160
+ 179 0068 003C1C46 		.word	1176255488
+ 180              		.cfi_endproc
+ 181              	.LFE41:
+ 183              		.text
+ 184              	.Letext0:
+ 185              		.file 2 "c:\\users\\arist\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 186              		.file 3 "c:\\users\\arist\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 187              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030xc.h"
+ 188              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
+ 189              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
+ 190              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
+ 191              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h"
+ 192              		.file 9 "Core/Inc/stm32_max6675.h"
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32_max6675.c
+C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s:19     .text.max6675_init:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s:25     .text.max6675_init:00000000 max6675_init
+C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s:73     .text.max6675_read_temp:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s:79     .text.max6675_read_temp:00000000 max6675_read_temp
+C:\Users\arist\AppData\Local\Temp\ccx6q4Ad.s:178    .text.max6675_read_temp:00000064 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+__aeabi_i2f
+__aeabi_fmul
+HAL_SPI_Receive

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 1
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccn0ShAm.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 1
   29:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c **** 
   30:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c **** /** @defgroup SPIEx SPIEx
   31:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   * @brief SPI Extended HAL module driver
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 2
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccn0ShAm.s 			page 2
 
 
   32:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 1
   33 0000 10B5     		push	{r4, lr}
   34              		.cfi_def_cfa_offset 8
   35              		.cfi_offset 4, -8
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 3
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccn0ShAm.s 			page 3
 
 
   36              		.cfi_offset 14, -4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 1
   79              	.L3:
   91:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****     }
   92:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   }
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 4
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccn0ShAm.s 			page 4
 
 
   93:Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c ****   return HAL_OK;
@@ -206,12 +206,12 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 1
   99              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
  100              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
  101              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h"
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s 			page 5
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccn0ShAm.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_spi_ex.c
-C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s:19     .text.HAL_SPIEx_FlushRxFifo:00000000 $t
-C:\Users\arist\AppData\Local\Temp\ccJmSKCN.s:25     .text.HAL_SPIEx_FlushRxFifo:00000000 HAL_SPIEx_FlushRxFifo
+C:\Users\arist\AppData\Local\Temp\ccn0ShAm.s:19     .text.HAL_SPIEx_FlushRxFifo:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccn0ShAm.s:25     .text.HAL_SPIEx_FlushRxFifo:00000000 HAL_SPIEx_FlushRxFifo
 
 NO UNDEFINED SYMBOLS

@@ -1,0 +1,653 @@
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32_ssd1306_i2c.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/stm32_ssd1306_i2c.c"
+  18              		.section	.text.write_buf,"ax",%progbits
+  19              		.align	1
+  20              		.syntax unified
+  21              		.code	16
+  22              		.thumb_func
+  24              	write_buf:
+  25              	.LVL0:
+  26              	.LFB42:
+   1:Core/Src/stm32_ssd1306_i2c.c **** /*
+   2:Core/Src/stm32_ssd1306_i2c.c **** * Adjust write_buf() function according to your project names
+   3:Core/Src/stm32_ssd1306_i2c.c **** * Kiriaus 15/7/22
+   4:Core/Src/stm32_ssd1306_i2c.c **** */
+   5:Core/Src/stm32_ssd1306_i2c.c **** 
+   6:Core/Src/stm32_ssd1306_i2c.c **** #include "stm32_ssd1306_i2c.h"
+   7:Core/Src/stm32_ssd1306_i2c.c **** 
+   8:Core/Src/stm32_ssd1306_i2c.c **** static uint8_t _i2caddr; 
+   9:Core/Src/stm32_ssd1306_i2c.c **** I2C_HandleTypeDef *_i2c_handler;
+  10:Core/Src/stm32_ssd1306_i2c.c **** 
+  11:Core/Src/stm32_ssd1306_i2c.c **** static uint32_t write_buf( uint8_t * buf, uint16_t size ); 
+  12:Core/Src/stm32_ssd1306_i2c.c **** 
+  13:Core/Src/stm32_ssd1306_i2c.c **** void init_display(uint8_t addr, I2C_HandleTypeDef *i2c_handler){
+  14:Core/Src/stm32_ssd1306_i2c.c ****    
+  15:Core/Src/stm32_ssd1306_i2c.c ****     _i2caddr = addr;
+  16:Core/Src/stm32_ssd1306_i2c.c ****     _i2c_handler = i2c_handler;
+  17:Core/Src/stm32_ssd1306_i2c.c ****     
+  18:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+  19:Core/Src/stm32_ssd1306_i2c.c ****         0x00,
+  20:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_DISPLAYOFF,
+  21:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETDISPLAYCLOCKDIV,
+  22:Core/Src/stm32_ssd1306_i2c.c ****         0x80,
+  23:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETMULTIPLEX,
+  24:Core/Src/stm32_ssd1306_i2c.c ****         0x3f,
+  25:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETDISPLAYOFFSET,
+  26:Core/Src/stm32_ssd1306_i2c.c ****         0x00,
+  27:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETSTARTLINE | 0x0,
+  28:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_CHARGEPUMP,
+  29:Core/Src/stm32_ssd1306_i2c.c ****         0x14,
+  30:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_MEMORYMODE,
+  31:Core/Src/stm32_ssd1306_i2c.c ****         0x00,
+  32:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SEGREMAP | 0x01,
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 2
+
+
+  33:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_COMSCANDEC,
+  34:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETCOMPINS,
+  35:Core/Src/stm32_ssd1306_i2c.c ****         0x12,
+  36:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETCONTRAST,
+  37:Core/Src/stm32_ssd1306_i2c.c ****         0xcf,
+  38:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETPRECHARGE,
+  39:Core/Src/stm32_ssd1306_i2c.c ****         0xf1,
+  40:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_SETVCOMDETECT,
+  41:Core/Src/stm32_ssd1306_i2c.c ****         0x40,
+  42:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_DISPLAYALLON_RESUME,
+  43:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_NORMALDISPLAY,
+  44:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_DISPLAYON
+  45:Core/Src/stm32_ssd1306_i2c.c ****     };
+  46:Core/Src/stm32_ssd1306_i2c.c ****     
+  47:Core/Src/stm32_ssd1306_i2c.c ****     write_buf( cmdbuf, sizeof(cmdbuf) ); 
+  48:Core/Src/stm32_ssd1306_i2c.c **** }
+  49:Core/Src/stm32_ssd1306_i2c.c **** 
+  50:Core/Src/stm32_ssd1306_i2c.c **** void update_display(video_buffer *buf){
+  51:Core/Src/stm32_ssd1306_i2c.c ****     
+  52:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t bit = 0;  
+  53:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t new_col = 0;
+  54:Core/Src/stm32_ssd1306_i2c.c **** 
+  55:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t SSD1306_buffer[buf->byte_buffer_cnt + 1];
+  56:Core/Src/stm32_ssd1306_i2c.c ****     
+  57:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+  58:Core/Src/stm32_ssd1306_i2c.c ****         0x00,
+  59:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_COLUMNADDR,
+  60:Core/Src/stm32_ssd1306_i2c.c ****         0x00,                      // start
+  61:Core/Src/stm32_ssd1306_i2c.c ****         buf->size_x - 1, // end
+  62:Core/Src/stm32_ssd1306_i2c.c ****         SSD1306_PAGEADDR,
+  63:Core/Src/stm32_ssd1306_i2c.c ****         0x00,                     // start
+  64:Core/Src/stm32_ssd1306_i2c.c ****         buf->size_y/8 - 1                       // end
+  65:Core/Src/stm32_ssd1306_i2c.c ****     };
+  66:Core/Src/stm32_ssd1306_i2c.c **** 
+  67:Core/Src/stm32_ssd1306_i2c.c ****         write_buf( cmdbuf, sizeof(cmdbuf) ); 
+  68:Core/Src/stm32_ssd1306_i2c.c **** 
+  69:Core/Src/stm32_ssd1306_i2c.c ****     SSD1306_buffer[0] = 0x40;
+  70:Core/Src/stm32_ssd1306_i2c.c ****     
+  71:Core/Src/stm32_ssd1306_i2c.c ****     int p = 1;
+  72:Core/Src/stm32_ssd1306_i2c.c ****         
+  73:Core/Src/stm32_ssd1306_i2c.c ****     //madness to adapt from vid_buffer structure to display structure;
+  74:Core/Src/stm32_ssd1306_i2c.c ****     for(uint16_t page = 0; page<8; page++){
+  75:Core/Src/stm32_ssd1306_i2c.c ****         
+  76:Core/Src/stm32_ssd1306_i2c.c ****         for(uint8_t k = 0; k < 16; k++){    
+  77:Core/Src/stm32_ssd1306_i2c.c ****             for(uint8_t i = 0; i < 8; i++){ 
+  78:Core/Src/stm32_ssd1306_i2c.c ****                 for (uint8_t j = 0; j < 8; j++) {
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+  80:Core/Src/stm32_ssd1306_i2c.c ****                     new_col |= bit >> (8-j-1) ;
+  81:Core/Src/stm32_ssd1306_i2c.c ****                     bit = 0;
+  82:Core/Src/stm32_ssd1306_i2c.c ****                 } 
+  83:Core/Src/stm32_ssd1306_i2c.c ****             SSD1306_buffer[p++] = new_col;
+  84:Core/Src/stm32_ssd1306_i2c.c ****             new_col = 0;
+  85:Core/Src/stm32_ssd1306_i2c.c ****             } 
+  86:Core/Src/stm32_ssd1306_i2c.c ****         }
+  87:Core/Src/stm32_ssd1306_i2c.c ****     }    
+  88:Core/Src/stm32_ssd1306_i2c.c ****     
+  89:Core/Src/stm32_ssd1306_i2c.c ****     write_buf( SSD1306_buffer, sizeof(SSD1306_buffer) );
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 3
+
+
+  90:Core/Src/stm32_ssd1306_i2c.c **** 
+  91:Core/Src/stm32_ssd1306_i2c.c **** }
+  92:Core/Src/stm32_ssd1306_i2c.c **** 
+  93:Core/Src/stm32_ssd1306_i2c.c **** // for submitting command sequences:
+  94:Core/Src/stm32_ssd1306_i2c.c **** //  buf[0] must be 0x00
+  95:Core/Src/stm32_ssd1306_i2c.c **** // for submitting bulk data (writing to display RAM):
+  96:Core/Src/stm32_ssd1306_i2c.c **** //  buf[0] must be 0x40
+  97:Core/Src/stm32_ssd1306_i2c.c **** static uint32_t write_buf( uint8_t *buf, uint16_t size ){
+  27              		.loc 1 97 57 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		.loc 1 97 57 is_stmt 0 view .LVU1
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0002 82B0     		sub	sp, sp, #8
+  37              		.cfi_def_cfa_offset 16
+  38 0004 0200     		movs	r2, r0
+  39 0006 0B00     		movs	r3, r1
+  98:Core/Src/stm32_ssd1306_i2c.c **** 
+  99:Core/Src/stm32_ssd1306_i2c.c ****     uint32_t status = TRANSFER_ERROR;
+  40              		.loc 1 99 5 is_stmt 1 view .LVU2
+  41              	.LVL1:
+ 100:Core/Src/stm32_ssd1306_i2c.c ****     
+ 101:Core/Src/stm32_ssd1306_i2c.c ****     status = HAL_I2C_Master_Transmit(_i2c_handler, _i2caddr, buf, size, 50);
+  42              		.loc 1 101 5 view .LVU3
+  43              		.loc 1 101 14 is_stmt 0 view .LVU4
+  44 0008 0449     		ldr	r1, .L2
+  45              	.LVL2:
+  46              		.loc 1 101 14 view .LVU5
+  47 000a 0978     		ldrb	r1, [r1]
+  48 000c 0448     		ldr	r0, .L2+4
+  49              	.LVL3:
+  50              		.loc 1 101 14 view .LVU6
+  51 000e 0068     		ldr	r0, [r0]
+  52 0010 3224     		movs	r4, #50
+  53 0012 0094     		str	r4, [sp]
+  54 0014 FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+  55              	.LVL4:
+ 102:Core/Src/stm32_ssd1306_i2c.c ****     
+ 103:Core/Src/stm32_ssd1306_i2c.c ****     return status;
+  56              		.loc 1 103 5 is_stmt 1 view .LVU7
+ 104:Core/Src/stm32_ssd1306_i2c.c **** }...
+  57              		.loc 1 104 1 is_stmt 0 view .LVU8
+  58 0018 02B0     		add	sp, sp, #8
+  59              		@ sp needed
+  60 001a 10BD     		pop	{r4, pc}
+  61              	.L3:
+  62              		.align	2
+  63              	.L2:
+  64 001c 00000000 		.word	_i2caddr
+  65 0020 00000000 		.word	_i2c_handler
+  66              		.cfi_endproc
+  67              	.LFE42:
+  69              		.section	.text.init_display,"ax",%progbits
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 4
+
+
+  70              		.align	1
+  71              		.global	init_display
+  72              		.syntax unified
+  73              		.code	16
+  74              		.thumb_func
+  76              	init_display:
+  77              	.LVL5:
+  78              	.LFB40:
+  13:Core/Src/stm32_ssd1306_i2c.c **** void init_display(uint8_t addr, I2C_HandleTypeDef *i2c_handler){
+  79              		.loc 1 13 64 is_stmt 1 view -0
+  80              		.cfi_startproc
+  81              		@ args = 0, pretend = 0, frame = 32
+  82              		@ frame_needed = 0, uses_anonymous_args = 0
+  13:Core/Src/stm32_ssd1306_i2c.c **** void init_display(uint8_t addr, I2C_HandleTypeDef *i2c_handler){
+  83              		.loc 1 13 64 is_stmt 0 view .LVU10
+  84 0000 30B5     		push	{r4, r5, lr}
+  85              		.cfi_def_cfa_offset 12
+  86              		.cfi_offset 4, -12
+  87              		.cfi_offset 5, -8
+  88              		.cfi_offset 14, -4
+  89 0002 89B0     		sub	sp, sp, #36
+  90              		.cfi_def_cfa_offset 48
+  15:Core/Src/stm32_ssd1306_i2c.c ****     _i2caddr = addr;
+  91              		.loc 1 15 5 is_stmt 1 view .LVU11
+  15:Core/Src/stm32_ssd1306_i2c.c ****     _i2caddr = addr;
+  92              		.loc 1 15 14 is_stmt 0 view .LVU12
+  93 0004 084B     		ldr	r3, .L5
+  94 0006 1870     		strb	r0, [r3]
+  16:Core/Src/stm32_ssd1306_i2c.c ****     _i2c_handler = i2c_handler;
+  95              		.loc 1 16 5 is_stmt 1 view .LVU13
+  16:Core/Src/stm32_ssd1306_i2c.c ****     _i2c_handler = i2c_handler;
+  96              		.loc 1 16 18 is_stmt 0 view .LVU14
+  97 0008 084B     		ldr	r3, .L5+4
+  98 000a 1960     		str	r1, [r3]
+  18:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+  99              		.loc 1 18 5 is_stmt 1 view .LVU15
+  18:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 100              		.loc 1 18 13 is_stmt 0 view .LVU16
+ 101 000c 01A8     		add	r0, sp, #4
+ 102              	.LVL6:
+  18:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 103              		.loc 1 18 13 view .LVU17
+ 104 000e 084B     		ldr	r3, .L5+8
+ 105 0010 0200     		movs	r2, r0
+ 106 0012 32CB     		ldmia	r3!, {r1, r4, r5}
+ 107 0014 32C2     		stmia	r2!, {r1, r4, r5}
+ 108              	.LVL7:
+  18:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 109              		.loc 1 18 13 view .LVU18
+ 110 0016 32CB     		ldmia	r3!, {r1, r4, r5}
+ 111 0018 32C2     		stmia	r2!, {r1, r4, r5}
+ 112 001a 1B88     		ldrh	r3, [r3]
+ 113 001c 1380     		strh	r3, [r2]
+  47:Core/Src/stm32_ssd1306_i2c.c ****     write_buf( cmdbuf, sizeof(cmdbuf) ); 
+ 114              		.loc 1 47 5 is_stmt 1 view .LVU19
+ 115 001e 1A21     		movs	r1, #26
+ 116 0020 FFF7FEFF 		bl	write_buf
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 5
+
+
+ 117              	.LVL8:
+  48:Core/Src/stm32_ssd1306_i2c.c **** }
+ 118              		.loc 1 48 1 is_stmt 0 view .LVU20
+ 119 0024 09B0     		add	sp, sp, #36
+ 120              		@ sp needed
+ 121 0026 30BD     		pop	{r4, r5, pc}
+ 122              	.L6:
+ 123              		.align	2
+ 124              	.L5:
+ 125 0028 00000000 		.word	_i2caddr
+ 126 002c 00000000 		.word	_i2c_handler
+ 127 0030 00000000 		.word	.LANCHOR0
+ 128              		.cfi_endproc
+ 129              	.LFE40:
+ 131              		.section	.text.update_display,"ax",%progbits
+ 132              		.align	1
+ 133              		.global	update_display
+ 134              		.syntax unified
+ 135              		.code	16
+ 136              		.thumb_func
+ 138              	update_display:
+ 139              	.LVL9:
+ 140              	.LFB41:
+  50:Core/Src/stm32_ssd1306_i2c.c **** void update_display(video_buffer *buf){
+ 141              		.loc 1 50 39 is_stmt 1 view -0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 16
+ 144              		@ frame_needed = 1, uses_anonymous_args = 0
+  50:Core/Src/stm32_ssd1306_i2c.c **** void update_display(video_buffer *buf){
+ 145              		.loc 1 50 39 is_stmt 0 view .LVU22
+ 146 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 147              		.cfi_def_cfa_offset 20
+ 148              		.cfi_offset 4, -20
+ 149              		.cfi_offset 5, -16
+ 150              		.cfi_offset 6, -12
+ 151              		.cfi_offset 7, -8
+ 152              		.cfi_offset 14, -4
+ 153 0002 DE46     		mov	lr, fp
+ 154 0004 5746     		mov	r7, r10
+ 155 0006 4E46     		mov	r6, r9
+ 156 0008 4546     		mov	r5, r8
+ 157 000a E0B5     		push	{r5, r6, r7, lr}
+ 158              		.cfi_def_cfa_offset 36
+ 159              		.cfi_offset 8, -36
+ 160              		.cfi_offset 9, -32
+ 161              		.cfi_offset 10, -28
+ 162              		.cfi_offset 11, -24
+ 163 000c 85B0     		sub	sp, sp, #20
+ 164              		.cfi_def_cfa_offset 56
+ 165 000e 00AF     		add	r7, sp, #0
+ 166              		.cfi_def_cfa_register 7
+ 167 0010 0400     		movs	r4, r0
+  52:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t bit = 0;  
+ 168              		.loc 1 52 5 is_stmt 1 view .LVU23
+ 169              	.LVL10:
+  53:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t new_col = 0;
+ 170              		.loc 1 53 5 view .LVU24
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 6
+
+
+  55:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t SSD1306_buffer[buf->byte_buffer_cnt + 1];
+ 171              		.loc 1 55 5 view .LVU25
+  55:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t SSD1306_buffer[buf->byte_buffer_cnt + 1];
+ 172              		.loc 1 55 31 is_stmt 0 view .LVU26
+ 173 0012 4389     		ldrh	r3, [r0, #10]
+ 174 0014 9846     		mov	r8, r3
+ 175              	.LVL11:
+  55:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t SSD1306_buffer[buf->byte_buffer_cnt + 1];
+ 176              		.loc 1 55 13 view .LVU27
+ 177 0016 0833     		adds	r3, r3, #8
+ 178              	.LVL12:
+  55:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t SSD1306_buffer[buf->byte_buffer_cnt + 1];
+ 179              		.loc 1 55 13 view .LVU28
+ 180 0018 DB08     		lsrs	r3, r3, #3
+ 181 001a DB00     		lsls	r3, r3, #3
+ 182 001c 6A46     		mov	r2, sp
+ 183 001e D31A     		subs	r3, r2, r3
+ 184 0020 9D46     		mov	sp, r3
+ 185 0022 E946     		mov	r9, sp
+ 186              	.LVL13:
+  57:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 187              		.loc 1 57 5 is_stmt 1 view .LVU29
+  57:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 188              		.loc 1 57 13 is_stmt 0 view .LVU30
+ 189 0024 0023     		movs	r3, #0
+ 190              	.LVL14:
+  57:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 191              		.loc 1 57 13 view .LVU31
+ 192 0026 3B72     		strb	r3, [r7, #8]
+ 193 0028 2122     		movs	r2, #33
+ 194 002a 7A72     		strb	r2, [r7, #9]
+ 195 002c BB72     		strb	r3, [r7, #10]
+  61:Core/Src/stm32_ssd1306_i2c.c ****         buf->size_x - 1, // end
+ 196              		.loc 1 61 12 view .LVU32
+ 197 002e 0278     		ldrb	r2, [r0]
+  61:Core/Src/stm32_ssd1306_i2c.c ****         buf->size_x - 1, // end
+ 198              		.loc 1 61 21 view .LVU33
+ 199 0030 013A     		subs	r2, r2, #1
+  57:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 200              		.loc 1 57 13 view .LVU34
+ 201 0032 FA72     		strb	r2, [r7, #11]
+ 202 0034 2222     		movs	r2, #34
+ 203 0036 3A73     		strb	r2, [r7, #12]
+ 204 0038 7B73     		strb	r3, [r7, #13]
+  64:Core/Src/stm32_ssd1306_i2c.c ****         buf->size_y/8 - 1                       // end
+ 205              		.loc 1 64 12 view .LVU35
+ 206 003a 4378     		ldrb	r3, [r0, #1]
+  64:Core/Src/stm32_ssd1306_i2c.c ****         buf->size_y/8 - 1                       // end
+ 207              		.loc 1 64 23 view .LVU36
+ 208 003c DB08     		lsrs	r3, r3, #3
+ 209 003e 013B     		subs	r3, r3, #1
+  57:Core/Src/stm32_ssd1306_i2c.c ****     uint8_t cmdbuf[] = {
+ 210              		.loc 1 57 13 view .LVU37
+ 211 0040 BB73     		strb	r3, [r7, #14]
+  67:Core/Src/stm32_ssd1306_i2c.c ****         write_buf( cmdbuf, sizeof(cmdbuf) ); 
+ 212              		.loc 1 67 9 is_stmt 1 view .LVU38
+ 213 0042 0721     		movs	r1, #7
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 7
+
+
+ 214 0044 0823     		movs	r3, #8
+ 215 0046 F818     		adds	r0, r7, r3
+ 216              	.LVL15:
+  67:Core/Src/stm32_ssd1306_i2c.c ****         write_buf( cmdbuf, sizeof(cmdbuf) ); 
+ 217              		.loc 1 67 9 is_stmt 0 view .LVU39
+ 218 0048 FFF7FEFF 		bl	write_buf
+ 219              	.LVL16:
+  69:Core/Src/stm32_ssd1306_i2c.c ****     SSD1306_buffer[0] = 0x40;
+ 220              		.loc 1 69 5 is_stmt 1 view .LVU40
+  69:Core/Src/stm32_ssd1306_i2c.c ****     SSD1306_buffer[0] = 0x40;
+ 221              		.loc 1 69 23 is_stmt 0 view .LVU41
+ 222 004c 4023     		movs	r3, #64
+ 223 004e 4A46     		mov	r2, r9
+ 224 0050 1370     		strb	r3, [r2]
+  71:Core/Src/stm32_ssd1306_i2c.c ****     int p = 1;
+ 225              		.loc 1 71 5 is_stmt 1 view .LVU42
+ 226              	.LVL17:
+  74:Core/Src/stm32_ssd1306_i2c.c ****     for(uint16_t page = 0; page<8; page++){
+ 227              		.loc 1 74 5 view .LVU43
+ 228              	.LBB2:
+  74:Core/Src/stm32_ssd1306_i2c.c ****     for(uint16_t page = 0; page<8; page++){
+ 229              		.loc 1 74 9 view .LVU44
+  74:Core/Src/stm32_ssd1306_i2c.c ****     for(uint16_t page = 0; page<8; page++){
+ 230              		.loc 1 74 18 is_stmt 0 view .LVU45
+ 231 0052 0023     		movs	r3, #0
+ 232 0054 7B60     		str	r3, [r7, #4]
+ 233              	.LBE2:
+  71:Core/Src/stm32_ssd1306_i2c.c ****     int p = 1;
+ 234              		.loc 1 71 9 view .LVU46
+ 235 0056 0133     		adds	r3, r3, #1
+ 236 0058 9C46     		mov	ip, r3
+ 237              	.LBB9:
+  74:Core/Src/stm32_ssd1306_i2c.c ****     for(uint16_t page = 0; page<8; page++){
+ 238              		.loc 1 74 5 view .LVU47
+ 239 005a 36E0     		b	.L8
+ 240              	.LVL18:
+ 241              	.L9:
+ 242              	.LBB3:
+ 243              	.LBB4:
+ 244              	.LBB5:
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 245              		.loc 1 79 21 is_stmt 1 discriminator 3 view .LVU48
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 246              		.loc 1 79 31 is_stmt 0 discriminator 3 view .LVU49
+ 247 005c 6368     		ldr	r3, [r4, #4]
+ 248 005e 9A46     		mov	r10, r3
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 249              		.loc 1 79 45 discriminator 3 view .LVU50
+ 250 0060 7B68     		ldr	r3, [r7, #4]
+ 251 0062 DB01     		lsls	r3, r3, #7
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 252              		.loc 1 79 63 discriminator 3 view .LVU51
+ 253 0064 257A     		ldrb	r5, [r4, #8]
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 254              		.loc 1 79 59 discriminator 3 view .LVU52
+ 255 0066 5543     		muls	r5, r2
+ 256 0068 AB46     		mov	fp, r5
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 8
+
+
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 257              		.loc 1 79 55 discriminator 3 view .LVU53
+ 258 006a 8344     		add	fp, fp, r0
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 259              		.loc 1 79 51 discriminator 3 view .LVU54
+ 260 006c 5B44     		add	r3, r3, fp
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 261              		.loc 1 79 40 discriminator 3 view .LVU55
+ 262 006e 5546     		mov	r5, r10
+ 263 0070 EB5C     		ldrb	r3, [r5, r3]
+ 264 0072 9A46     		mov	r10, r3
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 265              		.loc 1 79 95 discriminator 3 view .LVU56
+ 266 0074 8023     		movs	r3, #128
+ 267 0076 0B41     		asrs	r3, r3, r1
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 268              		.loc 1 79 81 discriminator 3 view .LVU57
+ 269 0078 5546     		mov	r5, r10
+ 270 007a 2B40     		ands	r3, r5
+  79:Core/Src/stm32_ssd1306_i2c.c ****                     bit = (buf->vid_buf[(128*page)+(k + (j*buf->byte_col_cnt))] & (0b10000000 >> i)
+ 271              		.loc 1 79 101 discriminator 3 view .LVU58
+ 272 007c 8B40     		lsls	r3, r3, r1
+ 273 007e 9B46     		mov	fp, r3
+ 274              	.LVL19:
+  80:Core/Src/stm32_ssd1306_i2c.c ****                     new_col |= bit >> (8-j-1) ;
+ 275              		.loc 1 80 21 is_stmt 1 discriminator 3 view .LVU59
+  80:Core/Src/stm32_ssd1306_i2c.c ****                     new_col |= bit >> (8-j-1) ;
+ 276              		.loc 1 80 43 is_stmt 0 discriminator 3 view .LVU60
+ 277 0080 0723     		movs	r3, #7
+ 278 0082 9B1A     		subs	r3, r3, r2
+ 279 0084 9A46     		mov	r10, r3
+  80:Core/Src/stm32_ssd1306_i2c.c ****                     new_col |= bit >> (8-j-1) ;
+ 280              		.loc 1 80 36 discriminator 3 view .LVU61
+ 281 0086 FF23     		movs	r3, #255
+ 282 0088 5D46     		mov	r5, fp
+ 283 008a 2B40     		ands	r3, r5
+ 284 008c 5546     		mov	r5, r10
+ 285 008e 2B41     		asrs	r3, r3, r5
+  80:Core/Src/stm32_ssd1306_i2c.c ****                     new_col |= bit >> (8-j-1) ;
+ 286              		.loc 1 80 29 discriminator 3 view .LVU62
+ 287 0090 1E43     		orrs	r6, r3
+ 288              	.LVL20:
+  80:Core/Src/stm32_ssd1306_i2c.c ****                     new_col |= bit >> (8-j-1) ;
+ 289              		.loc 1 80 29 discriminator 3 view .LVU63
+ 290 0092 F6B2     		uxtb	r6, r6
+ 291              	.LVL21:
+  81:Core/Src/stm32_ssd1306_i2c.c ****                     bit = 0;
+ 292              		.loc 1 81 21 is_stmt 1 discriminator 3 view .LVU64
+  78:Core/Src/stm32_ssd1306_i2c.c ****                 for (uint8_t j = 0; j < 8; j++) {
+ 293              		.loc 1 78 45 discriminator 3 view .LVU65
+ 294 0094 0132     		adds	r2, r2, #1
+ 295              	.LVL22:
+  78:Core/Src/stm32_ssd1306_i2c.c ****                 for (uint8_t j = 0; j < 8; j++) {
+ 296              		.loc 1 78 45 is_stmt 0 discriminator 3 view .LVU66
+ 297 0096 D2B2     		uxtb	r2, r2
+ 298              	.LVL23:
+ 299              	.L10:
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 9
+
+
+  78:Core/Src/stm32_ssd1306_i2c.c ****                 for (uint8_t j = 0; j < 8; j++) {
+ 300              		.loc 1 78 39 is_stmt 1 discriminator 1 view .LVU67
+ 301 0098 072A     		cmp	r2, #7
+ 302 009a DFD9     		bls	.L9
+ 303              	.LBE5:
+  83:Core/Src/stm32_ssd1306_i2c.c ****             SSD1306_buffer[p++] = new_col;
+ 304              		.loc 1 83 13 discriminator 2 view .LVU68
+ 305              	.LVL24:
+  83:Core/Src/stm32_ssd1306_i2c.c ****             SSD1306_buffer[p++] = new_col;
+ 306              		.loc 1 83 33 is_stmt 0 discriminator 2 view .LVU69
+ 307 009c 4B46     		mov	r3, r9
+ 308 009e 6246     		mov	r2, ip
+ 309              	.LVL25:
+  83:Core/Src/stm32_ssd1306_i2c.c ****             SSD1306_buffer[p++] = new_col;
+ 310              		.loc 1 83 33 discriminator 2 view .LVU70
+ 311 00a0 9E54     		strb	r6, [r3, r2]
+  84:Core/Src/stm32_ssd1306_i2c.c ****             new_col = 0;
+ 312              		.loc 1 84 13 is_stmt 1 discriminator 2 view .LVU71
+ 313              	.LVL26:
+  77:Core/Src/stm32_ssd1306_i2c.c ****             for(uint8_t i = 0; i < 8; i++){ 
+ 314              		.loc 1 77 40 discriminator 2 view .LVU72
+ 315 00a2 0131     		adds	r1, r1, #1
+ 316              	.LVL27:
+  77:Core/Src/stm32_ssd1306_i2c.c ****             for(uint8_t i = 0; i < 8; i++){ 
+ 317              		.loc 1 77 40 is_stmt 0 discriminator 2 view .LVU73
+ 318 00a4 C9B2     		uxtb	r1, r1
+ 319              	.LVL28:
+  83:Core/Src/stm32_ssd1306_i2c.c ****             SSD1306_buffer[p++] = new_col;
+ 320              		.loc 1 83 29 discriminator 2 view .LVU74
+ 321 00a6 0123     		movs	r3, #1
+ 322 00a8 9A46     		mov	r10, r3
+ 323 00aa D444     		add	ip, ip, r10
+ 324              	.LVL29:
+ 325              	.L11:
+  77:Core/Src/stm32_ssd1306_i2c.c ****             for(uint8_t i = 0; i < 8; i++){ 
+ 326              		.loc 1 77 34 is_stmt 1 discriminator 1 view .LVU75
+ 327 00ac 0729     		cmp	r1, #7
+ 328 00ae 02D8     		bhi	.L16
+ 329              	.LBB6:
+  78:Core/Src/stm32_ssd1306_i2c.c ****                 for (uint8_t j = 0; j < 8; j++) {
+ 330              		.loc 1 78 30 is_stmt 0 view .LVU76
+ 331 00b0 0022     		movs	r2, #0
+ 332              	.LBE6:
+ 333 00b2 0026     		movs	r6, #0
+ 334 00b4 F0E7     		b	.L10
+ 335              	.L16:
+ 336              	.LBE4:
+  76:Core/Src/stm32_ssd1306_i2c.c ****         for(uint8_t k = 0; k < 16; k++){    
+ 337              		.loc 1 76 37 is_stmt 1 discriminator 2 view .LVU77
+ 338 00b6 0130     		adds	r0, r0, #1
+ 339              	.LVL30:
+  76:Core/Src/stm32_ssd1306_i2c.c ****         for(uint8_t k = 0; k < 16; k++){    
+ 340              		.loc 1 76 37 is_stmt 0 discriminator 2 view .LVU78
+ 341 00b8 C0B2     		uxtb	r0, r0
+ 342              	.LVL31:
+ 343              	.L12:
+  76:Core/Src/stm32_ssd1306_i2c.c ****         for(uint8_t k = 0; k < 16; k++){    
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 10
+
+
+ 344              		.loc 1 76 30 is_stmt 1 discriminator 1 view .LVU79
+ 345 00ba 0F28     		cmp	r0, #15
+ 346 00bc 01D8     		bhi	.L17
+ 347              	.LBB7:
+  77:Core/Src/stm32_ssd1306_i2c.c ****             for(uint8_t i = 0; i < 8; i++){ 
+ 348              		.loc 1 77 25 is_stmt 0 view .LVU80
+ 349 00be 0021     		movs	r1, #0
+ 350 00c0 F4E7     		b	.L11
+ 351              	.L17:
+ 352              	.LBE7:
+ 353              	.LBE3:
+  74:Core/Src/stm32_ssd1306_i2c.c ****     for(uint16_t page = 0; page<8; page++){
+ 354              		.loc 1 74 40 is_stmt 1 discriminator 2 view .LVU81
+ 355 00c2 7D68     		ldr	r5, [r7, #4]
+ 356 00c4 0135     		adds	r5, r5, #1
+ 357 00c6 ABB2     		uxth	r3, r5
+ 358 00c8 7B60     		str	r3, [r7, #4]
+ 359              	.LVL32:
+ 360              	.L8:
+  74:Core/Src/stm32_ssd1306_i2c.c ****     for(uint16_t page = 0; page<8; page++){
+ 361              		.loc 1 74 32 discriminator 1 view .LVU82
+ 362 00ca 7B68     		ldr	r3, [r7, #4]
+ 363 00cc 072B     		cmp	r3, #7
+ 364 00ce 01D8     		bhi	.L18
+ 365              	.LBB8:
+  76:Core/Src/stm32_ssd1306_i2c.c ****         for(uint8_t k = 0; k < 16; k++){    
+ 366              		.loc 1 76 21 is_stmt 0 view .LVU83
+ 367 00d0 0020     		movs	r0, #0
+ 368 00d2 F2E7     		b	.L12
+ 369              	.L18:
+ 370              	.LBE8:
+ 371              	.LBE9:
+  89:Core/Src/stm32_ssd1306_i2c.c ****     write_buf( SSD1306_buffer, sizeof(SSD1306_buffer) );
+ 372              		.loc 1 89 5 is_stmt 1 view .LVU84
+ 373 00d4 4146     		mov	r1, r8
+ 374 00d6 0131     		adds	r1, r1, #1
+ 375 00d8 89B2     		uxth	r1, r1
+ 376 00da 4846     		mov	r0, r9
+ 377 00dc FFF7FEFF 		bl	write_buf
+ 378              	.LVL33:
+  91:Core/Src/stm32_ssd1306_i2c.c **** }
+ 379              		.loc 1 91 1 is_stmt 0 view .LVU85
+ 380 00e0 BD46     		mov	sp, r7
+ 381 00e2 05B0     		add	sp, sp, #20
+ 382              		@ sp needed
+ 383              	.LVL34:
+ 384              	.LVL35:
+ 385              	.LVL36:
+  91:Core/Src/stm32_ssd1306_i2c.c **** }
+ 386              		.loc 1 91 1 view .LVU86
+ 387 00e4 F0BC     		pop	{r4, r5, r6, r7}
+ 388 00e6 BB46     		mov	fp, r7
+ 389 00e8 B246     		mov	r10, r6
+ 390 00ea A946     		mov	r9, r5
+ 391 00ec A046     		mov	r8, r4
+ 392 00ee F0BD     		pop	{r4, r5, r6, r7, pc}
+ 393              		.cfi_endproc
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 11
+
+
+ 394              	.LFE41:
+ 396              		.global	_i2c_handler
+ 397              		.section	.bss._i2c_handler,"aw",%nobits
+ 398              		.align	2
+ 401              	_i2c_handler:
+ 402 0000 00000000 		.space	4
+ 403              		.section	.bss._i2caddr,"aw",%nobits
+ 406              	_i2caddr:
+ 407 0000 00       		.space	1
+ 408              		.section	.rodata
+ 409              		.align	2
+ 410              		.set	.LANCHOR0,. + 0
+ 411              	.LC4:
+ 412 0000 00AED580 		.ascii	"\000\256\325\200\250?\323\000@\215\024 \000\241\310"
+ 412      A83FD300 
+ 412      408D1420 
+ 412      00A1C8
+ 413 000f DA1281CF 		.ascii	"\332\022\201\317\331\361\333@\244\246\257"
+ 413      D9F1DB40 
+ 413      A4A6AF
+ 414              		.text
+ 415              	.Letext0:
+ 416              		.file 2 "c:\\users\\arist\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 417              		.file 3 "c:\\users\\arist\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
+ 418              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030xc.h"
+ 419              		.file 5 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
+ 420              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
+ 421              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h"
+ 422              		.file 8 "Core/Inc/GEVA.h"
+ARM GAS  C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32_ssd1306_i2c.c
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:19     .text.write_buf:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:24     .text.write_buf:00000000 write_buf
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:64     .text.write_buf:0000001c $d
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:406    .bss._i2caddr:00000000 _i2caddr
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:401    .bss._i2c_handler:00000000 _i2c_handler
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:70     .text.init_display:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:76     .text.init_display:00000000 init_display
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:125    .text.init_display:00000028 $d
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:132    .text.update_display:00000000 $t
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:138    .text.update_display:00000000 update_display
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:398    .bss._i2c_handler:00000000 $d
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:407    .bss._i2caddr:00000000 $d
+C:\Users\arist\AppData\Local\Temp\cc3oIDWg.s:409    .rodata:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_I2C_Master_Transmit

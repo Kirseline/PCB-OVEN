@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
   30:Core/Src/system_stm32f0xx.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
   31:Core/Src/system_stm32f0xx.c ****   *
   32:Core/Src/system_stm32f0xx.c ****   ******************************************************************************
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 2
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 2
 
 
   33:Core/Src/system_stm32f0xx.c ****   */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
   87:Core/Src/system_stm32f0xx.c ****   */
   88:Core/Src/system_stm32f0xx.c **** 
   89:Core/Src/system_stm32f0xx.c **** /** @addtogroup STM32F0xx_System_Private_Variables
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 3
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 3
 
 
   90:Core/Src/system_stm32f0xx.c ****   * @{
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
   36              	.LFE40:
   38              		.global	__aeabi_uidiv
   39              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 4
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 4
 
 
   40              		.align	1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
   50              		@ args = 0, pretend = 0, frame = 0
   51              		@ frame_needed = 0, uses_anonymous_args = 0
   52 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 5
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 5
 
 
   53              		.cfi_def_cfa_offset 8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
  214:Core/Src/system_stm32f0xx.c **** #if defined(STM32F042x6) || defined(STM32F048xx)  || defined(STM32F070x6) \
  215:Core/Src/system_stm32f0xx.c ****  || defined(STM32F078xx) || defined(STM32F071xB)  || defined(STM32F072xB) \
  216:Core/Src/system_stm32f0xx.c ****  || defined(STM32F070xB) || defined(STM32F091xC) || defined(STM32F098xx)  || defined(STM32F030xC)
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 6
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 6
 
 
  217:Core/Src/system_stm32f0xx.c ****         /* HSI used as PLL clock source : SystemCoreClock = HSI/PREDIV * PLLMUL */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
  105 002c 1340     		ands	r3, r2
  106              		.loc 1 233 22 view .LVU21
  107 002e 184A     		ldr	r2, .L10+12
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 7
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 7
 
 
  108 0030 D15C     		ldrb	r1, [r2, r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
  148              		.loc 1 197 7 is_stmt 1 view .LVU35
  197:Core/Src/system_stm32f0xx.c ****       predivfactor = (RCC->CFGR2 & RCC_CFGR2_PREDIV) + 1;
  149              		.loc 1 197 27 is_stmt 0 view .LVU36
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 8
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 8
 
 
  150 0050 A40C     		lsrs	r4, r4, #18
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
  190              	.LVL22:
  203:Core/Src/system_stm32f0xx.c ****       }
  191              		.loc 1 203 52 view .LVU51
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 9
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 9
 
 
  192 007a 6043     		muls	r0, r4
@@ -522,22 +522,22 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 1
  232              		.file 3 "c:\\users\\arist\\appdata\\roaming\\code\\user\\globalstorage\\bmd.stm32-for-vscode\\@xpa
  233              		.file 4 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h"
  234              		.file 5 "Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030xc.h"
-ARM GAS  C:\Users\arist\AppData\Local\Temp\ccnSV70m.s 			page 10
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32f0xx.c
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:19     .text.SystemInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:25     .text.SystemInit:00000000 SystemInit
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:40     .text.SystemCoreClockUpdate:00000000 $t
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:46     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:200    .text.SystemCoreClockUpdate:00000084 $d
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:227    .data.SystemCoreClock:00000000 SystemCoreClock
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:219    .rodata.AHBPrescTable:00000000 AHBPrescTable
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:212    .rodata.APBPrescTable:00000000 APBPrescTable
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:209    .rodata.APBPrescTable:00000000 $d
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:216    .rodata.AHBPrescTable:00000000 $d
-C:\Users\arist\AppData\Local\Temp\ccnSV70m.s:224    .data.SystemCoreClock:00000000 $d
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:19     .text.SystemInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:25     .text.SystemInit:00000000 SystemInit
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:40     .text.SystemCoreClockUpdate:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:46     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:200    .text.SystemCoreClockUpdate:00000084 $d
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:227    .data.SystemCoreClock:00000000 SystemCoreClock
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:219    .rodata.AHBPrescTable:00000000 AHBPrescTable
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:212    .rodata.APBPrescTable:00000000 APBPrescTable
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:209    .rodata.APBPrescTable:00000000 $d
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:216    .rodata.AHBPrescTable:00000000 $d
+C:\Users\arist\AppData\Local\Temp\ccXX1TQi.s:224    .data.SystemCoreClock:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

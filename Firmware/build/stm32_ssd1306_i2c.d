@@ -1,4 +1,5 @@
-build/main.o: Core/Src/main.c Core/Inc/main.h \
+build/stm32_ssd1306_i2c.o: Core/Src/stm32_ssd1306_i2c.c \
+ Core/Inc/stm32_ssd1306_i2c.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h \
  Core/Inc/stm32f0xx_hal_conf.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h \
@@ -29,9 +30,8 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h \
  Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h \
- Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h Core/Inc/GEVA.h \
- Core/Inc/stm32_ssd1306_i2c.h Core/Inc/GEVA.h Core/Inc/stm32_max6675.h
-Core/Inc/main.h:
+ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h Core/Inc/GEVA.h
+Core/Inc/stm32_ssd1306_i2c.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:
 Core/Inc/stm32f0xx_hal_conf.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:
@@ -66,6 +66,3 @@ Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h:
 Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h:
 Core/Inc/GEVA.h:
-Core/Inc/stm32_ssd1306_i2c.h:
-Core/Inc/GEVA.h:
-Core/Inc/stm32_max6675.h:

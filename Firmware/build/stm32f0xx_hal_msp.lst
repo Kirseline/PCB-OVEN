@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
   30:Core/Src/stm32f0xx_hal_msp.c **** /* USER CODE END TD */
   31:Core/Src/stm32f0xx_hal_msp.c **** 
   32:Core/Src/stm32f0xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 2
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 2
 
 
   33:Core/Src/stm32f0xx_hal_msp.c **** /* USER CODE BEGIN Define */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
   42 000a 9961     		str	r1, [r3, #24]
   43              		.loc 1 71 3 view .LVU4
   44 000c 9969     		ldr	r1, [r3, #24]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 3
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 3
 
 
   45 000e 0A40     		ands	r2, r1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
   84:Core/Src/stm32f0xx_hal_msp.c **** * @param hadc: ADC handle pointer
   85:Core/Src/stm32f0xx_hal_msp.c **** * @retval None
   86:Core/Src/stm32f0xx_hal_msp.c **** */
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 4
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 4
 
 
   87:Core/Src/stm32f0xx_hal_msp.c **** void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  111:Core/Src/stm32f0xx_hal_msp.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
  112:Core/Src/stm32f0xx_hal_msp.c **** 
  113:Core/Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Pin = NTC_A_Pin|NTC_B_Pin;
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 5
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 5
 
 
  114:Core/Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  153 003a 5A69     		ldr	r2, [r3, #20]
  154 003c 0A40     		ands	r2, r1
  155 003e 0192     		str	r2, [sp, #4]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 6
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 6
 
 
   98:Core/Src/stm32f0xx_hal_msp.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  194              		.loc 1 113 5 view .LVU48
  113:Core/Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
  195              		.loc 1 113 25 is_stmt 0 view .LVU49
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 7
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 7
 
 
  196 0066 0394     		str	r4, [sp, #12]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  238              		.cfi_offset 14, -4
  133:Core/Src/stm32f0xx_hal_msp.c ****   if(hadc->Instance==ADC1)
  239              		.loc 1 133 3 is_stmt 1 view .LVU58
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 8
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 8
 
 
  240              		.loc 1 133 10 is_stmt 0 view .LVU59
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  266              	.LVL12:
  151:Core/Src/stm32f0xx_hal_msp.c **** 
  267              		.loc 1 151 5 is_stmt 1 view .LVU65
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 9
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 9
 
 
  268 0020 0321     		movs	r1, #3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  314              	.LVL16:
  169:Core/Src/stm32f0xx_hal_msp.c ****   if(hi2c->Instance==I2C1)
  315              		.loc 1 169 3 is_stmt 1 view .LVU72
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 10
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 10
 
 
  316              		.loc 1 169 10 is_stmt 0 view .LVU73
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  341 0026 6361     		str	r3, [r4, #20]
  175:Core/Src/stm32f0xx_hal_msp.c ****     /**I2C1 GPIO Configuration
  342              		.loc 1 175 5 is_stmt 1 view .LVU80
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 11
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 11
 
 
  343 0028 6369     		ldr	r3, [r4, #20]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  381              		.loc 1 188 5 view .LVU96
  382 0052 E369     		ldr	r3, [r4, #28]
  383 0054 1340     		ands	r3, r2
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 12
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 12
 
 
  384 0056 0293     		str	r3, [sp, #8]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  205:Core/Src/stm32f0xx_hal_msp.c ****   {
  206:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE BEGIN I2C1_MspDeInit 0 */
  207:Core/Src/stm32f0xx_hal_msp.c **** 
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 13
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 13
 
 
  208:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE END I2C1_MspDeInit 0 */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  460 0038 00040048 		.word	1207960576
  461              		.cfi_endproc
  462              	.LFE44:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 14
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 14
 
 
  464              		.section	.text.HAL_SPI_MspInit,"ax",%progbits
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  242:Core/Src/stm32f0xx_hal_msp.c ****     __HAL_RCC_SPI1_CLK_ENABLE();
  243:Core/Src/stm32f0xx_hal_msp.c **** 
  244:Core/Src/stm32f0xx_hal_msp.c ****     __HAL_RCC_GPIOA_CLK_ENABLE();
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 15
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 15
 
 
  245:Core/Src/stm32f0xx_hal_msp.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  292:Core/Src/stm32f0xx_hal_msp.c ****   }
  293:Core/Src/stm32f0xx_hal_msp.c **** 
  294:Core/Src/stm32f0xx_hal_msp.c **** }
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 16
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 16
 
 
  510              		.loc 1 294 1 view .LVU121
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  551              		.loc 1 245 5 view .LVU134
  552              	.LBB11:
  245:Core/Src/stm32f0xx_hal_msp.c ****     /**SPI1 GPIO Configuration
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 17
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 17
 
 
  553              		.loc 1 245 5 view .LVU135
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  591              		.loc 1 258 25 is_stmt 0 view .LVU151
  592 0070 1023     		movs	r3, #16
  593 0072 0593     		str	r3, [sp, #20]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 18
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 18
 
 
  259:Core/Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  277:Core/Src/stm32f0xx_hal_msp.c ****     /**SPI2 GPIO Configuration
  633              		.loc 1 277 5 view .LVU167
  634              	.LBB13:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 19
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 19
 
 
  277:Core/Src/stm32f0xx_hal_msp.c ****     /**SPI2 GPIO Configuration
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  675 00c8 00300140 		.word	1073819648
  676 00cc 00380040 		.word	1073756160
  677 00d0 00100240 		.word	1073876992
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 20
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 20
 
 
  678 00d4 00040048 		.word	1207960576
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  321:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE BEGIN SPI1_MspDeInit 1 */
  322:Core/Src/stm32f0xx_hal_msp.c **** 
  323:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE END SPI1_MspDeInit 1 */
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 21
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 21
 
 
  324:Core/Src/stm32f0xx_hal_msp.c ****   }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  737 002a FFF7FEFF 		bl	HAL_GPIO_DeInit
  738              	.LVL42:
  739 002e EFE7     		b	.L31
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 22
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 22
 
 
  740              	.LVL43:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  784              		@ link register save eliminated.
  785              		.loc 1 353 1 is_stmt 0 view .LVU200
  786 0000 82B0     		sub	sp, sp, #8
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 23
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 23
 
 
  787              		.cfi_def_cfa_offset 8
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  822              	.L41:
  823 0024 00040040 		.word	1073742848
  824 0028 00100240 		.word	1073876992
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 24
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 24
 
 
  825              		.cfi_endproc
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  382:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE BEGIN TIM16_MspInit 1 */
  859              		.loc 1 382 5 is_stmt 1 view .LVU218
  860              	.LBB15:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 25
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 25
 
 
  382:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE BEGIN TIM16_MspInit 1 */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  392:Core/Src/stm32f0xx_hal_msp.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
  909              		.loc 1 392 3 is_stmt 1 view .LVU227
  910              		.loc 1 392 20 is_stmt 0 view .LVU228
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 26
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 26
 
 
  911 0006 1422     		movs	r2, #20
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  427:Core/Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF2_TIM16;
  428:Core/Src/stm32f0xx_hal_msp.c ****     HAL_GPIO_Init(FAN_GPIO_Port, &GPIO_InitStruct);
  429:Core/Src/stm32f0xx_hal_msp.c **** 
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 27
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 27
 
 
  430:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE BEGIN TIM16_MspPostInit 1 */
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  406:Core/Src/stm32f0xx_hal_msp.c ****     HAL_GPIO_Init(BUZZER_GPIO_Port, &GPIO_InitStruct);
  967              		.loc 1 406 5 view .LVU249
  406:Core/Src/stm32f0xx_hal_msp.c ****     HAL_GPIO_Init(BUZZER_GPIO_Port, &GPIO_InitStruct);
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 28
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 28
 
 
  968              		.loc 1 406 31 is_stmt 0 view .LVU250
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  427:Core/Src/stm32f0xx_hal_msp.c ****     HAL_GPIO_Init(FAN_GPIO_Port, &GPIO_InitStruct);
  1008              		.loc 1 427 31 is_stmt 0 view .LVU265
  1009 006a 0793     		str	r3, [sp, #28]
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 29
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 29
 
 
  428:Core/Src/stm32f0xx_hal_msp.c **** 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  451:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE BEGIN TIM3_MspDeInit 1 */
  452:Core/Src/stm32f0xx_hal_msp.c **** 
  453:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE END TIM3_MspDeInit 1 */
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 30
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 30
 
 
  454:Core/Src/stm32f0xx_hal_msp.c ****   }
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  1092              	.L60:
  467:Core/Src/stm32f0xx_hal_msp.c ****   {
  468:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE BEGIN TIM16_MspDeInit 0 */
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 31
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 31
 
 
  469:Core/Src/stm32f0xx_hal_msp.c **** 
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  1129 0000 10B5     		push	{r4, lr}
  1130              		.cfi_def_cfa_offset 8
  1131              		.cfi_offset 4, -8
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 32
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 32
 
 
  1132              		.cfi_offset 14, -4
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  516:Core/Src/stm32f0xx_hal_msp.c **** 
  517:Core/Src/stm32f0xx_hal_msp.c ****   /* USER CODE END USART2_MspInit 0 */
  518:Core/Src/stm32f0xx_hal_msp.c ****     /* Peripheral clock enable */
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 33
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 33
 
 
  519:Core/Src/stm32f0xx_hal_msp.c ****     __HAL_RCC_USART2_CLK_ENABLE();
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  1185              	.LBB19:
  497:Core/Src/stm32f0xx_hal_msp.c ****     /**USART1 GPIO Configuration
  1186              		.loc 1 497 5 view .LVU301
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 34
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 34
 
 
  497:Core/Src/stm32f0xx_hal_msp.c ****     /**USART1 GPIO Configuration
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  519:Core/Src/stm32f0xx_hal_msp.c **** 
  1227              		.loc 1 519 5 view .LVU316
  1228              	.LBB20:
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 35
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 35
 
 
  519:Core/Src/stm32f0xx_hal_msp.c **** 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  528:Core/Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
  1268              		.loc 1 528 5 is_stmt 1 view .LVU332
  529:Core/Src/stm32f0xx_hal_msp.c ****     GPIO_InitStruct.Alternate = GPIO_AF1_USART2;
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 36
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 36
 
 
  1269              		.loc 1 529 5 view .LVU333
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  1312              		.cfi_offset 14, -4
  548:Core/Src/stm32f0xx_hal_msp.c ****   if(huart->Instance==USART1)
  1313              		.loc 1 548 3 is_stmt 1 view .LVU341
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 37
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 37
 
 
  1314              		.loc 1 548 11 is_stmt 0 view .LVU342
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  1331              	.L75:
  554:Core/Src/stm32f0xx_hal_msp.c **** 
  1332              		.loc 1 554 5 is_stmt 1 view .LVU347
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 38
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 38
 
 
  1333 0012 0D4A     		ldr	r2, .L77+8
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  1383              		.file 6 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h"
  1384              		.file 7 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
  1385              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h"
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 39
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 39
 
 
  1386              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h"
@@ -2287,53 +2287,53 @@ ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 1
  1389              		.file 12 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h"
  1390              		.file 13 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h"
  1391              		.file 14 "<built-in>"
-ARM GAS  C:\Users\arist\AppData\Local\Temp\cctDWzFj.s 			page 40
+ARM GAS  C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s 			page 40
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_msp.c
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:19     .text.HAL_MspInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:25     .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:75     .text.HAL_MspInit:0000002c $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:80     .text.HAL_ADC_MspInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:86     .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:214    .text.HAL_ADC_MspInit:00000078 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:221    .text.HAL_ADC_MspDeInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:227    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:277    .text.HAL_ADC_MspDeInit:0000002c $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:285    .text.HAL_I2C_MspInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:291    .text.HAL_I2C_MspInit:00000000 HAL_I2C_MspInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:394    .text.HAL_I2C_MspInit:0000005c $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:401    .text.HAL_I2C_MspDeInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:407    .text.HAL_I2C_MspDeInit:00000000 HAL_I2C_MspDeInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:457    .text.HAL_I2C_MspDeInit:0000002c $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:465    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:471    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:675    .text.HAL_SPI_MspInit:000000c8 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:683    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:689    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:761    .text.HAL_SPI_MspDeInit:00000048 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:771    .text.HAL_TIM_PWM_MspInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:777    .text.HAL_TIM_PWM_MspInit:00000000 HAL_TIM_PWM_MspInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:823    .text.HAL_TIM_PWM_MspInit:00000024 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:829    .text.HAL_TIM_Base_MspInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:835    .text.HAL_TIM_Base_MspInit:00000000 HAL_TIM_Base_MspInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:882    .text.HAL_TIM_Base_MspInit:00000024 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:888    .text.HAL_TIM_MspPostInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:894    .text.HAL_TIM_MspPostInit:00000000 HAL_TIM_MspPostInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1020   .text.HAL_TIM_MspPostInit:00000078 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1028   .text.HAL_TIM_PWM_MspDeInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1034   .text.HAL_TIM_PWM_MspDeInit:00000000 HAL_TIM_PWM_MspDeInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1065   .text.HAL_TIM_PWM_MspDeInit:00000018 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1071   .text.HAL_TIM_Base_MspDeInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1077   .text.HAL_TIM_Base_MspDeInit:00000000 HAL_TIM_Base_MspDeInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1108   .text.HAL_TIM_Base_MspDeInit:00000018 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1115   .text.HAL_UART_MspInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1121   .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1288   .text.HAL_UART_MspInit:000000a4 $d
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1295   .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1301   .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\arist\AppData\Local\Temp\cctDWzFj.s:1369   .text.HAL_UART_MspDeInit:00000040 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:19     .text.HAL_MspInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:25     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:75     .text.HAL_MspInit:0000002c $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:80     .text.HAL_ADC_MspInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:86     .text.HAL_ADC_MspInit:00000000 HAL_ADC_MspInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:214    .text.HAL_ADC_MspInit:00000078 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:221    .text.HAL_ADC_MspDeInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:227    .text.HAL_ADC_MspDeInit:00000000 HAL_ADC_MspDeInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:277    .text.HAL_ADC_MspDeInit:0000002c $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:285    .text.HAL_I2C_MspInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:291    .text.HAL_I2C_MspInit:00000000 HAL_I2C_MspInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:394    .text.HAL_I2C_MspInit:0000005c $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:401    .text.HAL_I2C_MspDeInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:407    .text.HAL_I2C_MspDeInit:00000000 HAL_I2C_MspDeInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:457    .text.HAL_I2C_MspDeInit:0000002c $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:465    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:471    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:675    .text.HAL_SPI_MspInit:000000c8 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:683    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:689    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:761    .text.HAL_SPI_MspDeInit:00000048 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:771    .text.HAL_TIM_PWM_MspInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:777    .text.HAL_TIM_PWM_MspInit:00000000 HAL_TIM_PWM_MspInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:823    .text.HAL_TIM_PWM_MspInit:00000024 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:829    .text.HAL_TIM_Base_MspInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:835    .text.HAL_TIM_Base_MspInit:00000000 HAL_TIM_Base_MspInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:882    .text.HAL_TIM_Base_MspInit:00000024 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:888    .text.HAL_TIM_MspPostInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:894    .text.HAL_TIM_MspPostInit:00000000 HAL_TIM_MspPostInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1020   .text.HAL_TIM_MspPostInit:00000078 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1028   .text.HAL_TIM_PWM_MspDeInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1034   .text.HAL_TIM_PWM_MspDeInit:00000000 HAL_TIM_PWM_MspDeInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1065   .text.HAL_TIM_PWM_MspDeInit:00000018 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1071   .text.HAL_TIM_Base_MspDeInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1077   .text.HAL_TIM_Base_MspDeInit:00000000 HAL_TIM_Base_MspDeInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1108   .text.HAL_TIM_Base_MspDeInit:00000018 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1115   .text.HAL_UART_MspInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1121   .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1288   .text.HAL_UART_MspInit:000000a4 $d
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1295   .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1301   .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\arist\AppData\Local\Temp\ccbPXGDf.s:1369   .text.HAL_UART_MspDeInit:00000040 $d
 
 UNDEFINED SYMBOLS
 memset
