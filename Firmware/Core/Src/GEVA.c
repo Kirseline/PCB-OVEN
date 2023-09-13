@@ -375,7 +375,7 @@ uint8_t put_char(uint8_t pos_x, uint8_t pos_y, uint8_t chr, enum fonts_size ff, 
             c = font_s[chr];
         break;
     }
-/*
+
     switch (buf->orient) {
         case LANDSCAPE:
             n_pos = normalize_pos(pos_x, pos_y, buf); 
@@ -397,7 +397,7 @@ uint8_t put_char(uint8_t pos_x, uint8_t pos_y, uint8_t chr, enum fonts_size ff, 
             n_pos = normalize_pos(pos_x, pos_y, buf);
             break;
         }
-*/
+
     if (n_pos[X] >= buf->size_x || n_pos[X] < 0 || n_pos[Y] >= buf->size_y || n_pos[Y] < 0)
         error = 4;
     else if (n_pos[Y] + font_height > buf->size_y || n_pos[X] + font_width > buf->size_x)

@@ -251,7 +251,8 @@ mamma_mia.body = mamma_mia_sv;
   
   HAL_Delay(1500);    
 
-  
+
+
   //put_string(0,0,temp_str,SMALL,&vb);
   //put_string(0,40,"temp_str",SMALL,&vb);
 
@@ -260,27 +261,29 @@ mamma_mia.body = mamma_mia_sv;
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+ char c[CHAR_BUFF_SIZE];
   
 
   while (1)
   {
 
-    
+ 
     //clear_sector(0,0,60,15,&vb);
-    max6675_read_temp(max6675B);
+    //max6675_read_temp(max6675B);
     //put_string(0,0,"MAMMA MIA",MEDIUM,&vb);
+    HAL_UART_Transmit(&huart1,float_to_char(max6675_read_temp(max6675B),temp_str),CHAR_BUFF_SIZE,100);
+    HAL_UART_Transmit(&huart1,"\n\r",2,100);
     HAL_GPIO_TogglePin(SSR_A_GPIO_Port,SSR_A_Pin);
     //float_to_char(max6675_read_temp(max6675A),temp_str);
     /*for(uint8_t i=0; i< CHAR_BUFF_SIZE; i++)
       put_char(i*10,0,temp_str[i],MEDIUM,&vb);
 */
-    put_char(0,0,'K',MEDIUM,&vb);
+    //put_char(0,0,'K',MEDIUM,&vb);
     
     //put_circle(10,10,5,&vb);
     
-    update_display(&vb);
-    HAL_Delay(500);    
+    //update_display(&vb);
+    HAL_Delay(250);    
   
     /* USER CODE END WHILE */
 
